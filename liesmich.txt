@@ -1,0 +1,270 @@
+﻿Responsives Template Winchester 2.1.0 für Zen Cart 1.5.7 deutsch
+
+Anpassung des Templates Winchester (https://www.zen-cart.com/downloads.php?do=file&id=1865) von picaflor-azul für die deutsche Zen Cart Version 1.5.7
+März/April 2022
+www.webchills.at
+
+Demo des Templates:
+https://winchester157.zencartdemo.at
+
+Originaltemplate von:
+www.picaflor-azul.com
+
+
+Diese Version ist ausschließlich für die deutsche Zen Cart Version 1.5.7 geeignet!
+
+Changelog Version 2.1.0 - März/April 2022
+- Anpassungen für 1.5.7 und PHP 8
+- Font Awesome Update auf 6.1.1 und Einbindung lokal
+
+Changelog Version 1.7.1 - November 2019
+- Fixes für Google Analytics und Microdata aus 1.5.6d integriert
+
+Changelog Version 1.7 - September 2019
+- Anpassungen für PHP 7.3 
+- Anpassungen für Zen Cart 1.5.6 deutsch
+- Flexibles Footer Menü auf aktuelle Version aktualisiert
+
+
+Änderungen gegenüber dem Original Template:
+- Fehler im Installer behoben
+- Installer multilanguagefähig gemacht, so dass alle Konfigurationsoptionen in der deutschen Administration auf deutsch erscheinen
+- deutsche Sprachdateien hinzugefügt
+- AddThis entfernt (Wer AddThis in seinem Onlineshop einsetzt sollte sich das hier mal durchlesen: http://www.sueddeutsche.de/digital/internet-tracking-cookies-waren-gestern-1.2058685)
+- Anpassung der modifizierten Corefiles an die deutsche Zen Cart Version
+- Flexibles Footermenü auf multilanguage geändert
+- Fehler auf der Startseite behoben
+- Javascripts alle auf https umgestellt, so dass das Template auch in reinen SSL Shops läuft
+- Footermenü mit nützlichen Links voreingestellt
+- Anpassungen für Zen Cart 1.5.7
+- Zen Colorbox entfernt, da seit 1.5.5 bereits enthalten
+- Anleitung aktualisiert
+- Uninstaller hinzugefügt
+
+
+Dieses Template beinhaltet zahlreiche Zusatzmodule:
+- Bewertungen direkt auf der Artikeldetailseite
+- Betreff Feld auf der Kontaktseite
+- Flexibles Footer Menü
+- Define Page About Us (Über uns)
+
+Sollten im Shop bereits diese Module vorhanden sein, deinstallieren Sie diese Module komplett, bevor Sie das Template installieren!
+
+
+
+NEUINSTALLATION
+
+WICHTIGE HINWEISE
+
+Erst in einem Testsystem installieren und nicht direkt in einem Liveshop!
+
+Vor der Installation dieses Templates machen Sie eine komplette Sicherung Ihrer Shopdateien und Ihrer Datenbank!
+
+Sie haben eine Sicherung gemacht?
+Sie haben einen Testshop einsatzbereit?
+
+Dann lesen Sie weiter.
+
+Sollten Sie in Ihrem Shop bereits das Template Winchester Black installiert haben und nun auf Winchester Responsive umsteigen wollen, dann entfernen Sie zunächst Winchester Black komplett, bevor Sie Winchester Responsive installieren!
+Gleiches gilt für andere responsive Templates dieser Art wie z.B. Sheffield Blue oder Stirling Grand.
+Diese Templates bringen teilweise dieselben Zusatzfunktionalitäten mit und es wird zu Problemen führen, wenn Sie mehrere Templates dieser Art gleichzeitig zu installieren versuchen.
+Bevor Sie Winchester Responsive installieren entfernen Sie also zunächst falls installiert die Templates Winchester Black, Stirling Grand, Sheffield Blue oder andere picaflor-azul Templates!
+
+Die Installation erfolgt in folgenden Schritten, halten Sie diesen Ablauf ein:
+
+1)
+Der Ordner GEAENDERTE DATEIEN enthält die von diesem Template geänderten Originaldateien. 
+Benennen Sie den Ordner DEINADMIN auf den Namen Ihres Adminverzeichnisses um.
+Laden Sie diese Dateien nicht einfach so hoch, sonst gehen Änderungen, die Sie in diesen Dateien in Ihrem Shop vielleicht bereits einmal vorgenommen haben verloren.
+Stattdessen vergleichen Sie den Inhalt dieser Dateien mit einem Tool wie WinMerge oder Beyond Compare mit den Dateien Ihres Shops und nehmen falls nötig die Änderungen manuell vor.
+Danach den Inhalt in der vorgegebenen Struktur ins Shopverzeichnis hochladen
+
+2)
+Die Ordner/Dateien im Ordner NEUE DATEIEN in der vorgegebenen Struktur ins Shopverzeichnis hochladen, dadurch werden keine bestehenden Dateien überschrieben.
+Wichtiger Hinweis: 
+Die Dateien in folgenden Ordnern müssen Sie möglicherweise später nochmal mit den entsprechenden Dateien von Modulen vergleichen, die Sie bereits im Shop integriert haben und deren Änderungen nachziehen:
+includes/templates/winchester_responsive
+includes/modules/winchester_responsive
+includes/modules/sideboxes/winchester_responsive
+includes/languages/german/winchester_responsive
+includes/languages/english/winchester_responsive
+
+3)
+In der Zen Cart Administration unter Tools Templates das neue Winchester Responsive Template aus dem Dropdown auswählen und aktivieren.
+
+4)
+Nun im Admin auf irgendeinen Menüpunkt clicken, Sie sollten dann oben links zwei grüne Erfolgsmeldungen sehen, dass die nötigen Datenbankeinträge erfolgreich vorgenommen wurden
+
+5)
+Unter Tools Boxlayout clicken Sie nun auf den Button Zurücksetzen, dadurch werden die von diesem Template verwendeten Sideboxen automatisch voreingestellt.
+
+6)
+Stellen Sie nun die Sideboxen ein, die Sie anzeigen wollen und stellen Sie dabei die Einstellung Show Box @ Min-Width immer auf Aus.
+Diese Einstellung regelt die Anzeige von Sideboxen für mobile Geräte und für die sollten die Sideboxen immer aus sein.
+
+
+____________________________________________________________________________________________________
+
+
+Konfigurationsmöglichkeiten / Anpassung an eigene Wünsche
+
+____________________________________________________________________________________________________
+
+Sprachauswahl im Header entfernen
+
+Wenn Sie im Shop nur eine Sprache aktiv haben und die Sprachauswahl neben dem Logo nicht benötigen, entfernen Sie folgenden Abschnitt aus
+includes/templates/winchester_responsive/common/tpl_header.php
+
+<!-- bof languages header display -->
+<div id="navLanguagesWrapper" class="forward">
+<?php require(DIR_WS_MODULES . zen_get_module_directory ('header_languages.php'));?>
+</div>
+<!-- eof  languages header display -->
+
+____________________________________________________________________________________________________
+
+
+Logo austauschen
+
+includes/templates/winchester_responsive/images/logo.png überschreiben
+Größe des Logos sollte so wie in der Demo sein: 200 Pixel x 69 Pixel
+
+____________________________________________________________________________________________________
+
+
+Slogan unter Logo ändern
+includes/languages/german/winchester_responsive/header.php
+define('HEADER_SALES_TEXT', 'Template Demo Winchester');
+
+____________________________________________________________________________________________________
+
+
+Konfiguration > Responsives Template Konfiguration
+
+Slideshow auf der Startseite
+Standardmäßig aktiv
+Winchester Slideshow > true
+
+Weitere Einstellungsmöglichkeiten sind dort erklärt
+____________________________________________________________________________________________________
+
+
+Karussell der empfohlenen Artikel auf der Startseite
+
+Standardmäßig aktiv.
+Es müssen dafür natürlich Empfohlene Artikel angelegt sein.
+Einstellungen dazu unter Konfiguration Karussell der Empfohlenen Artikel 
+
+____________________________________________________________________________________________________
+
+
+Links im Footer
+
+Der Footerbereich ist komplett admingesteuert
+Tools > Flexibles Footer Menü
+
+____________________________________________________________________________________________________
+
+
+Menü in der mobilen Version
+
+kann in folgender Datei feinabgestimmt werden:
+includes/templates/winchester_responsive/templates/tpl_modules_mobile_categories_tabs.php 
+
+____________________________________________________________________________________________________
+
+
+Flyout Sidebox Links
+
+Inhalt kann geändert werden in:
+includes/languages/german/extra_definitions/winchester_responsive/winchester_responsive_defines.php
+Für englische Version entsprechend in
+includes/languages/english/extra_definitions/winchester_responsive/winchester_responsive_defines.php
+
+Wenn diese Flyout Box nicht benötigt wird, komplett entfernen includes/templates/winchester_responsive/common/tpl_main_page.php und dort folgenden Abschnitt entfernen:
+
+<div class="slide-out-div">
+<a class="handle" href="http://link-for-non-js-users.html">Content</a>
+<?php echo SLIDE_OUT_CONTENT; ?>
+</div>
+
+____________________________________________________________________________________________________
+
+
+Hinweistext ganz oben im Header
+
+Inhalt kann geändert werden in:
+includes/languages/german/extra_definitions/winchester_responsive/winchester_responsive_defines.php
+Für englische Version entsprechend in
+includes/languages/english/extra_definitions/winchester_responsive/winchester_responsive_defines.php
+
+____________________________________________________________________________________________________
+
+Social Media Links rechts unten
+
+Voreingestellt ist folgender Code :
+<a href="https://www.facebook.com/#" target="_blank"><i class="fa-brands fa-facebook"></i></a><a href="https://twitter.com/#" target="_blank"><i class="fa-brands fa-twitter"></i></a><a href="http://www.pinterest.com/#" target="_blank"><i class="fa-brands fa-pinterest"></i></a><a href="https://www.youtube.com/#" target="_blank"><i class="fa-brands fa-youtube"></i></a><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+
+Wichtig:
+Dieser Code lässt sich über Tools > Flexibles Footer Menü nur ändern, wenn dort Interner HTML Editor zunächst auf Nur-Text umgestellt wird!
+Also erst im Flexiblen Footer Menü den Editor auf Nur-Text umschalten.
+Dann wird der Code angezeigt und es können die Links auf die eigenen Social Media Sites geändert werden.
+
+Die Anzeige dieser Social Media Buttons ist an dieser Stelle des Templates exakt so vorgesehen. Diese Buttons sind keine Grafiken, sondern werden per Font Awesome Stylesheet erzeugt. Wenn hier irgendwelche Grafiken reinkopiert werden oder der Code sonstwie geändert wird, dann wird das nicht zum Erfolg führen.
+
+Wenn meine Facebook Page die Adresse https://www.facebook.com/zuck hat, dann ersetze ich den Dummy Link https://www.facebook.com/# mit https://www.facebook.com/zuck und lasse den Code ansonsten völlig unverändert:
+
+<a href="https://www.facebook.com/zuck" target="_blank"><i class="fa-brands fa-facebook"></i></a><a  href="https://twitter.com/#" target="_blank"><i class="fa-brands fa-twitter"></i></a><a  href="http://www.pinterest.com/#" target="_blank"><i class="fa-brands fa-pinterest"></i></a><a  href="https://www.youtube.com/#" target="_blank"><i class="fa-brands fa-youtube"></i></a><a href="#"  target="_blank"><i class="fa-brands fa-instagram"></i></a>
+
+Nach demselben Prinzip ändere ich die Links bei Twitter, Pinterest, Youtube und Instagram
+
+Ich habe nur Facebook und Youtube?
+
+Dann entferne ich die anderen Aufrufe und ändere auf:
+
+<a href="https://www.facebook.com/zuck" target="_blank"><i  class="fa-brands fa-facebook"></i></a><a  href="https://www.youtube.com/zuck" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+
+____________________________________________________________________________________________________
+
+Wie ändere ich Bilder und Links in den Slideshows auf der Startseite?
+
+Es gibt zwei "Slider" in den Winchester Templates.
+
+Die echte Slideshow oben ist admingesteuert. Unter Tools > Bannermanager die Banner mit der Bannergruppe homepageslide entsprechend ändern.
+Unter Banner URL die Dummy Raute rausnehmen und den gewünschten Link eintragen
+Zum Austausch der Bilder entweder über den Bannermanager andere hochladen oder einfach per FTP die mitgelieferten Beispielbilder in images/banners überschreiben. Diese Bannerbilder müssen exakt die Größe 1600x480 Pixel haben
+
+Unterhalb der Slideshow sind drei Bilder, die man dazu verwenden kann zu den Hauptkategorien oder Hauptinhalten des Shops zu linken.
+Dieser Bereich kann einfach über Tools > Seiteneditor bearbeitet werden, es ist die Startseite also define_main_page.php
+
+Hier empfiehlt es sich den Editor auf Nur Text umzuschalten um die Links zu verändern.
+Die Beispielbilder können per FTP überschrieben werden, das sind:
+includes/templates/winchester_responsive/images/home1.png
+includes/templates/winchester_responsive/images/home.png
+includes/templates/winchester_responsive/images/home3.png
+Diese drei Bilder müssen exakt die Größe 310x200 Pixel haben 
+
+
+____________________________________________________________________________________________________
+
+DEINSTALLATION
+____________________________________________________________________________________________________
+
+WICHTIG:
+Dieses Template verwendet einen Autoinstaller, der die Templatekonfiguration automatisch beim Aufruf des Admins installiert.
+Wenn Sie das Template komplett entfernen wollen, dann halten Sie dazu exakt folgenden Ablauf ein:
+
+1)
+Alle von diesem Template neu hizugefügten Dateien vom Server löschen.
+Achten Sie darauf, dass folgende Dateien und Ordner unbedingt gelöscht sind, bevor Sie die weiteren Schritte durchführen:
+DEINADMIN/includes/autoloaders/config.winchester_responsive.php
+DEINADMIN/includes/init_includes/init_winchester_responsive.php
+DEINADMIN/includes/installers/winchester_responsive
+
+2)
+Alle von diesem Template geänderten Dateien wieder mit den entsprechenden 1.5.7 Originaldateien bzw. den entsprechenden Dateien Ihres zuvor angelegten Backups ersetzen
+
+3)
+Die uninstall.sql im Ordner UNINSTALL mit einem Texteditor öffnen, Inhalt kopieren und ins Eingabefeld unter Tools > SQL Patches installieren einfügen und absenden
+Dadurch werden alle neuen Datenbankeinträge, die dieses Template vorgenommen hat entfernt.
+Das im Shop aktive Template wird auf das 1.5.7 Standardtemplate responsive_classic zurückgestellt mit dessen Standardeinstellungen.

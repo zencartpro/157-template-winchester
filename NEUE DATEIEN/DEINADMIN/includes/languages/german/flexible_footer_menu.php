@@ -1,0 +1,41 @@
+<?php
+define('HEADING_TITLE','Flexibles Footer Menü');
+//Main Page Plugin Defines
+define('TABLE_HEADER_NAME','Titel Name');
+define('TABLE_PAGE_NAME','Seiten Name');
+define('TABLE_COLUMN_ID','Spalte');
+define('TABLE_SORT_ORDER','Sortierreihenfolge');
+define('TABLE_STATUS','Status');
+define('TABLE_HEADER_PAGETITLE','Titel / Untertitel oder Bild');
+define('ICON_STATUS_GREEN','im Footer Menü anzeigen');
+define('ICON_STATUS_RED','im Footer Menü nicht anzeigen');
+define('BUTTON_NEW','Neue Seite für Spalte hinzuf|gen');
+define('BOX_INFO_STATUS','<strong>Seiten Status:&nbsp;</strong>');
+define('BOX_INFO_NO_IMAGE','<strong><font color="red">kein Bild hochgeladen</font></strong>');
+define('BOX_INFO_TEXT','<strong>Spalten Text/Kommentare:&nbsp;</strong>');
+define('SUCCESS_PAGE_STATUS_UPDATED','Flexibles Footer Menü Status aktualisiert!');
+define('TEXT_DISPLAY_NUMBER_OF_PAGES', 'Zeige <b>%d</b> bis <b>%d</b> (von <b>%d</b> Seitenlinks)');
+//New-Update Page Plugin Defines
+define('TEXT_COLUMN_HEADER','Spalten Titel/Untertitel:');
+define('TEXT_COLUMN_HEADER_TIP','(Option 1) Zeige Spalten Titel und Untertitel');
+define('TEXT_PAGES_NAME','Seiten Name:');
+define('TEXT_PAGES_NAME_TIP','(Option 2) Zeige Seitenname.');
+define('TEXT_HAS_IMAGE','Derzeit zugeordnetes Bild:');
+define('TEXT_USE_IMAGE','Bild hochladen:');
+define('TEXT_USE_IMAGE_TIP','(Option 3) Zeige ein Bild als Titel/Untertitel anstelle eines Texts');
+define('TEXT_DELETE_IMAGE','Derzeitiges Bild löschen:');
+define('TEXT_DELETE_IMAGE_NO','&nbsp;Nein');
+define('TEXT_DELETE_IMAGE_YES','&nbsp;Ja');
+define('TEXT_LINKAGE','Link hinzufügen:');
+define('TEXT_LINKAGE_TIP','Link URL zum Spalten Titel/Untertitel, Seitenname oder Bild hinzufügen.<br />INTERNER Link Beispiel: index.php?main_page=reviews<br/>EXTERNER Link Beispiel: http://www.zen-cart-pro.at <b>(http://)</b> ignoriert INTERNE Link URL und öffnet automatisch in neuem Fenster oder Tab.');
+define('TEXT_ADD_TEXT','Spalten Text/Kommentare:');
+define('TEXT_ADD_TEXT_TIP','Text oder Kommentar unter Spalten Titel/Untertitel oder Seitenname hinzufügen.<br />Um den Kommentar über den Spaltentitel oder Seitennaem anzuzeigen geben Sie die Sortierreihenfolge um 1 weniger an.<br />Sie können auch nur Text/Komentar eingeben und diesem eine eigene Sortierreihenfolge geben.');
+define('TEXT_COLUMN','Spalte:');
+define('TEXT_COLUMN_TIP','(Optional) Tragen Sie hier die gewünschte Spalte ein, in der die Überschrift erscheinen soll. Das dienst nur dazu, die Spalten für die Hauptseite hier übersichtlicher darzustellen, damit die Eingabe der Sortierreihenfolge der Unterpunkte leichter wird.');
+define('TEXT_COLUMN_SORT','Sortierreihenfolge:');
+define('TEXT_COLUMN_SORT_TIP','<b>WICHTIG</b><br/>Die Sortierreihenfolge muss größer als 0 sein!<br />Für die Spalte 1 sollte die Sortierung 1 sein. Spalte 2 sollte 2 sein usw.<br />Die einzelnen Elemente der Splate werden dann wie folgt angegeben: <b>1</b>1, <b>1</b>2, <b>1</b>3 oder <b>2</b>1, <b>2</b>2, <b>2</b>3 bis zu <b>1</b>9<br />Um mehr als 9 Elemente in einer Spalte anzeigen zu lassen, verdoppeln Sie die Einträge und geben wie folgt an: <b>1</b>, <b>1</b>1, <b>1</b>11, <b>1</b>111,  <b>1</b>2, <b>1</b>22, <b>1</b>222');
+define('FFM_TEXT_DELETE_IMAGE', 'Bild löschen');
+define('FFM_TABLE_TITLE_HEADER', 'Titel');
+define('FFM_TABLE_TITLE_PAGE_NAME', 'Seiten Name');
+define('FFM_TABLE_TITLE_IMAGE', 'Bild');
+define('SUCCESS_PAGE_UPDATED', 'Erfol: Die Seite wurde aktualisiert.'); 
