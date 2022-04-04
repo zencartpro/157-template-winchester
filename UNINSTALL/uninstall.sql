@@ -86,7 +86,7 @@ UPDATE configuration SET configuration_value = true WHERE configuration_key = 'P
 UPDATE configuration SET configuration_value = 1 WHERE configuration_key = 'PRODUCT_LIST_DESCRIPTION';
 UPDATE configuration SET configuration_value = 1 WHERE configuration_key = 'PRODUCT_LIST_FILTER';
 UPDATE configuration SET configuration_value = 2 WHERE configuration_key = 'PRODUCT_INFO_CATEGORIES_IMAGE_STATUS';
-UPDATE configuration SET configuration_value = true WHERE configuration_key = 'USE_SPLIT_LOGIN_MODE';
+UPDATE configuration SET configuration_value = True WHERE configuration_key = 'USE_SPLIT_LOGIN_MODE';
 UPDATE configuration SET configuration_value = 1 WHERE configuration_key = 'EZPAGES_STATUS_HEADER';
 UPDATE configuration SET configuration_value = 1 WHERE configuration_key = 'EZPAGES_STATUS_FOOTER';
 UPDATE configuration SET configuration_value = 1 WHERE configuration_key = 'SHOW_SHOPPING_CART_UPDATE';

@@ -1,16 +1,17 @@
 <?php
 /**
- * Page Template
  * Zen Cart German Specific
+ * Page Template
+ *
  * Loaded automatically by index.php?main_page=shopping_cart.<br />
  * Displays shopping-cart contents
  *
- * @package templateSystem
+
  * @copyright Copyright 2003-2022 Zen Cart Development Team
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_shopping_cart_default.php for Winchester 2022-04-02 15:49:16Z webchills $
+ * @version $Id: tpl_shopping_cart_default.php for Winchester 2022-04-04 19:40:16Z webchills $
  */
 ?>
 <div class="centerColumn" id="shoppingCartDefault">
@@ -28,7 +29,7 @@
 
 <h1 id="cartDefaultHeading"><?php echo HEADING_TITLE; ?></h1>
 <!-- ** BEGIN PAYPAL EXPRESS CHECKOUT for not logged in visitors only! ** -->
-<?php if (!$_SESSION['customer_id']) { ?>	
+<?php if (!zen_is_logged_in()) { ?>	
 <div class="buttonRow forward">
 <?php  // the tpl_ec_button template only displays EC option if cart contents >0 and value >0
 if (defined('MODULE_PAYMENT_PAYPALWPP_STATUS') && MODULE_PAYMENT_PAYPALWPP_STATUS == 'True') {
@@ -65,7 +66,7 @@ if (defined('MODULE_PAYMENT_PAYPALWPP_STATUS') && MODULE_PAYMENT_PAYPALWPP_STATU
 <?php    } //endif STOCK_ALLOW_CHECKOUT ?>
 <?php  } //endif flagAnyOutOfStock ?>
 
-<table  border="0" width="100%" cellspacing="0" cellpadding="0" id="cartContentsDisplay">
+<table id="cartContentsDisplay">
      <tr class="tableHeading">
 
         <th scope="col" id="scProductsHeading"><?php echo TABLE_HEADING_PRODUCTS; ?></th>
@@ -98,7 +99,11 @@ if (defined('MODULE_PAYMENT_PAYPALWPP_STATUS') && MODULE_PAYMENT_PAYPALWPP_STATU
     foreach ($product['attributes'] as $option => $value) {
 ?>
 
-<li><?php echo $value['products_options_name'] . TEXT_OPTION_DIVIDER . nl2br($value['products_options_values_name']); ?></li>
+<li>
+    <?php
+    echo $value['products_options_name'] . TEXT_OPTION_DIVIDER . nl2br($value['products_options_values_name']);
+    ?>
+</li>
 
 <?php
     }
