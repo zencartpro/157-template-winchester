@@ -21,7 +21,7 @@ define('HEADER_TITLE_TOP_TEXT','Versandkostenfreie Lieferung ab 50 Euro!');
 define('TABLE_HEADING_IMAGE','Bild');
 define('TABLE_HEADING_PRICE','Preis');
 /*bof left hand slide out content*/
-define('SLIDE_OUT_CONTENT','<center><h2>LINKE SLIDEBOX</h2>Hier können Sie jede Art von Inhalt anzeigen. Text, Bilder, was auch immer.<br /><br /><br /><br /><a href="index.php?main_page=specials"><img src="includes/templates/winchester_responsive/images/summer.png" alt="Bild ALT Text" /></a></center>');
+define('SLIDE_OUT_CONTENT','<div align="center"><h2>LINKE SLIDEBOX</h2>Hier können Sie jede Art von Inhalt anzeigen. Text, Bilder, was auch immer.<br /><br /><br /><br /><a href="index.php?main_page=specials"><img src="includes/templates/winchester_responsive/images/summer.png" alt="Bild ALT Text" /></a></div>');
 /*bof product info tabs*/
 define('HEADER_TITLE_DESCRIPTION','Beschreibung');
 define('HEADER_TITLE_DETAILS','Details');

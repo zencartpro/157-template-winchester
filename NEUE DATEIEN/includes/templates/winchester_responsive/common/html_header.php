@@ -9,7 +9,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: html_header.php for Winchester 2022-04-03 07:53:39Z webchills $
+ * @version $Id: html_header.php for Winchester 2022-04-04 20:11:39Z webchills $
  */
 if (!defined('IS_ADMIN_FLAG')) {
     die('Illegal Access');
@@ -43,32 +43,32 @@ if (!class_exists('Mobile_Detect')) {
   $paginateAsUL = true;
 
 ?>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" <?php echo HTML_PARAMS; ?>>
-<head>
+<!DOCTYPE html>
+<html <?php echo HTML_PARAMS; ?>>
+  <head>
+  <meta charset="<?php echo CHARSET; ?>">
 <title><?php echo META_TAG_TITLE; ?></title>
-<meta http-equiv="Content-Type" content="text/html; charset=<?php echo CHARSET; ?>" />
+
 <meta name="keywords" content="<?php echo META_TAG_KEYWORDS; ?>" />
 <meta name="description" content="<?php echo META_TAG_DESCRIPTION; ?>" />
 <meta name="language" content="<?php echo META_TAG_LANGUAGE; ?>" />
-<meta http-equiv="imagetoolbar" content="no" />
 <meta name="author" content="<?php echo STORE_NAME ?>" />
 <meta name="generator" content="Zen-Cart 1.5.7 - deutsche Version, http://www.zen-cart-pro.at" />
 
 
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+
 
 
 
 <?php if (defined('ROBOTS_PAGES_TO_SKIP') && in_array($current_page_base,explode(",",constant('ROBOTS_PAGES_TO_SKIP'))) || $current_page_base=='down_for_maintenance' || $robotsNoIndex === true) { ?>
 <meta name="robots" content="noindex, nofollow" />
 <?php } ?>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"/>
 <?php if (defined('FAVICON')) { ?>
 <link rel="icon" href="<?php echo FAVICON; ?>" type="image/x-icon" />
 <link rel="shortcut icon" href="<?php echo FAVICON; ?>" type="image/x-icon" />
-<?php }?>
+<?php } //endif FAVICON ?>
 
 <base href="<?php echo (($request_type == 'SSL') ? HTTPS_SERVER . DIR_WS_HTTPS_CATALOG : HTTP_SERVER . DIR_WS_CATALOG ); ?>" />
 <?php if (isset($canonicalLink) && $canonicalLink != '') { ?>
