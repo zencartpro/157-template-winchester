@@ -28,7 +28,7 @@ body{margin:0;padding:0;}
 #navSuppWrapper{margin:0;}
 #mobile-nav1{display:none;}
 #home-images{margin:0 auto;width:99%;}
-
+#header-cart{text-align:right;margin-right:10px;margin-bottom:20px;font-size:180%;}
 }
 
 /* 2.1 ALL TABLETS - ORIENTATION:PORTRAIT (DEFAULT LAYOUT) */
@@ -55,9 +55,9 @@ body {margin:0;padding:0;}
 a#foo2_next, a#foo1_next{right:0;}
 #logo, #tagline{margin-left:10px;}
 .banner span{font-size:140%;}
-#menu{width:100%;margin-top:-165px;}
+#menu{width:100%;position:absolute;top:0;float:none;margin-top:0;}
 ul.slimmenu{position:relative;z-index:1000;background:#fff;}
-#navMainWrapper{margin-top:-100px;width:42%;}
+#navMainWrapper{width:42%;}
 #navMainSearch input[type=text]{width:140px;}
 .slide-out-div{top:230px !important;}
 .ad{max-width:220px;}
@@ -73,6 +73,8 @@ ul.slimmenu{position:relative;z-index:1000;background:#fff;}
 #top-inner-wrapper{margin-left:10px;}
 #navSuppWrapper{margin:0;}
 #mobile-nav1{display:none;}
+#header-cart{text-align:right;margin-right:10px;margin-bottom:20px;font-size:180%;}
+#indexHomeBody [class*="col"]{margin-left:0;}
 }
 
 /* ----------- iPads (portrait and landscape) ----------- */
@@ -88,9 +90,6 @@ and (max-device-width : 1024px) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : landscape) {
-.fa-user{display:none;}
-.fa-search{float:right;}
-#menu{width:45%;/*margin-top:-165px;float:right;*/margin-top:0;}
 /* Styles */
 }
 
@@ -99,11 +98,6 @@ and (orientation : landscape) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : portrait) {
-#menu{float:none;margin-top:-30px;width:50%;}
-
-
-
-
 }
 
 /* ----------- iPad 3 (portrait) ----------- */

@@ -51,7 +51,7 @@ body{margin:0;padding:0;}
 #tagline{margin-left:10px;margin-top:15px;margin-bottom:0;}
 #top-wrapper{text-align:center;font-size:120%;}
 #menu{margin-top:-130px;width:98%;}
-.header-cart{float:right;width:50%;}
+#header-cart{float:right;width:50%;}
 #navMainSearch{float:left;width:53%;border:1px solid #000;display:none;}
 #top-middle{padding-bottom:0;border-bottom:none;}
 #mobile-nav{background:#f4f4f4;padding:10px 10px;border-bottom:1px solid #dbdbce;display:block;}
@@ -186,7 +186,7 @@ body{margin:0;padding:0;}
 #tagline{margin-left:10px;margin-top:15px;margin-bottom:0;}
 #top-wrapper{text-align:center;font-size:120%;}
 #menu{margin-top:-130px;width:98%;}
-.header-cart{float:right;width:50%;}
+#header-cart{float:right;width:50%;}
 #navMainSearch{float:left;width:53%;border:1px solid #000;display:none;}
 #top-middle{padding-bottom:0;border-bottom:none;padding-bottom:0;margin-bottom:-22px}
 #mobile-nav1{background:#f4f4f4;padding:10px 10px;border-bottom:1px solid #dbdbce;display:block;}
@@ -327,17 +327,14 @@ ul.slimmenu{position:relative;z-index:1000;background:#fff;}
 #top-inner-wrapper{margin-left:10px;}
 #navSuppWrapper{margin:0;}
 #mobile-nav1{display:block;}
-#mobile-nav1{padding:10px 10px;display:block;width:30%;float:right;margin-top:-50px;position:relative;z-index:1000;visibility:visible;}
+#mobile-nav1{padding:10px 10px;display:block;width:30%;float:right;margin-top:-50px;position:relative;z-index:1000;}
 #mobile-nav1 i{font-size:180%;margin-right:30px;color:#666;}
 #mobile-nav1 i:hover{color:#171717;}
-#mobile-nav1 .header-cart{margin-top:-140px;}
+#mobile-nav1 #header-cart{margin-top:-140px;}
 .fa-user{display:none;}
 .fa-search{float:right;position:relative;right:50px;}
-#home-images{width:100%;margin:0 auto;}
+#home-images{width:92%;margin:0 auto;}
 #template-demo-top{display:none;}
-.home-img{width:30%;}
-
-
 
 }
 
@@ -350,7 +347,7 @@ ul.slimmenu{position:relative;z-index:1000;background:#fff;}
 @media (min-width:980px){
 #mobile-nav1{display:none;}
 .ad{width:280px;}
-#home-images{width:100%;margin:0 auto;}
+#home-images{width:92%;margin:0 auto;}
 .fa-user{display:none;}
 }
 

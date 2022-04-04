@@ -10,7 +10,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_index_product_list.php for Winchester 2019-09-14 12:49:16Z webchills $
+ * @version $Id: tpl_index_product_list.php for Winchester 2022-04-04 19:18:16Z webchills $
  */
 ?>
 <div class="centerColumn" id="indexProductList">
@@ -39,7 +39,7 @@ if (PRODUCT_LIST_CATEGORIES_IMAGE_STATUS == 'true') {
   $check_for_alpha = $listing_sql;
   $check_for_alpha = $db->Execute($check_for_alpha);
 
-  if ($do_filter_list || isset($_GET['alpha_filter_id']) || ($check_for_alpha->RecordCount() > 0 && PRODUCT_LIST_ALPHA_SORTER == 'true') || (defined('PRODUCT_LISTING_LAYOUT_STYLE_CUSTOMER') and PRODUCT_LISTING_LAYOUT_STYLE_CUSTOMER == '1')) {//form if list/grid enabled
+  if ($do_filter_list || isset($_GET['alpha_filter_id']) || ($check_for_alpha->RecordCount() > 0 && PRODUCT_LIST_ALPHA_SORTER == 'true')) {
   $form = zen_draw_form('filter', zen_href_link(FILENAME_DEFAULT), 'get') . '<label class="inputLabel">' .TEXT_SHOW . '</label>';
 ?>
 
@@ -76,11 +76,8 @@ if (PRODUCT_LIST_CATEGORIES_IMAGE_STATUS == 'true') {
   // draw filter_id (ie: category/mfg depending on $options)
   if ($do_filter_list) {
     echo zen_draw_pull_down_menu('filter_id', $options, (isset($_GET['filter_id']) ? $_GET['filter_id'] : ''), 'onchange="this.form.submit()"');
-  }
+  } 
   
-  if (defined('PRODUCT_LISTING_LAYOUT_STYLE_CUSTOMER') and PRODUCT_LISTING_LAYOUT_STYLE_CUSTOMER == '1') {
-    echo '<div id="viewControl">' . zen_draw_pull_down_menu('view', array(array('id'=>'rows','text'=>PRODUCT_LISTING_LAYOUT_ROWS),array('id'=>'columns','text'=>PRODUCT_LISTING_LAYOUT_COLUMNS)), (isset($_GET['view']) ? $_GET['view'] : (defined('PRODUCT_LISTING_LAYOUT_STYLE')? PRODUCT_LISTING_LAYOUT_STYLE: 'rows')), 'onchange="this.form.submit()"') . '</div>';  
-  }
   // draw alpha sorter
   require(DIR_WS_MODULES . zen_get_module_directory(FILENAME_PRODUCT_LISTING_ALPHA_SORTER));
 ?>
