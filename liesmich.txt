@@ -16,6 +16,8 @@ Diese Version ist ausschließlich für die deutsche Zen Cart Version 1.5.7 geeig
 Changelog Version 2.1.0 - März/April 2022
 - Anpassungen für 1.5.7 und PHP 8
 - Font Awesome Update auf 6.1.1 und Einbindung lokal
+- veraltete Funktionen entfernt
+- Javascripts aktualisiert und lokal eingebunden
 
 Changelog Version 1.7.1 - November 2019
 - Fixes für Google Analytics und Microdata aus 1.5.6d integriert
@@ -30,13 +32,13 @@ Changelog Version 1.7 - September 2019
 - Fehler im Installer behoben
 - Installer multilanguagefähig gemacht, so dass alle Konfigurationsoptionen in der deutschen Administration auf deutsch erscheinen
 - deutsche Sprachdateien hinzugefügt
-- AddThis entfernt (Wer AddThis in seinem Onlineshop einsetzt sollte sich das hier mal durchlesen: http://www.sueddeutsche.de/digital/internet-tracking-cookies-waren-gestern-1.2058685)
-- Anpassung der modifizierten Corefiles an die deutsche Zen Cart Version
+- AddThis entfernt
+- Anpassung der modifizierten Corefiles an die deutsche Zen Cart Version 1.5.7
 - Flexibles Footermenü auf multilanguage geändert
 - Fehler auf der Startseite behoben
-- Javascripts alle auf https umgestellt, so dass das Template auch in reinen SSL Shops läuft
+- enthaltene Javascripts aktualisiert und lokal eingebunden
 - Footermenü mit nützlichen Links voreingestellt
-- Anpassungen für Zen Cart 1.5.7
+- Anpassungen für PHP 8
 - Zen Colorbox entfernt, da seit 1.5.5 bereits enthalten
 - Anleitung aktualisiert
 - Uninstaller hinzugefügt
