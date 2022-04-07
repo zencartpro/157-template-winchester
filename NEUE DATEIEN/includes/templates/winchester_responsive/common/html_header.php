@@ -159,7 +159,7 @@ echo '<link rel="stylesheet" type="text/css" href="' . $template->get_template_d
   }
 }
 
-if($detect->isMobile() && !$detect->isTablet() && $_SESSION['layoutType'] == 'full' or $detect->isTablet() && $_SESSION['layoutType'] == 'full' or $_SESSION['layoutType'] == 'full'){
+if($detect->isMobile() && !$detect->isTablet()){
 $fluidisFixed = 'fluidIsFixed';
 } else {
 $fluidisFixed = '';
