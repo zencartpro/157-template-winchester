@@ -38,3 +38,6 @@ define('FFM_TABLE_TITLE_HEADER', 'Header');
 define('FFM_TABLE_TITLE_PAGE_NAME', 'Page Name');
 define('FFM_TABLE_TITLE_IMAGE', 'Image');
 define('SUCCESS_PAGE_UPDATED', 'Success: The page has been updated.'); 
+define('SUCCESS_PAGE_INSERTED', 'Success: The page has been inserted.'); 
+define('TEXT_INFO_DELETE_INTRO', 'Delete page?'); 
+define('SUCCESS_PAGE_REMOVED', 'Success: The page has been deleted.'); 
