@@ -9,7 +9,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: html_header.php for Winchester 2022-04-04 20:11:39Z webchills $
+ * @version $Id: html_header.php for Winchester 2022-04-07 08:41:39Z webchills $
  */
 if (!defined('IS_ADMIN_FLAG')) {
     die('Illegal Access');
@@ -54,13 +54,6 @@ if (!class_exists('Mobile_Detect')) {
 <meta name="language" content="<?php echo META_TAG_LANGUAGE; ?>" />
 <meta name="author" content="<?php echo STORE_NAME ?>" />
 <meta name="generator" content="Zen-Cart 1.5.7 - deutsche Version, http://www.zen-cart-pro.at" />
-
-
-
-
-
-
-
 <?php if (defined('ROBOTS_PAGES_TO_SKIP') && in_array($current_page_base,explode(",",constant('ROBOTS_PAGES_TO_SKIP'))) || $current_page_base=='down_for_maintenance' || $robotsNoIndex === true) { ?>
 <meta name="robots" content="noindex, nofollow" />
 <?php } ?>
@@ -92,7 +85,6 @@ $manufacturers_id = (isset($_GET['manufacturers_id'])) ? $_GET['manufacturers_id
 <?php if (RSS_FEED_ENABLED == 'true'){ ?>
 <?php echo rss_feed_link_alternate();?>
 <?php } ?>
-
 <script type="text/javascript">window.jQuery || document.write(unescape('%3Cscript type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4" crossorigin="anonymous"%3E%3C/script%3E'));</script>
 <?php if (file_exists(DIR_WS_TEMPLATE . "jscript/jquery.min.js")) { ?>
 <script type="text/javascript">window.jQuery || document.write(unescape('%3Cscript type="text/javascript" src="<?php echo $template->get_template_dir('.js',DIR_WS_TEMPLATE, $current_page_base,'jscript'); ?>/jquery.min.js"%3E%3C/script%3E'));</script>
@@ -136,7 +128,6 @@ if($RI_CJLoader->get('status') && (!isset($Ajax) || !$Ajax->status())){
     }
 }
 
-
 if (COLUMN_WIDTH == '0' || (in_array($current_page_base,explode(",",'popup_image,popup_image_additional')) )) {  
 echo '';
 } else {
@@ -159,7 +150,7 @@ echo '<link rel="stylesheet" type="text/css" href="' . $template->get_template_d
   }
 }
 
-if($detect->isMobile() && !$detect->isTablet()){
+if($detect->isMobile() && !$detect->isTablet() && $_SESSION['layoutType'] == 'full' or $detect->isTablet() && $_SESSION['layoutType'] == 'full' or $_SESSION['layoutType'] == 'full'){
 $fluidisFixed = 'fluidIsFixed';
 } else {
 $fluidisFixed = '';
