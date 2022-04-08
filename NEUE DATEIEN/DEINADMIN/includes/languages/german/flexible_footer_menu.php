@@ -1,6 +1,5 @@
 <?php
 define('HEADING_TITLE','Flexibles Footer Menü');
-//Main Page Plugin Defines
 define('TABLE_HEADER_NAME','Titel Name');
 define('TABLE_PAGE_NAME','Seiten Name');
 define('TABLE_COLUMN_ID','Spalte');
@@ -15,7 +14,6 @@ define('BOX_INFO_NO_IMAGE','<strong><font color="red">kein Bild hochgeladen</fon
 define('BOX_INFO_TEXT','<strong>Spalten Text/Kommentare:&nbsp;</strong>');
 define('SUCCESS_PAGE_STATUS_UPDATED','Flexibles Footer Menü Status aktualisiert!');
 define('TEXT_DISPLAY_NUMBER_OF_PAGES', 'Zeige <b>%d</b> bis <b>%d</b> (von <b>%d</b> Seitenlinks)');
-//New-Update Page Plugin Defines
 define('TEXT_COLUMN_HEADER','Spalten Titel/Untertitel:');
 define('TEXT_COLUMN_HEADER_TIP','(Option 1) Zeige Spalten Titel und Untertitel');
 define('TEXT_PAGES_NAME','Seiten Name:');
@@ -38,4 +36,7 @@ define('FFM_TEXT_DELETE_IMAGE', 'Bild löschen');
 define('FFM_TABLE_TITLE_HEADER', 'Titel');
 define('FFM_TABLE_TITLE_PAGE_NAME', 'Seiten Name');
 define('FFM_TABLE_TITLE_IMAGE', 'Bild');
-define('SUCCESS_PAGE_UPDATED', 'Erfol: Die Seite wurde aktualisiert.'); 
+define('SUCCESS_PAGE_UPDATED', 'Erfolg: Die Seite wurde aktualisiert.'); 
+define('SUCCESS_PAGE_INSERTED', 'Erfolg: Die Seite wurde hinzugefügt.'); 
+define('TEXT_INFO_DELETE_INTRO', 'Seite löschen?'); 
+define('SUCCESS_PAGE_REMOVED', 'Erfolg: Die Seite wurde gelöscht.'); 
