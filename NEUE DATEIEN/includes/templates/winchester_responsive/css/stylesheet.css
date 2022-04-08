@@ -19,7 +19,7 @@ CODE {font-family: arial, verdana, helvetica, sans-serif;font-size: 1em;}
 FORM, SELECT, INPUT {display: inline;margin: 0.1em;;}
 TEXTAREA {margin: auto;display: block;width: 95%;border:1px solid #ddd;background:#ddddde;margin-top:10px;margin-bottom:10px;}
 input:focus, select:focus, textarea:focus {background: #ccc;}
-input {border:1px solid #ddd;background:#ddddde;height:28px;margin-bottom:10px;padding-left:10px;width:40%;}
+input {border:1px solid #ddd;background:#ddddde;height:28px;margin-bottom:10px;padding-left:10px;}
 FIELDSET {padding: 30px;margin: 0.5em 0em;border: 1px solid #dbdbce;margin-bottom:30px;margin-top:30px;}
 #country{width:42%;}
 LEGEND {font-weight: normal;padding: 15px;background:#f4f4f4;color:#444;text-transform:uppercase;margin-left:-31px;}
