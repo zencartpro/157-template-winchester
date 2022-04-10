@@ -2,17 +2,18 @@
 /**
  * Page Template
  *
- * @package templateSystem
+ 
  * @copyright Copyright 2003-2022 Zen Cart Development Team
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_product_reviews_default.php for Winchester 2019-09-14 15:49:16Z webchills $
+ * @version $Id: tpl_product_reviews_default.php for Winchester 2022-04-10 13:49:16Z webchills $
  */
 ?>
 <div class="centerColumn" id="reviewsDefault">
+<?php if ($messageStack->size('product_info') > 0) echo $messageStack->output('product_info'); ?>
 <?php
-  if (zen_not_null($products_image)) {
+  if (!empty($products_image)) {
   /**
    * require the image display code
    */
@@ -47,7 +48,7 @@
     <div id="button-write"><?php echo '<a href="' . zen_href_link(FILENAME_PRODUCT_REVIEWS_WRITE, zen_get_all_get_params(array('reviews_id'))) . '">' . zen_image_button(BUTTON_IMAGE_WRITE_REVIEW, BUTTON_WRITE_REVIEW_ALT) . '</a>'; ?></div>
 
 
-<br class="clearBoth" />
+<br class="clearBoth">
 
 <?php
   if ($reviews_split->number_of_rows > 0) {
@@ -56,7 +57,7 @@
 
 <div id="productReviewsDefaultListingTopNumber" class="navSplitPagesResult"><?php echo $reviews_split->display_count(TEXT_DISPLAY_NUMBER_OF_REVIEWS); ?></div>
 
-<div id="productReviewsDefaultListingTopLinks" class="navSplitPagesLinks"><?php echo TEXT_RESULT_PAGE . $reviews_split->display_links($max_display_page_links, zen_get_all_get_params(array('page', 'info', 'main_page')), $paginateAsUL); ?></div>
+<div id="productReviewsDefaultListingTopLinks" class="navSplitPagesLinks"><?php echo TEXT_RESULT_PAGE . $reviews_split->display_links($max_display_page_links, zen_get_all_get_params(array('page', 'info', 'x', 'y', 'main_page')), $paginateAsUL); ?></div>
 
 <?php
     }
@@ -67,7 +68,7 @@
 <div class="review-content">
 
 <div class="reviews-left">
-<div class="productReviewsDefaultReviewer"><?php echo sprintf(zen_date_short($reviews['dateAdded'])); ?><br /><?php echo sprintf(zen_output_string_protected($reviews['customersName'])); ?></div>
+<div class="productReviewsDefaultReviewer"><?php echo sprintf(zen_date_short($reviews['dateAdded'])); ?><br><?php echo sprintf(zen_output_string_protected($reviews['customersName'])); ?></div>
 
 <div class="rating"><?php echo zen_image(DIR_WS_TEMPLATE_IMAGES . 'stars_' . $reviews['reviewsRating'] . '.png', sprintf(TEXT_OF_5_STARS, $reviews['reviewsRating'])), sprintf(TEXT_OF_5_STARS, $reviews['reviewsRating']); ?></div>
 </div>
@@ -76,12 +77,12 @@
 <div class="productReviewsDefaultProductMainContent">
 <?php echo nl2br(zen_output_string_protected(stripslashes($reviews['reviewsText'])))?>
 </div>
-<br class="clearBoth" />
+<br class="clearBoth">
 </div>
-<br class="clearBoth" />
+<br class="clearBoth">
 </div>
 
-<br class="clearBoth" />
+<br class="clearBoth">
 
 <?php
     }
@@ -90,8 +91,8 @@
   } else {
 ?>
 
-<div id="productReviewsDefaultNoReviews" class="content"><?php echo TEXT_NO_REVIEWS . (REVIEWS_APPROVAL == '1' ? '<br />' . TEXT_APPROVAL_REQUIRED: ''); ?></div>
-<br class="clearBoth" />
+<div id="productReviewsDefaultNoReviews" class="content"><?php echo TEXT_NO_REVIEWS . (REVIEWS_APPROVAL == '1' ? '<br>' . TEXT_APPROVAL_REQUIRED: ''); ?></div>
+<br class="clearBoth">
 <?php
   }
 

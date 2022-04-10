@@ -10,11 +10,12 @@
  * <br />
  * $flag_disable_footer = true;<br />
  *
- * @package templateSystem
+ 
  * @copyright Copyright 2003-2022 Zen Cart Development Team
+ * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_footer.php for Winchester 2022-03-31 10:49:16Z webchills $
+ * @version $Id: tpl_footer.php for Winchester 2022-04-10 13:49:16Z webchills $
  */
 require(DIR_WS_MODULES . zen_get_module_directory('footer.php'));
 ?>
@@ -25,7 +26,7 @@ require(DIR_WS_MODULES . zen_get_module_directory('footer.php'));
 if (!isset($flag_disable_footer) || !$flag_disable_footer) {
 ?>
 <div id="navSupp">
-<?php if (EZPAGES_STATUS_FOOTER == '1' or (EZPAGES_STATUS_FOOTER == '2' and (strstr(EXCLUDE_ADMIN_IP_FOR_MAINTENANCE, $_SERVER['REMOTE_ADDR'])))) { ?>
+<?php if (EZPAGES_STATUS_FOOTER == '1' or (EZPAGES_STATUS_FOOTER == '2' && zen_is_whitelisted_admin_ip())) { ?>
 <ul>
 <li><?php echo '<a href="' . HTTPS_SERVER . DIR_WS_CATALOG . '">'; ?><?php echo HEADER_TITLE_CATALOG; ?></a></li>
 <li><?php require($template->get_template_dir('tpl_ezpages_bar_footer.php',DIR_WS_TEMPLATE, $current_page_base,'templates'). '/tpl_ezpages_bar_footer.php'); ?></li>

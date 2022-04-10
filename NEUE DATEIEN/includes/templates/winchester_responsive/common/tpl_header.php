@@ -15,7 +15,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_header.php for Winchester 2022-03-31 10:10:16Z webchills $
+ * @version $Id: tpl_header.php for Winchester 2022-04-10 13:46:16Z webchills $
  */
 ?>
 
@@ -157,15 +157,15 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 <!--eof-header logo and navigation display-->
 </div>
 </div>
-<!--bof-optional categories tabs navigation display-->
+<!--bof optional categories tabs navigation display-->
 <?php require($template->get_template_dir('tpl_modules_categories_tabs.php',DIR_WS_TEMPLATE, $current_page_base,'templates'). '/tpl_modules_categories_tabs.php'); ?>
-<!--eof-optional categories tabs navigation display-->
+<!--eof optional categories tabs navigation display-->
 
-<!--bof-header ezpage links-->
+<!--bof header ezpage links-->
 <?php if (EZPAGES_STATUS_HEADER == '1' or (EZPAGES_STATUS_HEADER == '2' && zen_is_whitelisted_admin_ip())) { ?>
 <?php require($template->get_template_dir('tpl_ezpages_bar_header.php',DIR_WS_TEMPLATE, $current_page_base,'templates'). '/tpl_ezpages_bar_header.php'); ?>
 <?php } ?>
-<!--eof-header ezpage links-->
+<!--eof header ezpage links-->
 </div>
 
 <?php

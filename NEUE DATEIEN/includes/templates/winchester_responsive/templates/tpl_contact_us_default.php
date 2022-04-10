@@ -2,7 +2,7 @@
 /**
  * Page Template
  * Zen Cart German Specific
- * Loaded automatically by index.php?main_page=contact_us.<br />
+ * Loaded automatically by index.php?main_page=contact_us.
  * Displays contact us page form.
  *
  * 
@@ -10,7 +10,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_contact_us_default.php for Winchester 2022-04-03 08:49:16Z webchills $
+ * @version $Id: tpl_contact_us_default.php for Winchester 2022-04-10 14:49:16Z webchills $
  */
 ?>
 <div class="centerColumn" id="contactUsDefault">

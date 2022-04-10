@@ -10,12 +10,12 @@
  * <br />
  * $flag_disable_header = true;<br />
  *
- * @package templateSystem
- * @copyright Copyright 2003-2012 Zen Cart Development Team
+ 
+ * @copyright Copyright 2003-2022 Zen Cart Development Team
+ * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
- * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
- * @version GIT: $Id: Author: Ian Wilson  Tue Aug 14 14:56:11 2012 +0100 Modified in v1.5.1 $
- * Modifies by Anne (Picaflor-Azul.com), Winchester Responsive v1.0
+ * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
+ * @version $Id: tpl_header_mobile.php 2022-04-10 14:49:16Z webchills $
  */
 ?>
 
@@ -25,13 +25,11 @@
     echo $messageStack->output('header');
   }
   if (isset($_GET['error_message']) && zen_not_null($_GET['error_message'])) {
-  echo htmlspecialchars(urldecode($_GET['error_message']), ENT_COMPAT, CHARSET, TRUE);
+    echo zen_output_string_protected(urldecode($_GET['error_message']));
   }
   if (isset($_GET['info_message']) && zen_not_null($_GET['info_message'])) {
-   echo htmlspecialchars($_GET['info_message'], ENT_COMPAT, CHARSET, TRUE);
-} else {
-
-}
+   echo zen_output_string_protected($_GET['info_message']);
+  }
 ?>
 
 
@@ -39,17 +37,7 @@
 <?php
 if (!isset($flag_disable_header) || !$flag_disable_header) {
 ?>
-<?php
-/**
- ******************************* BOF 2.1 **********************************
- */
-?>
 <div id="headerWrapper" class="<?php echo $fluidisFixed; ?>">
-<?php
-/**
- ******************************* EOF 2.1 **********************************
- */
-?>
 
 <div id="top-wrapper">
 <div class="onerow-fluid <?php echo $fluidisFixed; ?>" id="top-inner">
@@ -68,8 +56,7 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 
 <!--bof-branding display-->
 <div id="logoWrapper">
-    <div id="logo"><?php echo '<a href="' . HTTP_SERVER . DIR_WS_CATALOG . '">' . zen_image($template->get_template_dir(HEADER_LOGO_IMAGE, DIR_WS_TEMPLATE, $current_page_base,'images'). '/' . HEADER_LOGO_IMAGE, HEADER_ALT_TEXT) . '</a>'; ?>
-    </div>
+    <div id="logo"><?php echo '<a href="' . HTTP_SERVER . DIR_WS_CATALOG . '">' . zen_image($template->get_template_dir(HEADER_LOGO_IMAGE, DIR_WS_TEMPLATE, $current_page_base,'images'). '/' . HEADER_LOGO_IMAGE, HEADER_ALT_TEXT) . '</a>'; ?></div>
 <?php if (HEADER_SALES_TEXT != '' || (SHOW_BANNERS_GROUP_SET2 != '' && $banner = zen_banner_exists('dynamic', SHOW_BANNERS_GROUP_SET2))) { ?>
     <div id="taglineWrapper">
 <?php

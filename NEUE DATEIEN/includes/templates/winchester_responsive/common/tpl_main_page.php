@@ -3,45 +3,53 @@
  * Common Template - tpl_main_page.php
  * Zen Cart German Specific
  * Governs the overall layout of an entire page<br />
- * Normally consisting of a header, left side column. center column. right side column and footer<br />
- * For customizing, this file can be copied to /templates/your_template_dir/pagename<br />
- * example: to override the privacy page<br />
- * - make a directory /templates/my_template/privacy<br />
- * - copy /templates/templates_defaults/common/tpl_main_page.php to /templates/my_template/privacy/tpl_main_page.php<br />
- * <br />
- * to override the global settings and turn off columns un-comment the lines below for the correct column to turn off<br />
- * to turn off the header and/or footer uncomment the lines below<br />
- * Note: header can be disabled in the tpl_header.php<br />
- * Note: footer can be disabled in the tpl_footer.php<br />
- * <br />
- * $flag_disable_header = true;<br />
- * $flag_disable_left = true;<br />
- * $flag_disable_right = true;<br />
- * $flag_disable_footer = true;<br />
- * <br />
- * // example to not display right column on main page when Always Show Categories is OFF<br />
- * <br />
- * if ($current_page_base == 'index' and $cPath == '') {<br />
- *  $flag_disable_right = true;<br />
- * }<br />
- * <br />
- * example to not display right column on main page when Always Show Categories is ON and set to categories_id 3<br />
- * <br />
- * if ($current_page_base == 'index' and $cPath == '' or $cPath == '3') {<br />
- *  $flag_disable_right = true;<br />
- * }<br />
+ * Normally consisting of a header, left side column. center column. right side column and footer
+ * For customizing, this file can be copied to /templates/your_template_dir/pagename
+ * example: to override the privacy page
+ * - make a directory /templates/my_template/privacy
+ * - copy /templates/templates_defaults/common/tpl_main_page.php to /templates/my_template/privacy/tpl_main_page.php
+ * 
+ * to override the global settings and turn off columns un-comment the lines below for the correct column to turn off
+ * to turn off the header and/or footer uncomment the lines below
+ * Note: header can be disabled in the tpl_header.php
+ * Note: footer can be disabled in the tpl_footer.php
+ *
+ * $flag_disable_header = true;
+ * $flag_disable_left = true;
+ * $flag_disable_right = true;
+ * $flag_disable_footer = true;
+ * 
+ * // example to not display right column on main page when Always Show Categories is OFF
+ * 
+ * if ($current_page_base == 'index' and $cPath == '') {
+ *  $flag_disable_right = true;
+ * }
+ * 
+ * example to not display right column on main page when Always Show Categories is ON and set to categories_id 3
+ * 
+ * if ($current_page_base == 'index' and $cPath == '' or $cPath == '3') {
+ *  $flag_disable_right = true;
+ * }
  *
  
  * @copyright Copyright 2003-2022 Zen Cart Development Team
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_main_page.php for Winchester 2022-04-02 10:06:16Z webchills $
+ * @version $Id: tpl_main_page.php for Winchester 2022-04-10 14:32:16Z webchills $
  */
 if (!defined('IS_ADMIN_FLAG')) {
     die('Illegal Access');
 }
 
+/** bof DESIGNER TESTING ONLY: */
+// $messageStack->add('header', 'this is a sample error message', 'error');
+// $messageStack->add('header', 'this is a sample caution message', 'caution');
+// $messageStack->add('header', 'this is a sample success message', 'success');
+// $messageStack->add('main', 'this is a sample error message', 'error');
+// $messageStack->add('main', 'this is a sample caution message', 'caution');
+// $messageStack->add('main', 'this is a sample success message', 'success');
+/** eof DESIGNER TESTING ONLY */
 
 
 
@@ -166,15 +174,15 @@ if (!isset($flag_disable_left) || !$flag_disable_left) {
   }
 
 
-	if ($detect->isMobile() && !$detect->isTablet() or $detect->isMobile() && !$detect->isTablet() && $_SESSION['layoutType'] == 'mobile' or $detect->isTablet() && $_SESSION['layoutType'] == 'mobile' or $_SESSION['layoutType'] == 'mobile') {
+	if ($detect->isMobile() && !$detect->isTablet() || $detect->isMobile() && !$detect->isTablet() && $_SESSION['layoutType'] == 'mobile' || $detect->isTablet() && $_SESSION['layoutType'] == 'mobile' || $_SESSION['layoutType'] == 'mobile') {
 
     	require($template->get_template_dir('tpl_header_mobile.php',DIR_WS_TEMPLATE, $current_page_base,'common'). '/tpl_header_mobile.php');
 
-} else if ($detect->isTablet() or $detect->isMobile() && $_SESSION['layoutType'] == 'tablet' or $detect->isTablet() && $_SESSION['layoutType'] == 'tablet' or $_SESSION['layoutType'] == 'tablet'){
+} else if ($detect->isTablet() || $detect->isMobile() && $_SESSION['layoutType'] == 'tablet' || $detect->isTablet() && $_SESSION['layoutType'] == 'tablet' || $_SESSION['layoutType'] == 'tablet'){
 
 	require($template->get_template_dir('tpl_header_tablet.php',DIR_WS_TEMPLATE, $current_page_base,'common'). '/tpl_header_tablet.php');
 
-} else if ($detect->isMobile() && !$detect->isTablet() && $_SESSION['layoutType'] == 'full' or $detect->isTablet() && $_SESSION['layoutType'] == 'full' or $_SESSION['layoutType'] == 'full'){
+} else if ($detect->isMobile() && !$detect->isTablet() && $_SESSION['layoutType'] == 'full' || $detect->isTablet() && $_SESSION['layoutType'] == 'full' || $_SESSION['layoutType'] == 'full'){
 
 	require($template->get_template_dir('tpl_header.php',DIR_WS_TEMPLATE, $current_page_base,'common'). '/tpl_header.php');
 
@@ -198,16 +206,15 @@ if (COLUMN_LEFT_STATUS == 0 || (CUSTOMERS_APPROVAL == '1' and $_SESSION['custome
 if (!isset($flag_disable_left) || !$flag_disable_left) {
 ?>
 
-<div class="<?php echo $box_width_left_new; ?>">
-
+  <div class="<?php echo $box_width_left_new; ?>">
 <?php
  /**
   * prepares and displays left column sideboxes
   *
   */
+  require(DIR_WS_MODULES . zen_get_module_directory('column_left.php'));
 ?>
-<?php require(DIR_WS_MODULES . zen_get_module_directory('column_left.php')); ?>
-</div>
+  </div>
 
 <?php
 }
@@ -314,10 +321,9 @@ if (!isset($flag_disable_right) || !$flag_disable_right) {
   * prepares and displays right column sideboxes
   *
   */
+ require(DIR_WS_MODULES . zen_get_module_directory('column_right.php'));
 ?>
-
-<?php require(DIR_WS_MODULES . zen_get_module_directory('column_right.php')); ?>
-</div>
+  </div>
 <?php
 }
 ?>

@@ -7,7 +7,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_document_categories.php for Winchester 2022-04-02 15:10:16Z webchills $
+ * @version $Id: tpl_document_categories.php for Winchester 2022-04-10 15:10:16Z webchills $
  */
  
   $pointer ='';
@@ -70,7 +70,7 @@
 
       $content .= '</a></div>';
       
-//      $content .= '<br />';
+//      $content .= '<br>';
     }
     $content .= '</div>';
       

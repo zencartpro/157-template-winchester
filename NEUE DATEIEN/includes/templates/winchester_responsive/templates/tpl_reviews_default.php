@@ -2,12 +2,12 @@
 /**
  * Page Template
  *
- * @package templateSystem
+ 
  * @copyright Copyright 2003-2022 Zen Cart Development Team
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_reviews_default.php for Winchester 2019-09-14 15:49:16Z webchills $
+ * @version $Id: tpl_reviews_default.php for Winchester 2022-04-10 13:49:16Z webchills $
  */
 ?>
 <div class="centerColumn" id="reviewsDefault">
@@ -34,7 +34,7 @@
 <div class="all-reviews-left">
 <div class="smallProductImage"><?php echo '<a href="' . zen_href_link(FILENAME_PRODUCT_REVIEWS_INFO, 'products_id=' . $reviews->fields['products_id'] . '&reviews_id=' . $reviews->fields['reviews_id']) . '">' . zen_image(DIR_WS_IMAGES . $reviews->fields['products_image'], $reviews->fields['products_name'], SMALL_IMAGE_WIDTH, SMALL_IMAGE_HEIGHT) . '</a>'; ?></div>
 
-<br class="clearBoth" />
+<br class="clearBoth">
 <div class="reviews-details"><?php echo '<a href="' . zen_href_link(zen_get_info_page($reviews->fields['products_id']), 'products_id=' . $reviews->fields['products_id']) . '">' . zen_image_button(BUTTON_IMAGE_GOTO_PROD_DETAILS , BUTTON_GOTO_PROD_DETAILS_ALT) . '</a>'; ?></div>
 </div>
 
@@ -52,11 +52,11 @@
 </div> 
 
 </div>
-<br class="clearBoth" />
+<br class="clearBoth">
 
 </div>
 
-<br class="clearBoth" />
+<br class="clearBoth">
 
 <?php
       $reviews->MoveNext();
@@ -76,7 +76,7 @@
 <div id="reviewsDefaultListingBottomNumber" class="navSplitPagesResult"><?php echo $reviews_split->display_count(TEXT_DISPLAY_NUMBER_OF_REVIEWS); ?></div>
 
 <div id="reviewsDefaultListingBottomLinks" class="navSplitPagesLinks"><?php echo TEXT_RESULT_PAGE . ' ' . $reviews_split->display_links(MAX_DISPLAY_PAGE_LINKS, zen_get_all_get_params(array('page', 'info', 'main_page'))); ?></div>
-<br class="clearBoth" />
+<br class="clearBoth">
 <?php
   }
 ?>

@@ -2,7 +2,7 @@
 /**
  * Page Template
  *
- * Loaded automatically by index.php?main_page=advanced_search.<br />
+ * Loaded automatically by index.php?main_page=advanced_search.
  * Displays options fields upon which a product search will be run
  *
 
@@ -10,7 +10,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_advanced_search_default.php for Winchester 2022-04-02 15:19:16Z webchills $
+ * @version $Id: tpl_advanced_search_default.php for Winchester 2022-04-10 14:29:16Z webchills $
  */
 ?>
 <div class="centerColumn" id="advSearchDefault">
@@ -33,7 +33,7 @@
 <fieldset class="floatingBox back">
     <h3><?php echo ENTRY_CATEGORIES; ?></h3>
     <div class="floatLeft"><?php echo zen_draw_pull_down_menu('categories_id', zen_get_categories(array(array('id' => '', 'text' => TEXT_ALL_CATEGORIES)), '0' ,'', '1'), $sData['categories_id']); ?></div>
-<br />
+<br>
 <?php echo zen_draw_checkbox_field('inc_subcat', '1', $sData['inc_subcat'], 'id="inc-subcat"'); ?><label class="checkboxLabel" for="inc-subcat"><?php echo ENTRY_INCLUDE_SUBCATEGORIES; ?></label>
 <br class="clearBoth" />
 </fieldset>

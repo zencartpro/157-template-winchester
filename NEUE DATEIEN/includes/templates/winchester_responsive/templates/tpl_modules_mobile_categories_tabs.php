@@ -8,7 +8,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_modules_categories_tabs.php 2022-04-02 15:00:00Z webchills $
+ * @version $Id: tpl_modules_categories_tabs.php 2022-04-10 14:41:00Z webchills $
  */
 ?>
 
@@ -110,23 +110,9 @@ echo $menulist;
 </div>
 
 <script src="<?php echo $template->get_template_dir('jquery.slimmenu.min.js',DIR_WS_TEMPLATE, $current_page_base,'jscript') . '/jquery.slimmenu.min.js' ?>" type="text/javascript"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"></script>
+<script src="<?php echo $template->get_template_dir('jquery.easing.min.js',DIR_WS_TEMPLATE, $current_page_base,'jscript') . '/jquery.easing.min.js' ?>" type="text/javascript"></script>
 
-	<?php if ($detect->isMobile() && !$detect->isTablet() or $detect->isMobile() && !$detect->isTablet() && $_SESSION['layoutType'] == 'mobile' or $detect->isTablet() && $_SESSION['layoutType'] == 'mobile' or $_SESSION['layoutType'] == 'mobile') { ?>
-
-<script type="text/javascript">
-    $('ul.slimmenu').slimmenu(
-			      {
-			      resizeWidth: '800',
-				  collapserTitle: '',
-				  animSpeed: 'medium',
-				  easingEffect: null,
-				  indentChildren: false,
-				  childrenIndenter: '&nbsp;'
-				  });
-</script>
-
-<?php } else if ($detect->isTablet() or $detect->isMobile() && $_SESSION['layoutType'] == 'tablet' or $detect->isTablet() && $_SESSION['layoutType'] == 'tablet' or $_SESSION['layoutType'] == 'tablet'){ ?>
+<?php if ($detect->isMobile() && !$detect->isTablet() || $detect->isMobile() && !$detect->isTablet() && $_SESSION['layoutType'] == 'mobile' || $detect->isTablet() && $_SESSION['layoutType'] == 'mobile' || $_SESSION['layoutType'] == 'mobile') { ?>
 
 <script type="text/javascript">
     $('ul.slimmenu').slimmenu(
@@ -140,7 +126,21 @@ echo $menulist;
 				  });
 </script>
 
-<?php } else if ($detect->isMobile() && !$detect->isTablet() && $_SESSION['layoutType'] == 'full' or $detect->isTablet() && $_SESSION['layoutType'] == 'full'){ ?>
+<?php } else if ($detect->isTablet() or $detect->isMobile() && $_SESSION['layoutType'] == 'tablet' || $detect->isTablet() && $_SESSION['layoutType'] == 'tablet' || $_SESSION['layoutType'] == 'tablet'){ ?>
+
+<script type="text/javascript">
+    $('ul.slimmenu').slimmenu(
+			      {
+			      resizeWidth: '800',
+				  collapserTitle: '',
+				  animSpeed: 'medium',
+				  easingEffect: null,
+				  indentChildren: false,
+				  childrenIndenter: '&nbsp;'
+				  });
+</script>
+
+<?php } else if ($detect->isMobile() && !$detect->isTablet() && $_SESSION['layoutType'] == 'full' || $detect->isTablet() && $_SESSION['layoutType'] == 'full' || $_SESSION['layoutType'] == 'full' ){ ?>
 
 <script type="text/javascript">
     $('ul.slimmenu').slimmenu(

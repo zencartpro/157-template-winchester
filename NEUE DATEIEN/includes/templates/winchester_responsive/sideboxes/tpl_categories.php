@@ -70,7 +70,7 @@
   if (SHOW_CATEGORIES_BOX_SPECIALS == 'true' or SHOW_CATEGORIES_BOX_PRODUCTS_NEW == 'true' or SHOW_CATEGORIES_BOX_FEATURED_PRODUCTS == 'true' or SHOW_CATEGORIES_BOX_PRODUCTS_ALL == 'true') {
 // display a separator between categories and links
     if (SHOW_CATEGORIES_SEPARATOR_LINK == '1') {
-//      $content .= '<br />' . zen_draw_separator('pixel_silver.gif') . '<br />';
+//      $content .= '<br>' . zen_draw_separator('pixel_silver.gif') . '<br>';
 //      $content .= '<hr id="catBoxDivider" />' . "\n";
       $content .= '<br style="line-height: 0;" />' . '<hr id="catBoxDivider" />' . '<br style="line-height: 0;" />';
     }

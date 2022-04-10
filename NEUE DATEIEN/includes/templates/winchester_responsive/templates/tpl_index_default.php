@@ -2,7 +2,7 @@
 /**
  * Page Template
  *
- * Main index page<br />
+ * Main index page
  * Displays greetings, welcome text (define-page content), and various centerboxes depending on switch settings in Admin<br />
  * Centerboxes are called as necessary
  *
@@ -11,7 +11,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_index_default.php for Winchester 2022-04-07 08:49:16Z webchills $
+ * @version $Id: tpl_index_default.php for Winchester 2022-04-10 14:49:16Z webchills $
  */
 ?>
 <div class="centerColumn" id="indexDefault">
