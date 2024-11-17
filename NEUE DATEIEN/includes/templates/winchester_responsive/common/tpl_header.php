@@ -2,20 +2,20 @@
 /**
  * Common Template - tpl_header.php
  *
- * this file can be copied to /templates/your_template_dir/pagename<br />
- * example: to override the privacy page<br />
- * make a directory /templates/my_template/privacy<br />
- * copy /templates/templates_defaults/common/tpl_footer.php to /templates/my_template/privacy/tpl_header.php<br />
- * to override the global settings and turn off the footer un-comment the following line:<br />
- * <br />
- * $flag_disable_header = true;<br />
+ * this file can be copied to /templates/your_template_dir/pagename
+ * example: to override the privacy page
+ * make a directory /templates/my_template/privacy
+ * copy /templates/templates_defaults/common/tpl_footer.php to /templates/my_template/privacy/tpl_header.php
+ * to override the global settings and turn off the footer un-comment the following line:
+ * 
+ * $flag_disable_header = true;
  *
- 
+ * Zen Cart German Specific (158 code in 157)
  * @copyright Copyright 2003-2022 Zen Cart Development Team
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_header.php for Winchester 2022-04-10 13:46:16Z webchills $
+ * @version $Id: tpl_header.php for Winchester 2024-11-16 13:46:16Z webchills $
  */
 ?>
 
@@ -24,10 +24,10 @@
   if ($messageStack->size('header') > 0) {
     echo $messageStack->output('header');
   }
-  if (isset($_GET['error_message']) && zen_not_null($_GET['error_message'])) {
+  if (!empty($_GET['error_message'])) {
     echo zen_output_string_protected(urldecode($_GET['error_message']));
   }
-  if (isset($_GET['info_message']) && zen_not_null($_GET['info_message'])) {
+  if (!empty($_GET['info_message'])) {
    echo zen_output_string_protected($_GET['info_message']);
   }
 ?>
@@ -141,7 +141,7 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 <?php } } ?>
 </ul>
 </div>
-<br class="clearBoth" />
+<br class="clearBoth">
 <div class="header-cart">
     <a href="<?php echo zen_href_link(FILENAME_SHOPPING_CART, '', 'NONSSL'); ?>"><?php echo $_SESSION['cart']->count_contents();?>  - <?php echo $currencies->format($_SESSION['cart']->show_total());?></a>
    <?php if ($_SESSION['cart']->count_contents() != 0) { ?>

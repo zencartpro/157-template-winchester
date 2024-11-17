@@ -2,12 +2,12 @@
 /**
  * featured_products module - prepares content for display
  *
- * @package modules
- * @copyright Copyright 2003-2022 Zen Cart Development Team
+ * Zen Cart German Specific (158 code in 157)
+ * @copyright Copyright 2003-2024 Zen Cart Development Team
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: featured_products.php for Winchester 2019-09-14 11:02:16Z webchills $
+ * @version $Id: featured_products.php for Winchester 2024-11-16 11:02:16Z webchills $
  */
 if (!defined('IS_ADMIN_FLAG')) {
   die('Illegal Access');
@@ -116,8 +116,9 @@ if ($num_products_count > 0) {
   }
 
   if ($featured_products->RecordCount() > 0) {
-    if (isset($new_products_category_id) && $new_products_category_id !=0) {
-      $category_title = zen_get_categories_name((int)$new_products_category_id);
+  $category_title = '';
+    if (!empty($current_category_id)) {
+      $category_title = zen_get_category_name((int)$current_category_id);
       $title = '<h2 class="centerBoxHeading">' . TABLE_HEADING_FEATURED_PRODUCTS . ($category_title != '' ? ' - ' . $category_title : '') . '</h2>';
     } else {
       $title = '<h2 class="centerBoxHeading">' . TABLE_HEADING_FEATURED_PRODUCTS . '</h2>';

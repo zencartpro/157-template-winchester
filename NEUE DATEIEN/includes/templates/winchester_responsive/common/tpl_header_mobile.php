@@ -11,11 +11,11 @@
  * $flag_disable_header = true;<br />
  *
  
- * @copyright Copyright 2003-2022 Zen Cart Development Team
+ * @copyright Copyright 2003-2024 Zen Cart Development Team
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_header_mobile.php 2022-04-10 14:49:16Z webchills $
+ * @version $Id: tpl_header_mobile.php 2024-11-16 14:49:16Z webchills $
  */
 ?>
 
@@ -24,10 +24,10 @@
   if ($messageStack->size('header') > 0) {
     echo $messageStack->output('header');
   }
-  if (isset($_GET['error_message']) && zen_not_null($_GET['error_message'])) {
+  if (!empty($_GET['error_message'])) {
     echo zen_output_string_protected(urldecode($_GET['error_message']));
   }
-  if (isset($_GET['info_message']) && zen_not_null($_GET['info_message'])) {
+  if (!empty($_GET['info_message'])) {
    echo zen_output_string_protected($_GET['info_message']);
   }
 ?>

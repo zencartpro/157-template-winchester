@@ -2,7 +2,7 @@
 /**
  * Common Template - tpl_main_page.php
  * Zen Cart German Specific
- * Governs the overall layout of an entire page<br />
+ * Governs the overall layout of an entire page
  * Normally consisting of a header, left side column. center column. right side column and footer
  * For customizing, this file can be copied to /templates/your_template_dir/pagename
  * example: to override the privacy page
@@ -36,20 +36,12 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_main_page.php for Winchester 2022-04-10 14:32:16Z webchills $
+ * @version $Id: tpl_main_page.php for Winchester 2024-11-17 14:32:16Z webchills $
  */
 if (!defined('IS_ADMIN_FLAG')) {
     die('Illegal Access');
 }
 
-/** bof DESIGNER TESTING ONLY: */
-// $messageStack->add('header', 'this is a sample error message', 'error');
-// $messageStack->add('header', 'this is a sample caution message', 'caution');
-// $messageStack->add('header', 'this is a sample success message', 'success');
-// $messageStack->add('main', 'this is a sample error message', 'error');
-// $messageStack->add('main', 'this is a sample caution message', 'caution');
-// $messageStack->add('main', 'this is a sample success message', 'success');
-/** eof DESIGNER TESTING ONLY */
 
 
 
@@ -199,7 +191,7 @@ if (!isset($flag_disable_left) || !$flag_disable_left) {
 <div class="onerow-fluid <?php echo $fluidisFixed; ?>">
 
 <?php
-if (COLUMN_LEFT_STATUS == 0 || (CUSTOMERS_APPROVAL == '1' and $_SESSION['customer_id'] == '') || (CUSTOMERS_APPROVAL_AUTHORIZATION == 1 && CUSTOMERS_AUTHORIZATION_COLUMN_LEFT_OFF == 'true' and ($_SESSION['customers_authorization'] != 0 or $_SESSION['customer_id'] == ''))) {
+if (COLUMN_LEFT_STATUS == 0 || (CUSTOMERS_APPROVAL == '1' and !zen_is_logged_in()) || (CUSTOMERS_APPROVAL_AUTHORIZATION == 1 && CUSTOMERS_AUTHORIZATION_COLUMN_LEFT_OFF == 'true' and ($_SESSION['customers_authorization'] != 0 or !zen_is_logged_in()))) {
   // global disable of column_left
   $flag_disable_left = true;
 }
@@ -212,8 +204,8 @@ if (!isset($flag_disable_left) || !$flag_disable_left) {
   * prepares and displays left column sideboxes
   *
   */
-  require(DIR_WS_MODULES . zen_get_module_directory('column_left.php'));
 ?>
+<?php require(DIR_WS_MODULES . zen_get_module_directory('column_left.php')); ?>
   </div>
 
 <?php
@@ -278,7 +270,6 @@ if (!isset($flag_disable_left) || !$flag_disable_left) {
 </td>
 
 <?php
-//if (COLUMN_RIGHT_STATUS == 0 || (CUSTOMERS_APPROVAL == '1' and $_SESSION['customer_id'] == '') || (CUSTOMERS_APPROVAL_AUTHORIZATION == 1 && CUSTOMERS_AUTHORIZATION_COLUMN_RIGHT_OFF == 'true' && $_SESSION['customers_authorization'] != 0)) {
 if (COLUMN_RIGHT_STATUS == 0 || (CUSTOMERS_APPROVAL == '1' and !zen_is_logged_in()) || (CUSTOMERS_APPROVAL_AUTHORIZATION == 1 && CUSTOMERS_AUTHORIZATION_COLUMN_RIGHT_OFF == 'true' and ($_SESSION['customers_authorization'] != 0 or !zen_is_logged_in()))) {
   // global disable of column_right
   $flag_disable_right = true;
@@ -306,8 +297,7 @@ if (!isset($flag_disable_right) || !$flag_disable_right) {
 
 
 <?php
-//if (COLUMN_RIGHT_STATUS == 0 || (CUSTOMERS_APPROVAL == '1' and $_SESSION['customer_id'] == '') || (CUSTOMERS_APPROVAL_AUTHORIZATION == 1 && CUSTOMERS_AUTHORIZATION_COLUMN_RIGHT_OFF == 'true' && $_SESSION['customers_authorization'] != 0)) {
-if (COLUMN_RIGHT_STATUS == 0 || (CUSTOMERS_APPROVAL == '1' and $_SESSION['customer_id'] == '') || (CUSTOMERS_APPROVAL_AUTHORIZATION == 1 && CUSTOMERS_AUTHORIZATION_COLUMN_RIGHT_OFF == 'true' and ($_SESSION['customers_authorization'] != 0 or $_SESSION['customer_id'] == ''))) {
+if (COLUMN_RIGHT_STATUS == 0 || (CUSTOMERS_APPROVAL == '1' and !zen_is_logged_in()) || (CUSTOMERS_APPROVAL_AUTHORIZATION == 1 && CUSTOMERS_AUTHORIZATION_COLUMN_RIGHT_OFF == 'true' and ($_SESSION['customers_authorization'] != 0 or !zen_is_logged_in()))) {
   // global disable of column_right
   $flag_disable_right = true;
 }
@@ -321,15 +311,16 @@ if (!isset($flag_disable_right) || !$flag_disable_right) {
   * prepares and displays right column sideboxes
   *
   */
- require(DIR_WS_MODULES . zen_get_module_directory('column_right.php'));
 ?>
-  </div>
+
+<?php require(DIR_WS_MODULES . zen_get_module_directory('column_right.php')); ?>
+</div>
 <?php
 }
 ?>
 </div>
 <?php } ?>
-
+<br class="clearBoth" /> 
 <?php
  /**
   * prepares and displays footer output

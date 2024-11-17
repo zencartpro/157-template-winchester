@@ -2,11 +2,12 @@
 /**
  * reviews header_php.php 
  *
- * @package page
- * @copyright Copyright 2003-2019 Zen Cart Development Team
+ * Zen Cart German Specific (158 code in 157)
+ * @copyright Copyright 2003-2024 Zen Cart Development Team
+ * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
- * @license http://www.zen-cart-pro.at/license/2_0.txt GNU Public License V2.0
- * @version $Id: header_php.php for Winchester 2019-04-24 12:49:16Z webchills $
+ * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
+ * @version $Id: header_php.php for Winchester 2024-11-08 16:08:16Z webchills $
  */
 
 require(DIR_WS_MODULES . zen_get_module_directory('require_languages.php'));
@@ -25,7 +26,7 @@ $reviews_query_raw = "SELECT r.reviews_id, left(rd.reviews_text, 5000) AS review
                       ORDER BY r.reviews_id DESC";
 
 $reviews_query_raw = $db->bindVars($reviews_query_raw, ':languageID', $_SESSION['languages_id'], 'integer');
-$reviews_query_raw = $db->bindVars($reviews_query_raw, ':languageID', $_SESSION['languages_id'], 'integer');
+
 $reviews_split = new splitPageResults($reviews_query_raw, MAX_DISPLAY_NEW_REVIEWS);
 
 $breadcrumb->add(NAVBAR_TITLE);

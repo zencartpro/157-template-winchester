@@ -3,11 +3,12 @@
  * ezpages sidebox - used to display links to EZ-Pages content
  *
  * @package templateSystem
- * @copyright Copyright 2003-2019 Zen Cart Development Team
+ * @copyright Copyright 2003-2024 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: ezpages_drop_menu.php 2019-08-20 15:27:03Z webchills $
+ * @version $Id: ezpages_drop_menu.php 2024-11-16 15:27:03Z webchills $
  */
+ $show_ezpages_header = false;
  $ezpages_header_status = $db->Execute('select layout_box_name from ' . TABLE_LAYOUT_BOXES . " where layout_box_status_single = 1 and layout_template ='" . $template_dir . "' and layout_box_name='ezpages_drop_menu.php'");
 
   if ($ezpages_header_status->RecordCount() != 0) {

@@ -11,7 +11,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_index_categories.php for Winchester 2022-04-05 15:37:16Z webchills $
+ * @version $Id: tpl_index_categories.php for Winchester 2024-11-16 15:37:16Z webchills $
  */
 ?>
 <div class="centerColumn" id="indexCategories">
@@ -32,7 +32,7 @@
 </div>
 <?php } ?>
 
-<?php } else { //show_welcome ?>
+<?php } else { ?>
 <h1 id="indexCategoriesHeading"><?php echo $current_categories_name; ?></h1>
 <?php } ?>
 
@@ -126,8 +126,7 @@ while (!$show_display_category->EOF) {
 <?php } ?>
 
 <?php if ($show_display_category->fields['configuration_key'] == 'SHOW_PRODUCT_INFO_CATEGORY_UPCOMING') { ?>
-<?php include(DIR_WS_MODULES . zen_get_module_directory(FILENAME_UPCOMING_PRODUCTS)); ?>
-<?php } ?>
+<?php include(DIR_WS_MODULES . zen_get_module_directory(FILENAME_UPCOMING_PRODUCTS)); ?><?php } ?>
 <?php
   $show_display_category->MoveNext();
 } // !EOF

@@ -2,12 +2,12 @@
 /**
  * specials_index module
  *
- * @package modules
- * @copyright Copyright 2003-2022 Zen Cart Development Team
+ * Zen Cart German Specific (158 code in 157)
+ * @copyright Copyright 2003-2024 Zen Cart Development Team
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: specials_index.php for Winchester 2019-09-04 16:07:16Z webchills $
+ * @version $Id: specials_index.php for Winchester 2024-11 16:07:16Z webchills $
  */
 if (!defined('IS_ADMIN_FLAG')) {
   die('Illegal Access');
@@ -85,7 +85,7 @@ if ($num_products_count > 0) {
   }
 
   if ($specials_index->RecordCount() > 0) {
-    $title = '<h2 class="centerBoxHeading">' . sprintf(TABLE_HEADING_SPECIALS_INDEX, strftime('%B')) . '</h2>';
+    $title = '<h2 class="centerBoxHeading">' . sprintf(TABLE_HEADING_SPECIALS_INDEX, $zcDate->output('%B')) . '</h2>';
     $zc_show_specials = true;
   }
 }

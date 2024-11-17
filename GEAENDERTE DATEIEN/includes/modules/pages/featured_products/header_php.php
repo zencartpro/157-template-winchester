@@ -2,11 +2,11 @@
 /**
  * Featured Products
  * 
- * @copyright Copyright 2003-2022 Zen Cart Development Team
+ * @copyright Copyright 2003-2024 Zen Cart Development Team
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: header_php.php for Winchester 2022-04-03 08:34:16Z webchills $
+ * @version $Id: header_php.php for Winchester 2024-11-16 08:34:16Z webchills $
  */
 // This should be first line of the script:
 $zco_notifier->notify('NOTIFY_HEADER_START_FEATURED_PRODUCTS');
@@ -54,4 +54,3 @@ $define_list = array('PRODUCT_LIST_MODEL' => PRODUCT_LIST_MODEL,
   {
     if ($value > 0) $column_list[] = $key;
   }
-?>

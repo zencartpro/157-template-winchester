@@ -1,11 +1,11 @@
 <?php
 /**
- * Zen Cart German Specific
- * @copyright Copyright 2003-2022 Zen Cart Development Team
+ * Zen Cart German Specific (158 code in 157 / zencartpro adaptations)
+ * @copyright Copyright 2003-2024 Zen Cart Development Team
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: button_names.php for Winchester 2022-04-03 09:05:14Z webchills $
+ * @version $Id: button_names.php for Winchester 2024-11-16 09:05:14Z webchills $
  */
 
 
@@ -39,12 +39,15 @@ define('BUTTON_IMAGE_REDEEM', 'button_redeem.gif');
 define('BUTTON_IMAGE_RETURN_TO_PROD_LIST', 'button_return_to_product_list.gif');
 define('BUTTON_IMAGE_REVIEWS', 'button_reviews.gif');
 define('BUTTON_IMAGE_SEARCH', 'button_search.gif');
+define('BUTTON_IMAGE_SEARCH_HEADER', 'button_search_header.gif');
 define('BUTTON_IMAGE_SEND', 'button_send.gif');
 define('BUTTON_IMAGE_SEND_A_GIFT_CERT', 'button_send_a_gift_cert.gif');
 define('BUTTON_IMAGE_SEND_ANOTHER', 'button_send_another.gif');
 define('BUTTON_IMAGE_SHIPPING_ESTIMATOR', 'button_shipping_estimator.gif');
 define('BUTTON_IMAGE_SOLD_OUT','button_sold_out.gif');
 define('BUTTON_IMAGE_SOLD_OUT_SMALL','button_sold_out_sm.gif');
+define('BUTTON_IMAGE_DROPSHIPPING','button_sold_out.gif');
+define('BUTTON_IMAGE_DROPSHIPPING_SMALL','button_sold_out_sm.gif');
 define('BUTTON_IMAGE_SUBMIT', 'button_submit.gif');
 define('BUTTON_IMAGE_UNSUBSCRIBE', 'button_unsubscribe.gif');
 define('BUTTON_IMAGE_UPDATE', 'button_update.gif');
@@ -66,9 +69,9 @@ define('BUTTON_CREATE_ACCOUNT_ALT', 'Neues Konto erstellen');
 define('BUTTON_LOG_OFF_ALT', 'Abmelden');
 define('BUTTON_ADD_TO_CART_ALT', 'In den Warenkorb');
 define('BUTTON_ADD_ADDRESS_ALT', 'Adresse hinzufügen');
-define('BUTTON_ADD_PRODUCTS_TO_CART_ALT', 'Ausgewählte Artikel in den Warenkorb');
+define('BUTTON_ADD_PRODUCTS_TO_CART_ALT', 'Ausgewählte in den Warenkorb');
 define('BUTTON_BACK_ALT', 'Zurück');
-define('BUTTON_BUY_NOW_ALT', 'Jetzt kaufen');
+define('BUTTON_BUY_NOW_ALT', 'Jetzt kaufen <i class="icon-circle-arrow-right white"></i>');
 define('BUTTON_CANCEL_ALT', 'Abbrechen');
 define('BUTTON_CHANGE_ADDRESS_ALT', 'Adresse ändern');
 define('BUTTON_CHECKOUT_ALT', 'Zur Kasse');
@@ -80,6 +83,8 @@ define('BUTTON_CONTINUE_SHOPPING_ALT', 'Weiter einkaufen');
 define('BUTTON_DELETE_ALT', 'Löschen');
 define('BUTTON_DELETE_SMALL_ALT', 'Löschen');
 define('BUTTON_DOWNLOAD_ALT', 'Download');
+define('BUTTON_DROPSHIPPING_ALT', 'Sonderbestellung');
+define('BUTTON_DROPSHIPPING_SMALL_ALT', 'Sonderbestellung');
 define('BUTTON_EDIT_SMALL_ALT', 'Bearbeiten');
 define('BUTTON_IN_CART_ALT', 'In den Warenkorb ');
 define('BUTTON_LOGIN_ALT', 'Anmelden');
@@ -93,11 +98,12 @@ define('BUTTON_REVIEWS_ALT', 'Bewertungen');
 define('BUTTON_SEARCH_ALT', 'Suche');
 define('BUTTON_SEND_ALT', 'Jetzt senden');
 define('BUTTON_SEND_ANOTHER_ALT', 'Gutschein versenden');
-define('BUTTON_SEND_A_GIFT_CERT_ALT', 'Einen Gutschein senden');
+define('BUTTON_SEND_A_GIFT_CERT_ALT', 'Gutschein senden');
 define('BUTTON_SHIPPING_ESTIMATOR_ALT', 'Voraussichtliche Versandkosten');
 define('BUTTON_SOLD_OUT_ALT', 'Ausverkauft');
 define('BUTTON_SOLD_OUT_SMALL_ALT', 'Ausverkauft');
 define('BUTTON_SUBMIT_ALT', 'Absenden');
+define('BUTTON_SUBMIT_GO_ALT', 'Absenden');
 define('BUTTON_UNSUBSCRIBE', 'Abbestellen');
 define('BUTTON_UPDATE_ALT', 'Aktualisieren');
 define('BUTTON_VIEW_SMALL_ALT', 'Anzeigen');

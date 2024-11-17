@@ -5,7 +5,7 @@
  * @copyright Portions Copyright 2003 osCommerce
  * Zen Cart German Version - www.zen-cart-pro.at
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: flexible_footer_menu.php 2022-04-03 08:44:51Z webchills $
+ * @version $Id: flexible_footer_menu.php 2024-11-17 16:44:51Z webchills $
  */
 require('includes/application_top.php');
 $languages = zen_get_languages(); // modification for multi-language support
@@ -131,28 +131,9 @@ if (zen_not_null($action)) {
 <!doctype html>
 <html <?php echo HTML_PARAMS; ?>>
   <head>
-    <meta charset="<?php echo CHARSET; ?>">
-    <title><?php echo TITLE; ?></title>
-    <link rel="stylesheet" href="includes/stylesheet.css">
-    <link rel="stylesheet" href="includes/cssjsmenuhover.css" media="all" id="hoverJS">
-    <script src="includes/menu.js"></script>
-    <script src="includes/general.js"></script>
-    <script>
-      function init() {
-          cssjsmenu('navbar');
-          if (document.getElementById) {
-              var kill = document.getElementById('hoverJS');
-              kill.disabled = true;
-          }
-      }
-    </script>
-    <?php
-    if ($editor_handler != '') {
-      include ($editor_handler);
-    }
-    ?>
+    <?php require DIR_WS_INCLUDES . 'admin_html_head.php'; ?>  
   </head>
-  <body onLoad="init()">
+  <body>
       <?php require(DIR_WS_INCLUDES . 'header.php'); ?>
     <!-- header_eof //-->
     <!-- body //-->

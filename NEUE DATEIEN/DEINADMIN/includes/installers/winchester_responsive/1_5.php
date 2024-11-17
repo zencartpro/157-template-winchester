@@ -1,9 +1,10 @@
 <?php
-/* Winchester Responsive Template 2.1.0 Multilanguage Installer
- * @copyright Copyright 2003-2022 Zen Cart Development Team
- * Zen Cart German Version - www.zen-cart-pro.at
+/**
+ * @package Winchester Responsive
+ * @copyright Copyright 2003-2024 Zen Cart Development Team
+ * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: 1_5.php 2022-04-03 08:27:14 webchills $
+ * @version $Id: 1_5.php 2024-11-17 06:27:14 webchills $
  */
  
  
@@ -198,7 +199,7 @@ $db->Execute("INSERT IGNORE INTO " . TABLE_FLEXIBLE_FOOTER_MENU . " (page_id, la
 (13, 1, 'Shipping and Returns', 'index.php?main_page=shippinginfo', '', '', '', 1, 22, 2, now(), now()),
 (14, 1, 'My Account', 'index.php?main_page=account', '', '', '', 1, 25, 2, now(), now()),
 (15, 1, '', '', 'Share and Connect', '', '', 1, 4, 4, now(), now()),
-(16, 1, '', '', '', '', '<a href=\"https://www.facebook.com/#\" target=\"_blank\"><i class=\"fa-brands fa-facebook\"></i></a><a href=\"https://twitter.com/#\" target=\"_blank\"><i class=\"fa-brands fa-twitter\"></i></a><a href=\"http://www.pinterest.com/#\" target=\"_blank\"><i class=\"fa-brands fa-pinterest\"></i></a><a href=\"https://www.youtube.com/#\" target=\"_blank\"><i class=\"fa-brands fa-youtube\"></i></a><a href=\"#\" target=\"_blank\"><i class=\"fa-brands fa-instagram\"></i></a>', 1, 41, 4, now(), now()),
+(16, 1, '', '', '', '', '<a href=\"https://www.facebook.com/#\" target=\"_blank\"><i class=\"fa-brands fa-facebook\"></i></a><a href=\"https://bsky.app\" target=\"_blank\"><i class=\"fa-brands fa-bluesky\"></i></a><a href=\"http://www.pinterest.com/#\" target=\"_blank\"><i class=\"fa-brands fa-pinterest\"></i></a><a href=\"https://www.youtube.com/#\" target=\"_blank\"><i class=\"fa-brands fa-youtube\"></i></a><a href=\"#\" target=\"_blank\"><i class=\"fa-brands fa-instagram\"></i></a>', 1, 41, 4, NOW(), NOW()),
 (17, 1, '', 'index.php?main_page=impressum', NULL, '', NULL, 1, 15, 1, now(), now()),
 (18, 1, '', 'index.php?main_page=privacy', NULL, '', NULL, 1, 16, 1, NOW(), NOW()),
 (19, 1, '', 'index.php?main_page=conditions', NULL, '', NULL, 1, 17, 1, NOW(), NOW());");
@@ -247,8 +248,8 @@ $db->Execute("INSERT IGNORE INTO " . TABLE_FLEXIBLE_FOOTER_MENU_CONTENT . " (pag
 (14, 1, 'My Account', '', ''),
 (15, 43, '', 'Social Media', ''),
 (15, 1, '', 'Social Media', ''),
-(16, 1,  '', '', '<a href=\"https://www.facebook.com/#\" target=\"_blank\"><i class=\"fa-brands fa-facebook\"></i></a><a href=\"https://twitter.com/#\" target=\"_blank\"><i class=\"fa-brands fa-twitter\"></i></a><a href=\"http://www.pinterest.com/#\" target=\"_blank\"><i class=\"fa-brands fa-pinterest\"></i></a><a href=\"https://www.youtube.com/#\" target=\"_blank\"><i class=\"fa-brands fa-youtube\"></i></a><a href=\"#\" target=\"_blank\"><i class=\"fab fa-instagram\"></i></a>'),
-(16, 43,  '', '', '<a href=\"https://www.facebook.com/#\" target=\"_blank\"><i class=\"fa-brands fa-facebook\"></i></a><a href=\"https://twitter.com/#\" target=\"_blank\"><i class=\"fa-brands fa-twitter\"></i></a><a href=\"http://www.pinterest.com/#\" target=\"_blank\"><i class=\"fa-brands fa-pinterest\"></i></a><a href=\"https://www.youtube.com/#\" target=\"_blank\"><i class=\"fa-brands fa-youtube\"></i></a><a href=\"#\" target=\"_blank\"><i class=\"fab fa-instagram\"></i></a>'),
+(16, 1,  '', '', '<a href=\"https://www.facebook.com/#\" target=\"_blank\"><i class=\"fa-brands fa-facebook\"></i></a><a href=\"https://bsky.app/profile/#\" target=\"_blank\"><i class=\"fa-brands fa-bluesky\"></i></a><a href=\"http://www.pinterest.com/#\" target=\"_blank\"><i class=\"fa-brands fa-pinterest\"></i></a><a href=\"https://www.youtube.com/#\" target=\"_blank\"><i class=\"fa-brands fa-youtube\"></i></a><a href=\"#\" target=\"_blank\"><i class=\"fa-brands fa-instagram\"></i></a>'),
+(16, 43,  '', '', '<a href=\"https://www.facebook.com/#\" target=\"_blank\"><i class=\"fa-brands fa-facebook\"></i></a><a href=\"https://bsky.app/profile/#\" target=\"_blank\"><i class=\"fa-brands fa-bluesky\"></i></a><a href=\"http://www.pinterest.com/#\" target=\"_blank\"><i class=\"fa-brands fa-pinterest\"></i></a><a href=\"https://www.youtube.com/#\" target=\"_blank\"><i class=\"fa-brands fa-youtube\"></i></a><a href=\"#\" target=\"_blank\"><i class=\"fa-brands fa-instagram\"></i></a>'),
 (17, 43, 'Impressum', '', ''),
 (17, 1, 'Imprint', '', ''),
 (18, 43, 'Datenschutz', '', ''),

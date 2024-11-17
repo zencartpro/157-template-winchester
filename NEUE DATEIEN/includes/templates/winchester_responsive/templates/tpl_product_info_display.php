@@ -1,15 +1,15 @@
 <?php
 /**
  * Page Template
- * Zen Cart German Specific
+ * Zen Cart German Specific (zencartpro adaptations)
  * Loaded automatically by index.php?main_page=product_info.
  * Displays details of a typical product
  *
- * @copyright Copyright 2003-2022 Zen Cart Development Team
+ * @copyright Copyright 2003-2024 Zen Cart Development Team
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_product_info_display.php for Winchester 2022-04-10 13:50:24Z webchills $
+ * @version $Id: tpl_product_info_display.php for Winchester 2024-11-16 13:50:24Z webchills $
  */
  //require(DIR_WS_MODULES . '/debug_blocks/product_info_prices.php');
 ?>
@@ -50,16 +50,14 @@ require($template->get_template_dir('/tpl_products_next_previous.php',DIR_WS_TEM
 <div id="pi-left">
 <!--bof Main Product Image -->
 <?php
-  if (!empty($products_image)) {
+  if (!empty($products_image) || !empty($enable_additional_images_without_main_image)) {
   ?>
 <?php
 /**
  * display the main product image
  */
    require($template->get_template_dir('/tpl_modules_main_product_image.php',DIR_WS_TEMPLATE, $current_page_base,'templates'). '/tpl_modules_main_product_image.php'); ?>
-<?php
-  }
-?>
+
 <!--eof Main Product Image-->
 
 <br class="clearBoth">
@@ -74,7 +72,9 @@ require($template->get_template_dir('/tpl_products_next_previous.php',DIR_WS_TEM
 
 
 </div>
-
+<?php
+  }
+?>
 <div id="pi-right">
 <!--bof Product Price block -->
 <h2 id="productPrices" class="productGeneral">
@@ -123,7 +123,7 @@ require($template->get_template_dir('/tpl_products_next_previous.php',DIR_WS_TEM
 ?>
 <!--eof Quantity Discounts table -->
 
-
+</div>
 <!--bof Add to Cart Box -->
 <?php
 if (CUSTOMERS_APPROVAL == 3 and TEXT_LOGIN_FOR_PRICE_BUTTON_REPLACE_SHOWROOM == '') {
@@ -277,7 +277,7 @@ if ($flag_show_ask_a_question) {
 <?php } ?>
 <!--eof Prev/Next bottom position -->
 
-<br class="clearBoth">
+<br class="clearBoth" />
 
 <!--bof Product date added/available-->
 <?php
