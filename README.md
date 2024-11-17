@@ -1,6 +1,6 @@
 # 157-template-winchester
 Responsives Template Winchester für Zen Cart 1.5.7 deutsch
-Anpassung des Templates Winchester Responsive von picaflor-azul für die deutsche Zen Cart Version 1.5.7
+* Anpassung des Templates Winchester Responsive von picaflor-azul für die deutsche Zen Cart Version 1.5.7
 
 Hinweis: 
 Freigegebene getestete Versionen für den Einsatz in Livesystemen ausschließlich unter Releases herunterladen:
