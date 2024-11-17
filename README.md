@@ -24,4 +24,4 @@ Demo des Templates:
 * Anleitung aktualisiert
 * Uninstaller hinzugefügt
 * Twitter durch Bluesky ersetzt
-* Font auf Open Sans geändert
+* Font auf Ubuntu geändert, alternativ Arimo oder Open Sans

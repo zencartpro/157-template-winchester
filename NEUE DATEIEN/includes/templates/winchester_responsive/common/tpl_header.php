@@ -60,9 +60,7 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 <!--bof-branding display-->
 <div id="logoWrapper">
 <!-- bof languages header display -->
-<div id="navLanguagesWrapper" class="forward">
-<?php require(DIR_WS_MODULES . zen_get_module_directory ('header_languages.php'));?>
-</div>
+
 <!-- eof  languages header display -->
 
     <div id="logo"><?php echo '<a href="' . HTTP_SERVER . DIR_WS_CATALOG . '">' . zen_image($template->get_template_dir(HEADER_LOGO_IMAGE, DIR_WS_TEMPLATE, $current_page_base,'images'). '/' . HEADER_LOGO_IMAGE, HEADER_ALT_TEXT) . '</a>'; ?>
