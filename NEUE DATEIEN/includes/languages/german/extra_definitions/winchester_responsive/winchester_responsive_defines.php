@@ -15,8 +15,7 @@ define('TITLE_CONTACT','Kontakt');
 /*bof customer service*/
 define('HEADER_TITLE_CUSTOMER_SERVICE','Kundenservice');
 /*bof top specials*/
-define('HEADER_TITLE_SPECIALS','<a href="index.php?main_page=specials">Sonderangebote</a>');
-define('HEADER_TITLE_TOP_TEXT','Versandkostenfreie Lieferung ab 50 Euro!');
+define('HEADER_TITLE_TOP_TEXT','<a href="index.php?main_page=shippinginfo">Versandkostenfreie Lieferung ab 50 Euro!</a> *** Minus 10% mit Rabattcode BLACK FRIDAY');
 /*bof column grid*/
 define('TABLE_HEADING_IMAGE','Bild');
 define('TABLE_HEADING_PRICE','Preis');

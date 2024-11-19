@@ -44,16 +44,14 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 <div id="top-wrapper">
 <div class="onerow-fluid <?php echo $fluidisFixed; ?>" id="top-inner">
 <div id="top-inner-wrapper">
-    <div class="top-specials"><?php echo HEADER_TITLE_SPECIALS; ?></div>
-     <?php echo HEADER_TITLE_TOP_TEXT; ?>
+    <div class="top-specials"><?php echo HEADER_TITLE_TOP_TEXT; ?></div>
+     
 </div>
 </div>
 </div>
 <?php } ?>
 
-<!--bof-search display-->
-<div id="navMainSearchSection"><?php require(DIR_WS_MODULES . 'sideboxes/search_header.php'); ?></div>
-<!--eof-search display-->
+
 
 <div id="top-middle">
 <div class="onerow-fluid <?php echo $fluidisFixed; ?>">
@@ -80,6 +78,11 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
    <?php if ($_SESSION['cart']->count_contents() != 0) { ?>
 <?php }?>
 </div>
+<!-- bof languages header display -->
+<div id="navLanguagesWrapper" class="forward">
+<?php require(DIR_WS_MODULES . zen_get_module_directory ('header_languages.php'));?>
+</div>
+<!-- eof  languages header display -->
 <!--eof-navigation display-->
 
 
@@ -89,7 +92,16 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 
 <!--bof-branding display-->
 <div id="logoWrapper">
-
+	<!--bof-search display-->
+	<div id="searchSection">
+<div id="navMainSearchSection"><?php require(DIR_WS_MODULES . 'sideboxes/search_header.php'); ?></div>
+</div>
+<!--eof-search display-->
+	<div id="megamenu">
+<!--bof handheld menu display-->
+<?php require($template->get_template_dir('tpl_modules_mobile_categories_tabs.php',DIR_WS_TEMPLATE, $current_page_base,'templates'). '/tpl_modules_mobile_categories_tabs.php'); ?>
+<!--eof handheld menu display-->
+</div>
 <!-- bof languages header display -->
 
 <!-- eof  languages header display -->
@@ -123,9 +135,7 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 </div>
 
 
-<!--bof handheld menu display-->
-<?php require($template->get_template_dir('tpl_modules_mobile_categories_tabs.php',DIR_WS_TEMPLATE, $current_page_base,'templates'). '/tpl_modules_mobile_categories_tabs.php'); ?>
-<!--eof handheld menu display-->
+
 
 
 <?php if ($detect->isMobile() && !$detect->isTablet() or $detect->isMobile() && !$detect->isTablet() && $_SESSION['layoutType'] == 'mobile' or $detect->isTablet() && $_SESSION['layoutType'] == 'mobile' or $_SESSION['layoutType'] == 'mobile') { ?>

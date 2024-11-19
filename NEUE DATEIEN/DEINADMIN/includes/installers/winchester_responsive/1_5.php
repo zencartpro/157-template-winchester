@@ -4,7 +4,7 @@
  * @copyright Copyright 2003-2024 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: 1_5.php 2024-11-17 06:27:14 webchills $
+ * @version $Id: 1_5.php 2024-11-19 06:27:14 webchills $
  */
  
  
@@ -18,7 +18,7 @@ if ($configuration->RecordCount() > 0) {
 }
 
 // Layout Settings
-$db->Execute("UPDATE " . TABLE_CONFIGURATION . " SET configuration_value = '&nbsp;<i class=\"fas fa-angle-right\"></i>&nbsp;' WHERE configuration_key = 'BREAD_CRUMBS_SEPARATOR' LIMIT 1;");
+$db->Execute("UPDATE " . TABLE_CONFIGURATION . " SET configuration_value = '&nbsp;&nbsp;<i class=\"fa-solid fa-caret-right fa-xs\"></i>&nbsp;&nbsp;' WHERE configuration_key = 'BREAD_CRUMBS_SEPARATOR' LIMIT 1;");
 $db->Execute("UPDATE " . TABLE_CONFIGURATION . " SET configuration_value = 2 WHERE configuration_key = 'DEFINE_BREADCRUMB_STATUS' LIMIT 1;");
 $db->Execute("UPDATE " . TABLE_CONFIGURATION . " SET configuration_value = '250px' WHERE configuration_key = 'COLUMN_WIDTH_LEFT' LIMIT 1;");
 $db->Execute("UPDATE " . TABLE_CONFIGURATION . " SET configuration_value = 0 WHERE configuration_key = 'COLUMN_RIGHT_STATUS' LIMIT 1;");
