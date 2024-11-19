@@ -26,15 +26,26 @@ line-height:22px;
 }
 
 #siteinfoLegalSection{
+	width:100%;
+	height:30px;
+	background:#FFFFFF !important;
+	color: #171717;
+	font-weight:300;
+	
+}
+
+#siteinfoLegal{
 	float:left;
 	text-align:left;
-	width:50%;
+	margin-left:8px;
+	padding-top:2px;
 }
 
 #footer-bottom{
 	float:right;
 	text-align:right;
-	width:50%;
+	padding-top:2px;
+	margin-right:8px;
 }
 
 /*bof basic elements*/
@@ -145,7 +156,7 @@ table{width:100%;}
 .important {font-weight:bold;}
 .gvBal {float:right;}
 .centerColumn, #bannerOne, #bannerTwo,  #bannerThree,  #bannerFour,  #bannerFive,  #bannerSix {padding:0.8em;}
-.smallText, #siteinfoLegal, #siteinfoCredits, #siteinfoStatus, #siteinfoIP {font-size: 0.9em;}
+.smallText, #siteinfoCredits, #siteinfoStatus, #siteinfoIP {font-size: 0.9em;}
 
 /*bof shopping cart display*/
 #cartContentsDisplay {border:1px solid #dfdfd7;}
@@ -389,9 +400,13 @@ ul.slimmenu.collapsed li ul.level2 li ul, ul.slimmenu1.collapsed li ul.level2 li
 /*bof footer menu*/
 #navSuppWrapper {margin: 10px 5px 0;padding: 0;background:none;font-weight: bold;border-top:1px solid #dbdbce;}
 #navSuppWrapper a{color:#444;font-weight:normal;}
-#siteinfoLegal, #footer-bottom {padding:0;line-height:normal;clear:both;color:#171717;background:#f4f4f4;text-align:center;margin-bottom:30px;font-size:90%;}
-#siteinfoLegal a, #footer-bottom a {padding: 0 0.5em 0 0.5em;color: #171717;white-space: nowrap;}
+#siteinfoLegal, #footer-bottom {font-size:13px;}
+#siteinfoLegal a, #footer-bottom a {color: #000000;}
 #siteinfoLegal a:hover, #footer-bottom a:hover {color: #fa6938;}
+#footer-bottom a{
+	padding-left:20px;
+	text-align:right;
+}
 #bannerSix {margin-top:0px;padding-bottom:30px;background:#f4f4f4;}
 #flex-navSupp ul {margin: 0;padding: 0.5em 0em;list-style-type: none;text-align: center;line-height: 1.5em;}
 #flex-navSupp ul li {display: inline;}

@@ -14,7 +14,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_footer.php for Winchester 2024-11-19 16:49:16Z webchills $
+ * @version $Id: tpl_footer.php for Winchester 2024-11-19 17:28:16Z webchills $
  */
 require(DIR_WS_MODULES . zen_get_module_directory('footer.php'));
 ?>
@@ -39,8 +39,9 @@ if (!isset($flag_disable_footer) || !$flag_disable_footer) {
 
 <?php require($template->get_template_dir('tpl_flexible_footer_menu.php',DIR_WS_TEMPLATE, $current_page_base,'templates'). '/tpl_flexible_footer_menu.php'); ?>
 <br>
+<div id="siteinfoLegalSection">
 <!--bof- site copyright display -->
-<div id="siteinfoLegalSection" class="DEACTlegalCopyright"><?php echo FOOTER_TEXT_BODY; ?></div>
+<div id="siteinfoLegal"><?php echo FOOTER_TEXT_BODY; ?></div>
 <!--eof- site copyright display -->
 <?php if (defined('WIN_FOOTERNAVI_STATUS') && (WIN_FOOTERNAVI_STATUS === 'true')) { ?>
 <!--bof sitemap, privacy, conditions, impressum -->
@@ -60,8 +61,7 @@ if (!isset($flag_disable_footer) || !$flag_disable_footer) {
 </div>
 <!--eof sitemap, privacy, conditions, impressum -->
 <?php } ?>
-
-
+</div>
 </div>
 <!--eof-flexible footer menu -->
 
