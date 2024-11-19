@@ -9,13 +9,12 @@
  * to override the global settings and turn off the footer un-comment the following line:
  * 
  * $flag_disable_footer = true;
- *
- 
- * @copyright Copyright 2003-2022 Zen Cart Development Team
+ * 
+ * @copyright Copyright 2003-2024 Zen Cart Development Team
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_footer.php for Winchester 2024-11-16 13:49:16Z webchills $
+ * @version $Id: tpl_footer.php for Winchester 2024-11-19 16:49:16Z webchills $
  */
 require(DIR_WS_MODULES . zen_get_module_directory('footer.php'));
 ?>
@@ -39,37 +38,35 @@ if (!isset($flag_disable_footer) || !$flag_disable_footer) {
 <div class="onerow-fluid <?php echo $fluidisFixed; ?>">
 
 <?php require($template->get_template_dir('tpl_flexible_footer_menu.php',DIR_WS_TEMPLATE, $current_page_base,'templates'). '/tpl_flexible_footer_menu.php'); ?>
-<br /><br />
-
+<br>
 <!--bof- site copyright display -->
-<div id="siteinfoLegal" class="legalCopyright"><?php echo FOOTER_TEXT_BODY; ?></div>
+<div id="siteinfoLegalSection" class="DEACTlegalCopyright"><?php echo FOOTER_TEXT_BODY; ?></div>
 <!--eof- site copyright display -->
-
+<?php if (defined('WIN_FOOTERNAVI_STATUS') && (WIN_FOOTERNAVI_STATUS === 'true')) { ?>
 <!--bof sitemap, privacy, conditions, impressum -->
 <div id="footer-bottom">
-                       <?php if (DEFINE_SITE_MAP_STATUS <= 1) { ?>
-                        <a href="<?php echo zen_href_link(FILENAME_SITE_MAP); ?>"><?php echo BOX_INFORMATION_SITE_MAP; ?></a>
-                        <?php } ?>
-                        <?php if (DEFINE_PRIVACY_STATUS <= 1)  { ?>
-                        <a href="<?php echo zen_href_link(FILENAME_PRIVACY); ?>"><?php echo BOX_INFORMATION_PRIVACY; ?></a>
-                        <?php } ?>
-                        <?php if (DEFINE_CONDITIONS_STATUS <= 1) { ?>
-                        <a href="<?php echo zen_href_link(FILENAME_CONDITIONS); ?>"><?php echo BOX_INFORMATION_CONDITIONS; ?></a>
-                        <?php } ?> 
-                        <?php if (DEFINE_IMPRESSUM_STATUS <= 1) { ?>
-                        <a href="<?php echo zen_href_link(FILENAME_IMPRESSUM); ?>"><?php echo BOX_INFORMATION_IMPRESSUM; ?></a>
-                        <?php } ?>
-<!--eof sitemap, privacy, conditions, impressum -->
-
-
+<?php if (DEFINE_SITE_MAP_STATUS <= 1) { ?>
+<a href="<?php echo zen_href_link(FILENAME_SITE_MAP); ?>"><?php echo BOX_INFORMATION_SITE_MAP; ?></a>
+<?php } ?>
+<?php if (DEFINE_PRIVACY_STATUS <= 1)  { ?>
+<a href="<?php echo zen_href_link(FILENAME_PRIVACY); ?>"><?php echo BOX_INFORMATION_PRIVACY; ?></a>
+<?php } ?>
+<?php if (DEFINE_CONDITIONS_STATUS <= 1) { ?>
+<a href="<?php echo zen_href_link(FILENAME_CONDITIONS); ?>"><?php echo BOX_INFORMATION_CONDITIONS; ?></a>
+<?php } ?> 
+<?php if (DEFINE_IMPRESSUM_STATUS <= 1) { ?>
+<a href="<?php echo zen_href_link(FILENAME_IMPRESSUM); ?>"><?php echo BOX_INFORMATION_IMPRESSUM; ?></a>
+<?php } ?>
 </div>
+<!--eof sitemap, privacy, conditions, impressum -->
+<?php } ?>
+
+
 </div>
 <!--eof-flexible footer menu -->
 
 </div>
 <!--eof-navigation display -->
-
-
 
 <!--bof-ip address display -->
 <?php

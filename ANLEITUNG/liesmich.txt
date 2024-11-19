@@ -15,6 +15,7 @@ Diese Version ist ausschließlich für die deutsche Zen Cart Version 1.5.7i geei
 
 Changelog Version 3.0.0 - November 2024
 - Anpassungen für 1.5.7i und PHP 8.3
+- Neue Konfigurationsoptionen im Winchester Menü, um Bereiche zu deaktivieren
 - Font Awesome Update auf 6.6.0
 - veraltete Funktionen entfernt
 - Javascripts aktualisiert

@@ -21,7 +21,7 @@ define('HEADER_TITLE_CART_ITEMS', 'Artikel');
 define('HEADER_TITLE_SEARCH','Suchen');
 
 define('HEADER_ALT_TEXT', 'Zen Cart 1.5.7 - deutsche Version');
-define('HEADER_SALES_TEXT', 'Template Demo Winchester');
+define('HEADER_SALES_TEXT', 'Template Demo Winchester<br>Zen Cart 1.5.7i deutsch<br>PHP 8.3.x');
 define('HEADER_LOGO_WIDTH', '240px');
 define('HEADER_LOGO_HEIGHT', '70px');
 define('HEADER_LOGO_IMAGE','logo.png');

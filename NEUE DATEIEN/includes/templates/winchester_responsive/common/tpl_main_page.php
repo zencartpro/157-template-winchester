@@ -30,20 +30,16 @@
  * if ($current_page_base == 'index' and $cPath == '' or $cPath == '3') {
  *  $flag_disable_right = true;
  * }
- *
- 
- * @copyright Copyright 2003-2022 Zen Cart Development Team
+ * 
+ * @copyright Copyright 2003-2024 Zen Cart Development Team
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_main_page.php for Winchester 2024-11-17 14:32:16Z webchills $
+ * @version $Id: tpl_main_page.php for Winchester 2024-11-19 16:32:16Z webchills $
  */
 if (!defined('IS_ADMIN_FLAG')) {
     die('Illegal Access');
 }
-
-
-
 
 // the following statements can be modified as needed to set additional flags
   if (in_array($current_page_base,explode(",",'shopping_cart')) ) {
@@ -90,7 +86,7 @@ $center_column_width = $center_column - $side_columns_total;
   $body_id = ($this_is_home_page) ? 'indexHome' : str_replace('_', '', $_GET['main_page']);
 ?>
 <body id="<?php echo $body_id . 'Body'; ?>"<?php if($zv_onload !='') echo ' onload="'.$zv_onload.'"'; ?>>
-
+<?php if (defined('WIN_TOTOP_STATUS') && (WIN_TOTOP_STATUS === 'true')) { ?>
 <script src="<?php echo $template->get_template_dir('',DIR_WS_TEMPLATE, $current_page_base,'jscript') . '/back_to_top.min.js' ?>" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -101,7 +97,7 @@ timeEffect : 750
 });
 });
 </script> 
-
+<?php } ?>
 <?php
   if (SHOW_BANNERS_GROUP_SET1 != '' && $banner = zen_banner_exists('dynamic', SHOW_BANNERS_GROUP_SET1)) {
     if ($banner->RecordCount() > 0) {
@@ -111,11 +107,6 @@ timeEffect : 750
     }
   }
 ?>
-
-
-
-
-
 
 <?php if (COLUMN_WIDTH == '0'){ ?>
 
@@ -187,7 +178,6 @@ if (!isset($flag_disable_left) || !$flag_disable_left) {
 ?>
 
 
-
 <div class="onerow-fluid <?php echo $fluidisFixed; ?>">
 
 <?php
@@ -221,9 +211,7 @@ if (!isset($flag_disable_left) || !$flag_disable_left) {
 
 <div class="<?php echo 'col' . $center_column_width; ?>">
 
-  <?php } ?>
-
-
+<?php } ?>
 
 <!-- bof  breadcrumb -->
 <?php if (!$breadcrumb->isEmpty() && (DEFINE_BREADCRUMB_STATUS == '1' || (DEFINE_BREADCRUMB_STATUS == '2' && !$this_is_home_page))) { ?>
@@ -263,7 +251,6 @@ if (!isset($flag_disable_left) || !$flag_disable_left) {
     }
   }
 ?>
-
 
 <?php if (COLUMN_WIDTH == '0'){ ?>
 
@@ -350,7 +337,7 @@ if (!isset($flag_disable_right) || !$flag_disable_right) {
 <?php }else{ ?>
 <?php //do nothing ?>
 <?php } ?>
-
+<?php if (defined('WIN_SLIDEOUTBOX_STATUS') && (WIN_SLIDEOUTBOX_STATUS === 'true')) { ?>
 <script src="<?php echo $template->get_template_dir('',DIR_WS_TEMPLATE, $current_page_base,'jscript') . '/jquery.tabSlideOut.v1.3.js' ?>" type="text/javascript"></script>
 
     <script type="text/javascript">
@@ -376,6 +363,7 @@ if (!isset($flag_disable_right) || !$flag_disable_right) {
     <a class="handle" href="http://link-for-non-js-users.html">Content</a>
 <?php echo SLIDE_OUT_CONTENT; ?>
          </div>
+<?php } ?>
 <?php
 /**
 * load the loader JS files

@@ -40,7 +40,7 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 
 <div id="headerWrapper" class="<?php echo $fluidisFixed; ?>">
 
-
+<?php if (defined('WIN_TOPNOTICE_STATUS') && (WIN_TOPNOTICE_STATUS === 'true')) { ?>
 <div id="top-wrapper">
 <div class="onerow-fluid <?php echo $fluidisFixed; ?>" id="top-inner">
 <div id="top-inner-wrapper">
@@ -49,16 +49,47 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 </div>
 </div>
 </div>
+<?php } ?>
 
+<!--bof-search display-->
+<div id="navMainSearchSection"><?php require(DIR_WS_MODULES . 'sideboxes/search_header.php'); ?></div>
+<!--eof-search display-->
 
 <div id="top-middle">
 <div class="onerow-fluid <?php echo $fluidisFixed; ?>">
 
+<!--bof-navigation display-->
+<div id="navMainWrapper">
+	
+<div id="navMain">
+    <ul>
+<?php if (zen_is_logged_in() && !zen_in_guest_checkout()) { ?>
+    <li><a href="<?php echo zen_href_link(FILENAME_LOGOFF, '', 'SSL'); ?>"><?php echo HEADER_TITLE_LOGOFF; ?></a></li>
+    <li><a href="<?php echo zen_href_link(FILENAME_ACCOUNT, '', 'SSL'); ?>"><?php echo HEADER_TITLE_MY_ACCOUNT; ?></a></li>
+<?php
+      } else {
+        if (STORE_STATUS == '0') {
+?>
+    <li class="h-login"><a href="<?php echo zen_href_link(FILENAME_LOGIN, '', 'SSL'); ?>"><?php echo HEADER_TITLE_LOGIN; ?></a></li>
+<?php } } ?>
+</ul>
+</div>
+<br class="clearBoth">
+<div class="header-cart">
+    <a href="<?php echo zen_href_link(FILENAME_SHOPPING_CART, '', 'NONSSL'); ?>"><?php echo $_SESSION['cart']->count_contents();?>  - <?php echo $currencies->format($_SESSION['cart']->show_total());?></a>
+   <?php if ($_SESSION['cart']->count_contents() != 0) { ?>
+<?php }?>
+</div>
+<!--eof-navigation display-->
+
+
+</div>
 
 
 
 <!--bof-branding display-->
 <div id="logoWrapper">
+
 <!-- bof languages header display -->
 
 <!-- eof  languages header display -->
@@ -124,37 +155,12 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 </div>
 
 
-<!--bof-navigation display-->
-<div id="navMainWrapper">
-<div id="navMain">
-    <ul>
-<?php if (zen_is_logged_in() && !zen_in_guest_checkout()) { ?>
-    <li><a href="<?php echo zen_href_link(FILENAME_LOGOFF, '', 'SSL'); ?>"><?php echo HEADER_TITLE_LOGOFF; ?></a></li>
-    <li><a href="<?php echo zen_href_link(FILENAME_ACCOUNT, '', 'SSL'); ?>"><?php echo HEADER_TITLE_MY_ACCOUNT; ?></a></li>
-<?php
-      } else {
-        if (STORE_STATUS == '0') {
-?>
-    <li class="h-login"><a href="<?php echo zen_href_link(FILENAME_LOGIN, '', 'SSL'); ?>"><?php echo HEADER_TITLE_LOGIN; ?></a></li>
-<?php } } ?>
-</ul>
-</div>
-<br class="clearBoth">
-<div class="header-cart">
-    <a href="<?php echo zen_href_link(FILENAME_SHOPPING_CART, '', 'NONSSL'); ?>"><?php echo $_SESSION['cart']->count_contents();?>  - <?php echo $currencies->format($_SESSION['cart']->show_total());?></a>
-   <?php if ($_SESSION['cart']->count_contents() != 0) { ?>
-<?php }?>
-</div>
-<!--eof-navigation display-->
 
-<div id="navMainSearch"><?php require(DIR_WS_MODULES . 'sideboxes/search_header.php'); ?>
-</div>
-</div>
-<br class="clearBoth" />
 <!--eof-branding display-->
 <!--eof-header logo and navigation display-->
 </div>
 </div>
+
 <!--bof optional categories tabs navigation display-->
 <?php require($template->get_template_dir('tpl_modules_categories_tabs.php',DIR_WS_TEMPLATE, $current_page_base,'templates'). '/tpl_modules_categories_tabs.php'); ?>
 <!--eof optional categories tabs navigation display-->

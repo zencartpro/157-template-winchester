@@ -15,6 +15,7 @@ Demo des Templates:
 * Font Awesome 6.6.0 lokal eingebunden
 * fehlende Anpassungen in Artikeltypentemplates ergänzt
 * Installer multilanguagefähig gemacht, so dass alle Konfigurationsoptionen in der deutschen Administration auf deutsch erscheinen
+* Neue Konfigurationsoptionen im Winchester Menü, um Bereiche zu deaktivieren
 * deutsche Sprachdateien hinzugefügt
 * AddThis entfernt
 * Anpassung der modifizierten Corefiles an die deutsche Zen Cart Version
@@ -24,4 +25,4 @@ Demo des Templates:
 * Anleitung aktualisiert
 * Uninstaller hinzugefügt
 * Twitter durch Bluesky ersetzt
-* Font auf Ubuntu geändert, alternativ Arimo oder Open Sans
+* Font auf Ubuntu geändert, alternativ Arimo oder Open Sans vorintegriert
