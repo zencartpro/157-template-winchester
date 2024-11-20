@@ -9,7 +9,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: html_header.php for Winchester 2024-11-16 14:19:39Z webchills $
+ * @version $Id: html_header.php for Winchester 2024-11-20 12:45:39Z webchills $
  */
 if (!defined('IS_ADMIN_FLAG')) {
     die('Illegal Access');
@@ -173,7 +173,7 @@ $fluidisFixed = '';
 ?>
 
 <script src="<?php echo $template->get_template_dir('',DIR_WS_TEMPLATE, $current_page_base,'jscript') . '/css_browser_selector.js' ?>" type="text/javascript"></script>
-<link rel="stylesheet" href="extras/fontawesome/6.6.0/css/all.css" />
+<link rel="stylesheet" href="extras/fontawesome/6.7.0/css/all.css" />
 <?php require($template->get_template_dir('super_data_head.php',DIR_WS_TEMPLATE, $current_page_base,'templates'). '/super_data_head.php'); ?>
 <?php
   $zco_notifier->notify('NOTIFY_HTML_HEAD_END', $current_page_base);
