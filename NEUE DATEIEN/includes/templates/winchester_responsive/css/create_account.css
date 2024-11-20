@@ -1,0 +1,21 @@
+#createAcctDefault input[type=text] {
+	width:300px;
+}
+
+#createAcctDefault input[[type=password] {
+	width:300px;
+}
+
+#createAcctDefault input[[type=tel] {
+	width:300px;
+}
+
+#createAcctDefault input[[type=email] {
+	width:300px;
+}
+
+#createAcctDefault label {
+	width:200px;
+}
+
+

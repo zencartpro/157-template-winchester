@@ -31,8 +31,10 @@
 ?>
 
 <h1><?php echo HEADING_TITLE; ?></h1>
-
-
+<div class="contentimage-right"><img src="images/content/4.jpg" alt="Beispielbild 4"></div>
+<?php if (CONTACT_US_STORE_NAME_ADDRESS== '1') { ?>
+<address><?php echo nl2br(STORE_NAME_ADDRESS); ?></address>
+<?php } ?>
 <?php if (DEFINE_CONTACT_US_STATUS >= '1' and DEFINE_CONTACT_US_STATUS <= '2') { ?>
 <div id="contactUsNoticeContent" class="content">
 <?php
@@ -42,13 +44,12 @@
   require($define_page);
 ?>
 </div>
+<br class="clearBoth">
 <?php } ?>
 
 <?php if ($messageStack->size('contact') > 0) echo $messageStack->output('contact'); ?>
 
-<?php if (CONTACT_US_STORE_NAME_ADDRESS== '1') { ?>
-<address><?php echo nl2br(STORE_NAME_ADDRESS); ?></address>
-<?php } ?>
+
 
 
 <fieldset id="contactUsForm">

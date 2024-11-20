@@ -22,7 +22,7 @@ define('HEADER_TITLE_SEARCH','Suchen');
 
 define('HEADER_ALT_TEXT', 'Zen Cart 1.5.7 - deutsche Version');
 // keep HEADER_SALES_TEXT short!
-define('HEADER_SALES_TEXT', 'Template Demo Winchester');
+define('HEADER_SALES_TEXT', 'DEMOSHOP Template WINCHESTER<br>1.5.7i - PHP 8.3.12');
 define('HEADER_LOGO_WIDTH', '240px');
 define('HEADER_LOGO_HEIGHT', '70px');
 define('HEADER_LOGO_IMAGE','logo.png');
