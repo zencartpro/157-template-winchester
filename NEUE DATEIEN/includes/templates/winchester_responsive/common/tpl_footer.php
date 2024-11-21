@@ -64,8 +64,6 @@ if (!isset($flag_disable_footer) || !$flag_disable_footer) {
 </div>
 </div>
 <!--eof-flexible footer menu -->
-
-</div>
 <!--eof-navigation display -->
 
 <!--bof-ip address display -->

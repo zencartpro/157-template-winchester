@@ -113,6 +113,41 @@ text-decoration:underline;
 	border:10px solid #F4F4F4;
 }
 
+#gpsrinfo{
+	
+	margin:0;
+	padding:0;	
+}
+
+#gpsrDetailsList li{
+list-style-type:none;
+}
+
+#gpsrDetailsList{
+margin:0px;
+padding:16px;
+font-size:1em;
+line-height:26px;
+text-align:left;	
+}
+
+#productDateAdded{
+	font-size:85%;
+}
+
+#productInfoLink{
+	font-size:85%;
+}
+
+#productInfoLink a{
+	text-decoration:underline;
+}
+
+#productInfoLink a:hover{
+	text-decoration:underline;
+	color:#fa6938;
+}
+
 /*bof basic elements*/
 a img {border: none;}
 a:link, #navEZPagesTOC ul li a {color:#000;text-decoration:none;}
@@ -397,7 +432,7 @@ LABEL#textAreaReviews {font-weight:normal;margin: 1em 0;}
 .additionalImages img{width:50px;}
 #productInfoLink{margin-top:20px;}
 .pi-reviews, #productDetailsList, #productDescription{line-height:26px;color:#444;}
-#productDescription{font-size:1.1em;}
+#productDescription{font-size:1em;}
 .review-date{margin-top:10px;margin-bottom:10px;}
 .pi-reviews{font-size:110%;}
 .review-text{margin-bottom:30px;border-bottom:1px solid #dbdbce;padding-bottom:30px;}

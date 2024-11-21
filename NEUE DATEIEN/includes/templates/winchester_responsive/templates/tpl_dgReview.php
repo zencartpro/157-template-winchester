@@ -69,7 +69,7 @@
 <?php
   } else {
 
-echo TEXT_FIRST_REVIEW . '<a href="' . zen_href_link(FILENAME_PRODUCT_REVIEWS_WRITE, zen_get_all_get_params(array())) . '">' . TEXT_FIRST_REVIEW_WRITE . '</a>';
+echo TEXT_FIRST_REVIEW . '<a href="' . zen_href_link(FILENAME_PRODUCT_REVIEWS_WRITE, zen_get_all_get_params(array())) . '">' . TEXT_FIRST_REVIEW_WRITE . '</a></div>';
 ?>
  
 <?php

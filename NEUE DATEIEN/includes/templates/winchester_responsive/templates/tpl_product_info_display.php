@@ -9,7 +9,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_product_info_display.php for Winchester 2024-11-16 13:50:24Z webchills $
+ * @version $Id: tpl_product_info_display.php for Winchester 2024-11-21 08:50:24Z webchills $
  */
  //require(DIR_WS_MODULES . '/debug_blocks/product_info_prices.php');
 ?>
@@ -160,7 +160,7 @@ if (CUSTOMERS_APPROVAL == 3 and TEXT_LOGIN_FOR_PRICE_BUTTON_REPLACE_SHOWROOM == 
 <script type="text/javascript">
     $(document).ready(function () {
         $('#horizontalTab').easyResponsiveTabs({
-            type: 'default', //Types: default, vertical, accordion           
+            type: 'accordion', //Types: default, vertical, accordion           
             width: 'auto', //auto or any width like 600px
             fit: true,   // 100% fit in a container
                     activate: function(event) { // Callback function if tab is switched
@@ -190,12 +190,20 @@ if (CUSTOMERS_APPROVAL == 3 and TEXT_LOGIN_FOR_PRICE_BUTTON_REPLACE_SHOWROOM == 
  <?php
 //You will have to change 'SHOW_BANNERS_GROUP_SET9' for each different group you added to display the proper banners
 if (SHOW_BANNERS_GROUP_SETCUSTOMTAB != '' && $banner = zen_banner_exists('dynamic', SHOW_BANNERS_GROUP_SETCUSTOMTAB)) 
-    {
-    if ($banner->RecordCount() > 0) 
-        {
-           echo $banner->fields['banners_title'];
-        }
-    }?> 
+    { ?>
+    <?php if ($banner->RecordCount() > 0) 
+       { ?>
+       	
+        <?php echo $banner->fields['banners_title'];
+        } ?>
+   
+<?php } ?>
+   </li>
+   <li>
+<?php if (($flag_show_gpsr) && (!empty($manufacturers_gpsr_company)))  { ?>
+
+<?php echo HEADER_TITLE_GPSR; ?>
+<?php } ?>
 </li>
             </ul>
             <div class="resp-tabs-container">
@@ -228,34 +236,69 @@ if (SHOW_BANNERS_GROUP_SETCUSTOMTAB != '' && $banner = zen_banner_exists('dynami
 <!-- added for dgReview on product page -->
 	<?php require($template->get_template_dir('tpl_dgReview.php', DIR_WS_TEMPLATE, $current_page_base,'templates'). '/' . 'tpl_dgReview.php');?>
 <!-- added for dgReview on product page -->
-
-
 </div>
-		<div>
+<div>
 
  <?php
 //You will have to change 'SHOW_BANNERS_GROUP_SET9' for each different group you added to display the proper banners
-if (SHOW_BANNERS_GROUP_SETCUSTOMTAB != '' && $banner = zen_banner_exists('dynamic', SHOW_BANNERS_GROUP_SETCUSTOMTAB)) 
-    {
-    if ($banner->RecordCount() > 0) 
-        {
-           echo zen_display_banner('static', $banner);
-        }
-    }?> 
+if (SHOW_BANNERS_GROUP_SETCUSTOMTAB != '' && $banner = zen_banner_exists('dynamic', SHOW_BANNERS_GROUP_SETCUSTOMTAB)) { ?>
+<?php  if ($banner->RecordCount() > 0)  { ?>
+<?php echo zen_display_banner('static', $banner);?>
 
+<?php } ?>
+<?php } ?>            
+</div>
 
-		</div>
-
-            </div>
-        </div>
-
+<?php if ($flag_show_gpsr) { ?>
+<?php if (!empty($manufacturers_gpsr_company)) { ?>
+ <!--bof GPSR -->
+<div id="gpsrinfo" class="productGeneral">
+<ul id="gpsrDetailsList">
+	<?php echo '<li><b>' . TEXT_MANUFACTURER_GPSR_INFO . '' . $manufacturers_name . '</b></li>'; ?>
+	<?php echo '<li>' . TEXT_MANUFACTURER_GPSR_CONTACT_INFO . '</li>'; ?>
+	<?php echo '<li>&nbsp; </li>'; ?>
+	<?php echo '<li>' . TEXT_MANUFACTURER_GPSR_ADDRESS_INFO . '</li>'; ?>
+  <?php echo ((!empty($manufacturers_gpsr_company)) ? '<li>' . TEXT_MANUFACTURER_GPSR_COMPANY . $manufacturers_gpsr_company . '</li>' : '') . "\n"; ?>
+  <?php echo ((!empty($manufacturers_gpsr_contact_person)) ? '<li>' . TEXT_MANUFACTURER_GPSR_CONTACT_PERSON . $manufacturers_gpsr_contact_person . '</li>' : '') . "\n"; ?>
+  <?php echo ((!empty($manufacturers_gpsr_street)) ? '<li>' . TEXT_MANUFACTURER_GPSR_STREET . $manufacturers_gpsr_street . '</li>' : '') . "\n"; ?>
+  <?php echo ((!empty($manufacturers_gpsr_city)) ? '<li>' . TEXT_MANUFACTURER_GPSR_POSTCODE . $manufacturers_gpsr_postcode . ' ' . TEXT_MANUFACTURER_GPSR_CITY . $manufacturers_gpsr_city . '</li>' : '') . "\n"; ?>
+  <?php echo ((!empty($manufacturers_gpsr_country)) ? '<li>' . TEXT_MANUFACTURER_GPSR_COUNTRY . $manufacturers_gpsr_country . '</li>' : '') . "\n"; ?>
+  <?php echo '<li>&nbsp; </li>'; ?>
+  <?php echo '<li>' . TEXT_MANUFACTURER_GPSR_URL_INFO . '</li>'; ?>
+  <?php echo ((!empty($manufacturers_gpsr_url)) ? '<li>' . TEXT_MANUFACTURER_GPSR_URL . $manufacturers_gpsr_url . '</li>' : '') . "\n"; ?>
+  <?php if (!empty($manufacturers_gpsr_company_noneu)) { ?>
+  <?php echo '<li>&nbsp; </li>'; ?>
+  <?php echo '<li>' . TEXT_MANUFACTURER_GPSR_CONTACT_INFO_NONEU . '</li>'; ?>
+  <?php echo '<li>&nbsp; </li>'; ?>
+  <?php echo '<li>' . TEXT_MANUFACTURER_GPSR_ADDRESS_INFO . '</li>'; ?>
+  <?php echo ((!empty($manufacturers_gpsr_company_noneu)) ? '<li>' . TEXT_MANUFACTURER_GPSR_COMPANY_NONEU . $manufacturers_gpsr_company_noneu . '</li>' : '') . "\n"; ?>
+  <?php echo ((!empty($manufacturers_gpsr_contact_person_noneu)) ? '<li>' . TEXT_MANUFACTURER_GPSR_CONTACT_PERSON_NONEU . $manufacturers_gpsr_contact_person_noneu . '</li>' : '') . "\n"; ?>
+  <?php echo ((!empty($manufacturers_gpsr_street_noneu)) ? '<li>' . TEXT_MANUFACTURER_GPSR_STREET_NONEU . $manufacturers_gpsr_street_noneu . '</li>' : '') . "\n"; ?>
+  <?php echo ((!empty($manufacturers_gpsr_city_noneu)) ? '<li>' . TEXT_MANUFACTURER_GPSR_POSTCODE_NONEU . $manufacturers_gpsr_postcode_noneu . ' ' . TEXT_MANUFACTURER_GPSR_CITY_NONEU . $manufacturers_gpsr_city_noneu . '</li>' : '') . "\n"; ?>
+  <?php echo ((!empty($manufacturers_gpsr_country_noneu)) ? '<li>' . TEXT_MANUFACTURER_GPSR_COUNTRY_NONEU . $manufacturers_gpsr_country_noneu . '</li>' : '') . "\n"; ?>
+  <?php echo '<li>&nbsp; </li>'; ?>
+  <?php echo '<li>' . TEXT_MANUFACTURER_GPSR_URL_INFO . '</li>'; ?>
+  <?php echo ((!empty($manufacturers_gpsr_url_noneu)) ? '<li>' . TEXT_MANUFACTURER_GPSR_URL_NONEU . $manufacturers_gpsr_url_noneu . '</li>' : '') . "\n"; ?>
+  <?php echo '<li>&nbsp; </li>'; ?>
+  <?php } ?>
+  <?php echo ((!empty($manufacturers_gpsr_additional_1)) ? '<li>' . TEXT_MANUFACTURER_GPSR_ADDITIONAL_1 . $manufacturers_gpsr_additional_1 . '</li>' : '') . "\n"; ?>
+  <?php echo ((!empty($manufacturers_gpsr_additional_2)) ? '<li>' . TEXT_MANUFACTURER_GPSR_ADDITIONAL_2 . $manufacturers_gpsr_additional_2 . '</li>' : '') . "\n"; ?>
+  <?php echo ((!empty($manufacturers_gpsr_additional_3)) ? '<li>' . TEXT_MANUFACTURER_GPSR_ADDITIONAL_3 . $manufacturers_gpsr_additional_3 . '</li>' : '') . "\n"; ?>
+</ul>
+</div>
+ 
+	<!--eof GPSR -->
+<?php } ?>
+<?php } ?>
+</div>
+</div>
 
 <?php
 if ($flag_show_ask_a_question) {
 ?>
 <!-- bof Ask a Question -->
-<br>
-<span id="productQuestions" class="">
+<br class="clearBoth">
+<span id="productQuestions" class="forward">
 <?php echo '<a href="' . zen_href_link(FILENAME_ASK_A_QUESTION, 'pid=' . $_GET['products_id'], 'SSL') . '">' . zen_image_button(BUTTON_IMAGE_ASK_A_QUESTION, BUTTON_ASK_A_QUESTION_ALT, ' id="askAQuestionButton"') . '</a>'; ?>
 </span>
 <br class="clearBoth">

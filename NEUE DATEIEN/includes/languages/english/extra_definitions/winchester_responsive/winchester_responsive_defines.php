@@ -29,3 +29,4 @@ define('HEADER_TITLE_DETAILS','Details');
 define('HEADER_TITLE_REVIEWS','Reviews');
 define('TEXT_FIRST_REVIEW','<div class="review-first">Be the first to write a review.&nbsp;&nbsp;');
 define('TEXT_FIRST_REVIEW_WRITE','<span class="review-first-write">Write a Review.</span></div>');
+define('HEADER_TITLE_GPSR','Manufacturer Info (GPSR)');
