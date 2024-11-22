@@ -56,8 +56,18 @@ top:10px;
 
 #navLanguagesWrapper{
 	position:absolute;
-	right:0px;
+	right:3px;
 	top:30px;
+}
+
+#navCurrenciesWrapper{
+	position:absolute;
+	right:100px;
+	top:30px;
+}
+
+#currencyinheader{
+	
 }
 
 #navMain{

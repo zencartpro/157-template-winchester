@@ -15,7 +15,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_header.php for Winchester 2024-11-22 18:46:16Z webchills $
+ * @version $Id: tpl_header.php for Winchester 2024-11-22 21:05:16Z webchills $
  */
 ?>
 
@@ -53,6 +53,13 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 <?php require(DIR_WS_MODULES . zen_get_module_directory ('header_languages.php'));?>
 </div>
 <!-- eof  languages header display -->
+<!-- bof currencies header display -->
+<?php if (defined('WIN_HEADER_CURRENCY_STATUS') && WIN_HEADER_CURRENCY_STATUS === 'true') { ?>
+<div id="navCurrenciesWrapper">
+<?php  require(DIR_WS_MODULES . 'header_currencies.php');?>
+</div>
+<?php }?>
+<!-- eof currencies header display -->
 <!--bof-login display-->
 <div id="navMain">
     <ul>
@@ -144,10 +151,9 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 <?php
     if ($this_is_home_page) {
 ?>
- <?php
-if (WIN_SLIDER_STATUS == 'true') {
-?>
-          <?php require($template->get_template_dir('tpl_home_slider.php',DIR_WS_TEMPLATE, $current_page_base,'common')
+<?php if (defined('WIN_SLIDER_STATUS') && WIN_SLIDER_STATUS === 'true') { ?>
+
+ <?php require($template->get_template_dir('tpl_home_slider.php',DIR_WS_TEMPLATE, $current_page_base,'common')
                         . '/tpl_home_slider.php');?>
 <?php
     } ?>
