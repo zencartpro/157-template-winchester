@@ -218,7 +218,20 @@ if (!isset($flag_disable_left) || !$flag_disable_left) {
     <div id="navBreadCrumb"><?php echo $breadcrumb->trail(BREAD_CRUMBS_SEPARATOR); ?></div>
 <?php } ?>
 <!-- eof breadcrumb -->
-
+<!-- bof  message stack -->
+<?php
+  // Display all header alerts via messageStack:
+  if ($messageStack->size('header') > 0) {
+    echo $messageStack->output('header');
+  }
+  if (!empty($_GET['error_message'])) {
+    echo zen_output_string_protected(urldecode($_GET['error_message']));
+  }
+  if (!empty($_GET['info_message'])) {
+   echo zen_output_string_protected($_GET['info_message']);
+  }
+?>
+<!-- eof  message stack -->
 <?php
   if (SHOW_BANNERS_GROUP_SET3 != '' && $banner = zen_banner_exists('dynamic', SHOW_BANNERS_GROUP_SET3)) {
     if ($banner->RecordCount() > 0) {

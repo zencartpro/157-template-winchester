@@ -235,6 +235,7 @@ if (SHOW_BANNERS_GROUP_SETCUSTOMTAB != '' && $banner = zen_banner_exists('dynami
                 <div>
 <!-- added for dgReview on product page -->
 	<?php require($template->get_template_dir('tpl_dgReview.php', DIR_WS_TEMPLATE, $current_page_base,'templates'). '/' . 'tpl_dgReview.php');?>
+	<br class="clearBoth">
 <!-- added for dgReview on product page -->
 </div>
 <div>
