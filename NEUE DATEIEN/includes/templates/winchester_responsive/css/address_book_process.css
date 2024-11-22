@@ -1,0 +1,20 @@
+#addressBookProcessDefault input[type=text] {
+	width:330px;
+}
+
+#addressBookProcessDefault input[type=password] {
+	width:330px;
+}
+
+#addressBookProcessDefault input[type=tel] {
+	width:330px;
+}
+
+#addressBookProcessDefault input[type=email] {
+	width:330px;
+}
+
+#addressBookProcessDefault label {
+	width:170px;
+	font-size:95%;
+}

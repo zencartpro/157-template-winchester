@@ -1,21 +1,29 @@
 #createAcctDefault input[type=text] {
-	width:300px;
+	width:330px;
 }
 
-#createAcctDefault input[[type=password] {
-	width:300px;
+#createAcctDefault input[type=password] {
+	width:330px;
 }
 
-#createAcctDefault input[[type=tel] {
-	width:300px;
+#createAcctDefault input[type=tel] {
+	width:330px;
 }
 
-#createAcctDefault input[[type=email] {
-	width:300px;
+#createAcctDefault input[type=email] {
+	width:330px;
 }
 
 #createAcctDefault label {
-	width:200px;
+	width:170px;
+}
+
+#createAcctDefaultLoginLink a{
+	text-decoration:underline;
+}
+
+.pseudolink{
+	text-decoration:underline;
 }
 
 

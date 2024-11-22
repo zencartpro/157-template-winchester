@@ -1,0 +1,19 @@
+#accountEditDefault input[type=text] {
+	width:330px;
+}
+
+#accountEditDefault input[type=password] {
+	width:330px;
+}
+
+#accountEditDefault input[type=tel] {
+	width:330px;
+}
+
+#accountEditDefault input[type=email] {
+	width:330px;
+}
+
+#accountEditDefault label {
+	width:170px;
+}

@@ -148,6 +148,15 @@ text-align:left;
 	color:#fa6938;
 }
 
+.instructions{
+	font-size:80%;
+
+}
+
+#myAccountGen a{
+	line-height:36px;
+}
+
 /*bof basic elements*/
 a img {border: none;}
 a:link, #navEZPagesTOC ul li a {color:#000;text-decoration:none;}
@@ -200,7 +209,7 @@ table{width:100%;}
 #tagline {margin:0 0 0 10px;color:#171717;font-size:85%;text-align:left;clear:both;}
 
 #sendSpendWrapper {margin:0em 0em 1em 1em;border:1px solid #cacaca;float:right;}
-.floatingBox, #accountLinksWrapper, #sendSpendWrapper, #checkoutShipto, #checkoutBillto, #navEZPagesTOCWrapper {margin:0;width:47%;}
+.floatingBox, #sendSpendWrapper, #checkoutShipto, #checkoutBillto, #navEZPagesTOCWrapper {margin:0;width:47%;}
 .wrapperAttribsOptions {margin:0.3em 0em;}
 
 #header-right{width:69%;border:1px solid #000;}

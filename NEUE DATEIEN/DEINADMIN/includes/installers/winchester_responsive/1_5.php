@@ -4,7 +4,7 @@
  * @copyright Copyright 2003-2024 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: 1_5.php 2024-11-19 06:27:14 webchills $
+ * @version $Id: 1_5.php 2024-11-22 15:27:14 webchills $
  */
  
  
@@ -274,12 +274,12 @@ $db->Execute("UPDATE " . TABLE_CONFIGURATION . " SET configuration_value = 'fals
 // Banners
 $db->Execute("INSERT IGNORE INTO " . TABLE_BANNERS . " (banners_id, banners_title, banners_url, banners_image, banners_group, banners_html_text, expires_impressions, expires_date, date_scheduled, date_added, date_status_change, status, banners_open_new_windows, banners_on_ssl, banners_sort_order)
   VALUES 
-('', 'Modernes Responsives Design', '', 'banners/slide6.jpg', 'homepageslide', NULL, '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '1', '1', '0'),
-('', 'Optimiert für alle Geräte', '', 'banners/slide7.jpg', 'homepageslide', NULL, '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '1', '1', '0'),
-('', 'Zahlreiche Zusatzfunktionen', '', 'banners/slide14.jpg', 'homepageslide', NULL, '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '1', '1', '0'),
-('', 'Multilinguale Installation und Administration', '', 'banners/slide9.jpg', 'homepageslide', NULL, '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '1', '1', '0'),
+('', 'Banner Slogan 1', '', 'banners/slide6.jpg', 'homepageslide', NULL, '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '1', '1', '0'),
+('', 'Banner Slogan 2', '', 'banners/slide7.jpg', 'homepageslide', NULL, '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '1', '1', '0'),
+('', 'Banner Slogan 3', '', 'banners/slide14.jpg', 'homepageslide', NULL, '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '1', '1', '0'),
+('', 'Banner Slogan 4', '', 'banners/slide9.jpg', 'homepageslide', NULL, '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '1', '1', '0'),
 ('', 'Zusatzinfo', '', '', 'Zusatzinfo', '<div id=\"custom-tab-wrapper\"><img src=\"includes/templates/winchester_responsive/images/summer.png\" class=\"custom-tab-image\" alt=\"your alt text here\" /><div id=\"custom-tab-text\">Sie können in diesem Tab jeden Inhalt anzeigen, den Sie wollen.  Wenn Sie Text und/oder Bilder verwenden wollen, nutzen Sie den Bannermanager um Ihre Inhalte einzugeben.<br /><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam interdum feugiat ipsum vehicula sollicitudin. Integer sed lacus eget risus consectetur ullamcorper. Pellentesque rutrum ullamcorper faucibus. Nam porttitor iaculis enim, mattis tristique velit tristique bibendum. Aliquam porta nisl tortor, non luctus justo. Nam tincidunt dui vel mauris tincidunt posuere. Phasellus rhoncus elit et lorem sodales ullamcorper.</div><div class=\"clearBoth\"></div></div>', '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '1', '1', '0'),
-('', 'Slideshow per Admin steuerbar', '', 'banners/slide10.jpg', 'homepageslide', NULL, '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '1', '1', '0');");
+('', 'Banner Slogan 5', '', 'banners/slide10.jpg', 'homepageslide', NULL, '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '1', '1', '0');");
 
 
 $db->Execute(" SELECT @gid:=configuration_group_id

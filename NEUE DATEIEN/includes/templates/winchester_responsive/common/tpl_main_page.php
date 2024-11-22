@@ -35,7 +35,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_main_page.php for Winchester 2024-11-19 16:32:16Z webchills $
+ * @version $Id: tpl_main_page.php for Winchester 2024-11-22 16:32:16Z webchills $
  */
 if (!defined('IS_ADMIN_FLAG')) {
     die('Illegal Access');
@@ -46,7 +46,7 @@ if (!defined('IS_ADMIN_FLAG')) {
     $flag_disable_right = true;
   }
 
-  if (in_array($current_page_base,explode(",",'login')) ) {
+  if (in_array($current_page_base,explode(",",'login,create_account,no_account,checkout_shipping,checkout_payment,checkout_confirmation,account,account_edit,address_book_process')) ) {
     $flag_disable_right = true;
     $flag_disable_left = true;
   }
