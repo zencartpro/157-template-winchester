@@ -1,0 +1,24 @@
+#checkoutShipAddressDefault input[type=text] {
+	width:330px;
+}
+
+#checkoutShipAddressDefault input[type=password] {
+	width:330px;
+}
+
+#checkoutShipAddressDefault input[type=tel] {
+	width:330px;
+}
+
+#checkoutShipAddressDefault input[type=email] {
+	width:330px;
+}
+
+#checkoutShipAddressDefault label {
+	width:170px;
+	font-size:95%;
+}
+
+.instructions{
+	float:right;
+}

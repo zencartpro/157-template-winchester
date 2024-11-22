@@ -46,7 +46,7 @@ if (!defined('IS_ADMIN_FLAG')) {
     $flag_disable_right = true;
   }
 
-  if (in_array($current_page_base,explode(",",'login,create_account,no_account,checkout_shipping,checkout_payment,checkout_confirmation,account,account_edit,address_book_process')) ) {
+  if (in_array($current_page_base,explode(",",'login,create_account,no_account,checkout_shipping,checkout_payment,checkout_confirmation,account,account_edit,address_book_process,account_history_info,account_history,shopping_cart')) ) {
     $flag_disable_right = true;
     $flag_disable_left = true;
   }

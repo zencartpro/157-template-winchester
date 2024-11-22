@@ -13,8 +13,8 @@ line-height:22px;
 }
 
 #navMain{
-z-index: 9999999999;
-	pointer-events: all;
+
+font-size:90%;
 }
 
 #searchSection{
@@ -22,7 +22,7 @@ z-index: 9999999999;
 	left:280px;
 	top:-20px;
 	width:460px;
-	z-index: 999999999;
+   z-index:999;
 	pointer-events: all;
 }
 
@@ -46,6 +46,7 @@ width:240px;
 	left:280px;
 	top:-10px;
 	min-width:700px;
+	z-index:1;
 }
 
 .mshop, .minfo, .mcontact{
@@ -236,7 +237,7 @@ table{width:100%;}
 #top-inner{background:none;}
 .top-specials{text-transform:uppercase;line-height:20px;padding:0 10px;}
 #top-middle{width:100%;background:#fff;padding-top:20px;padding-bottom:20px;border-bottom:1px solid #dbdbce;}
-#navMainWrapper {margin:0 auto;background:transparent;color:#171717;width:25%;border:0px solid #000;float:right;}
+#navMainWrapper {margin:0 auto;background:transparent;color:#171717;z-index:1000;border:0px solid #000;float:right;}
 #navMain ul  {margin:0 auto;padding: 0px 0 0.5em 0;list-style-type:none;text-align:right;line-height: 1.5em;float:right;}
 #navMain ul li {display:inline;}
 #navMain ul li a {margin:0;padding:0em 1.0em;color: #444;text-decoration:none;white-space:nowrap;font-size:100%;text-transform:uppercase;}

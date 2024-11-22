@@ -1,0 +1,24 @@
+#checkoutPayAddressDefault input[type=text] {
+	width:330px;
+}
+
+#checkoutPayAddressDefault input[type=password] {
+	width:330px;
+}
+
+#checkoutPayAddressDefault input[type=tel] {
+	width:330px;
+}
+
+#checkoutPayAddressDefault input[type=email] {
+	width:330px;
+}
+
+#checkoutPayAddressDefault label {
+	width:170px;
+	font-size:95%;
+}
+
+.instructions{
+	float:right;
+}
