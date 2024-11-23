@@ -1,10 +1,10 @@
 <?php
 /*bof categories definitions*/
-define('HEADER_TITLE_CATEGORIES','Kategorien');
+define('HEADER_TITLE_CATEGORIES','Sortiment');
 /*bof menu definition*/
 define('HEADER_TITLE_MENU','Menü');
 /*bof back to top*/
-define('BACK_TO_TOP','Top');
+define('BACK_TO_TOP','<i class="fa-solid fa-arrow-up"></i>');
 /*bof information definitions*/
 define('HEADER_TITLE_INFORMATION','Information');
 define('TITLE_EZ_PAGES','Nützliche Links');

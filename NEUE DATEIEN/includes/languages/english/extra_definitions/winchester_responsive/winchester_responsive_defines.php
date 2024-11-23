@@ -4,20 +4,20 @@ define('HEADER_TITLE_CATEGORIES','Categories');
 /*bof menu definition*/
 define('HEADER_TITLE_MENU','Menu');
 /*bof back to top*/
-define('BACK_TO_TOP','Top');
+define('BACK_TO_TOP','<i class="fa-solid fa-arrow-up"></i>');
 /*bof information definitions*/
 define('HEADER_TITLE_INFORMATION','Information');
 define('TITLE_EZ_PAGES','Useful Links');
 define('TITLE_GENERAL','General Info');
 define('TITLE_CUSTOMERS','Customers');
-define('TITLE_NEWSLETTERS','Newsletters');
+define('TITLE_NEWSLETTERS','Newsletter');
 define('TITLE_CONTACT','Contact');
 
 /*bof customer service*/
 define('HEADER_TITLE_CUSTOMER_SERVICE','Customer Service');
 /*bof top specials*/
-define('HEADER_TITLE_SPECIALS','<a href="index.php?main_page=specials">Specials</a>');
-define('HEADER_TITLE_TOP_TEXT','FREE Shipping on all orders over $50.00!');
+define('HEADER_TITLE_TOP_TEXT','<a href="index.php?main_page=shippinginfo">FREE Shipping on all orders over 50 Euro!</a> *** Minus 10% mit Rabattcode BLACK FRIDAY');
+
 /*bof column grid*/
 define('TABLE_HEADING_IMAGE','Image');
 define('TABLE_HEADING_PRICE','Price');

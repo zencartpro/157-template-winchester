@@ -1,11 +1,11 @@
 <?php
 /**
- * Zen Cart German Specific
- * @copyright Copyright 2003-2022 Zen Cart Development Team
+ * Zen Cart German Specific (158 code in 157 / zencartpro adaptations)
+ * @copyright Copyright 2003-2024 Zen Cart Development Team
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: button_names.php for Winchester 2022-04-03 09:28:24Z webchills $
+ * @version $Id: button_names.php for Winchester 2024-11-23 09:28:24Z webchills $
  */
 
 
@@ -39,12 +39,15 @@ define('BUTTON_IMAGE_REDEEM', 'button_redeem.gif');
 define('BUTTON_IMAGE_RETURN_TO_PROD_LIST', 'button_return_to_product_list.gif');
 define('BUTTON_IMAGE_REVIEWS', 'button_reviews.gif');
 define('BUTTON_IMAGE_SEARCH', 'button_search.gif');
+define('BUTTON_IMAGE_SEARCH_HEADER', 'button_search_header.gif');
 define('BUTTON_IMAGE_SEND', 'button_send.gif');
 define('BUTTON_IMAGE_SEND_A_GIFT_CERT', 'button_send_a_gift_cert.gif');
 define('BUTTON_IMAGE_SEND_ANOTHER', 'button_send_another.gif');
 define('BUTTON_IMAGE_SHIPPING_ESTIMATOR', 'button_shipping_estimator.gif');
 define('BUTTON_IMAGE_SOLD_OUT','button_sold_out.gif');
 define('BUTTON_IMAGE_SOLD_OUT_SMALL','button_sold_out_sm.gif');
+define('BUTTON_IMAGE_DROPSHIPPING','button_sold_out.gif');
+define('BUTTON_IMAGE_DROPSHIPPING_SMALL','button_sold_out_sm.gif');
 define('BUTTON_IMAGE_SUBMIT', 'button_submit.gif');
 define('BUTTON_IMAGE_UNSUBSCRIBE', 'button_unsubscribe.gif');
 define('BUTTON_IMAGE_UPDATE', 'button_update.gif');
@@ -82,6 +85,8 @@ define('BUTTON_CONTINUE_SHOPPING_ALT', 'Continue Shopping');
 define('BUTTON_DELETE_ALT', 'Delete');
 define('BUTTON_DELETE_SMALL_ALT', 'Delete');
 define('BUTTON_DOWNLOAD_ALT', 'Download Now');
+define('BUTTON_DROPSHIPPING_ALT', 'Special Order');
+define('BUTTON_DROPSHIPPING_SMALL_ALT', 'Special Order');
 define('BUTTON_EDIT_SMALL_ALT', 'Edit');
 define('BUTTON_IN_CART_ALT', 'Add to Cart');
 define('BUTTON_LOGIN_ALT', 'Sign In');
@@ -100,6 +105,7 @@ define('BUTTON_SHIPPING_ESTIMATOR_ALT', 'Shipping Estimator');
 define('BUTTON_SOLD_OUT_ALT', 'Sold Out');
 define('BUTTON_SOLD_OUT_SMALL_ALT', 'Sold Out');
 define('BUTTON_SUBMIT_ALT', 'Submit');
+define('BUTTON_SUBMIT_GO_ALT', 'Submit');
 define('BUTTON_UNSUBSCRIBE', 'Unsubscribe');
 define('BUTTON_UPDATE_ALT', 'Update');
 define('BUTTON_VIEW_SMALL_ALT', 'View');
