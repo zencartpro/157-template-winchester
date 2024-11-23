@@ -12,7 +12,7 @@ Demo des Templates:
 Änderungen gegenüber dem Original Template:
 * Anpassungen für Zen Cart 1.5.7i deutsch und PHP 8.3
 * alle verwendeten Javascripts aktualisiert
-* Font Awesome 6.6.0 lokal eingebunden
+* Font Awesome 6.7.0 lokal eingebunden
 * fehlende Anpassungen in Artikeltypentemplates ergänzt
 * Installer multilanguagefähig gemacht, so dass alle Konfigurationsoptionen in der deutschen Administration auf deutsch erscheinen
 * Neue Konfigurationsoptionen im Winchester Menü, um Bereiche zu deaktivieren
@@ -26,3 +26,5 @@ Demo des Templates:
 * Uninstaller hinzugefügt
 * Twitter durch Bluesky ersetzt
 * Font auf Ubuntu geändert, alternativ Arimo oder Open Sans vorintegriert
+* Layout modernisiert
+* Sprach. und Währungsauswahl im Header integriert
