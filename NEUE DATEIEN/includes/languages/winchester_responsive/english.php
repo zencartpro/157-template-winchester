@@ -257,7 +257,7 @@ define('ICON_IMAGE_WARNING','warning.png');
 define('ICON_SUCCESS_ALT','Success');
 define('ICON_TINYCART_ALT','Add this product to your cart by clicking here.');
 define('ICON_TRASH_ALT','Delete');
-define('ICON_UPDATE_ALT','Update');
+define('ICON_UPDATE_ALT','Click on this icon to update the quantity.');
 define('ICON_WARNING_ALT','Warning');
 define('IMAGE_ALT_PREFIX','(image for)');
 define('IMAGE_ALT_TEXT_NO_TITLE','A generic image');

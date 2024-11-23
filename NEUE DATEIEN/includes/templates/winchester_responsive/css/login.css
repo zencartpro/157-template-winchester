@@ -1,0 +1,29 @@
+#loginDefault input[type=text] {
+	width:330px;
+}
+
+#loginDefault input[type=password] {
+	width:330px;
+}
+
+#loginDefault input[type=tel] {
+	width:330px;
+}
+
+#loginDefault input[type=email] {
+	width:330px;
+}
+
+#loginDefault label {
+	width:170px;
+}
+
+#loginDefault a{
+	text-decoration:underline;
+}
+
+.pseudolink{
+	text-decoration:underline;
+}
+
+

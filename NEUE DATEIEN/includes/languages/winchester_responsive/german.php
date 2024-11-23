@@ -257,7 +257,7 @@ define('ICON_IMAGE_WARNING','warning.png');
 define('ICON_SUCCESS_ALT','Erfolg');
 define('ICON_TINYCART_ALT','Legen Sie dieses Produkt in Ihren Warenkorb, indem Sie hier klicken.');
 define('ICON_TRASH_ALT','Löschen');
-define('ICON_UPDATE_ALT','Aktualisieren');
+define('ICON_UPDATE_ALT','Clicken Sie auf dieses Symbol, um die Menge zu aktualisieren');
 define('ICON_WARNING_ALT','Warnung');
 define('IMAGE_ALT_PREFIX','(Bild für)');
 define('IMAGE_ALT_TEXT_NO_TITLE','Ein allgemeines Bild');
