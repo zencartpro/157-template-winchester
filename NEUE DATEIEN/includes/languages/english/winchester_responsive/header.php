@@ -5,7 +5,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: header.php for Winchester 2024-11-22 17:05:14Z webchills $
+ * @version $Id: header.php for Winchester 2024-11-23 10:51:14Z webchills $
  */
 define('HEADER_TITLE_CREATE_ACCOUNT', 'Create Account');
 define('HEADER_TITLE_MY_ACCOUNT', 'My Account');
@@ -24,6 +24,9 @@ define('HEADER_SALES_TEXT', 'DEMOSHOP<br>Template WINCHESTER');
 define('HEADER_LOGO_WIDTH', '240px');
 define('HEADER_LOGO_HEIGHT', '70px');
 define('HEADER_LOGO_IMAGE', 'logo.png');
+define('HEADER_LOGO_MOBILE_WIDTH', '200px');
+define('HEADER_LOGO_MOBILE_HEIGHT', '50px');
+define('HEADER_LOGO_MOBILE_IMAGE','logo-mobile.png');
 define('HEADER_SEARCH_BUTTON','Search');
 define('HEADER_SEARCH_DEFAULT_TEXT', 'Enter search keywords here');
 define('SEARCH_DEFAULT_TEXT', 'Search');

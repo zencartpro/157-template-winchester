@@ -2,86 +2,60 @@
 /**
  * Common Template - tpl_header.php
  *
- * this file can be copied to /templates/your_template_dir/pagename<br />
- * example: to override the privacy page<br />
- * make a directory /templates/my_template/privacy<br />
- * copy /templates/templates_defaults/common/tpl_footer.php to /templates/my_template/privacy/tpl_header.php<br />
- * to override the global settings and turn off the footer un-comment the following line:<br />
- * <br />
- * $flag_disable_header = true;<br />
+ * this file can be copied to /templates/your_template_dir/pagename
+ * example: to override the privacy page
+ * make a directory /templates/my_template/privacy
+ * copy /templates/templates_defaults/common/tpl_footer.php to /templates/my_template/privacy/tpl_header.php
+ * to override the global settings and turn off the footer un-comment the following line:
+ * 
+ * $flag_disable_header = true;
  *
- 
- * @copyright Copyright 2003-2024 Zen Cart Development Team
+ * Zen Cart German Specific (158 code in 157)
+ * @copyright Copyright 2003-2022 Zen Cart Development Team
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_header_mobile.php 2024-11-16 14:49:16Z webchills $
+ * @version $Id: tpl_header_mobile.php 2024-11-23 08:27:16Z webchills $
  */
 ?>
 
 <?php
-  // Display all header alerts via messageStack:
-  if ($messageStack->size('header') > 0) {
-    echo $messageStack->output('header');
-  }
-  if (!empty($_GET['error_message'])) {
-    echo zen_output_string_protected(urldecode($_GET['error_message']));
-  }
-  if (!empty($_GET['info_message'])) {
-   echo zen_output_string_protected($_GET['info_message']);
-  }
-?>
-
-
-<!--bof-header logo and navigation display-->
-<?php
 if (!isset($flag_disable_header) || !$flag_disable_header) {
 ?>
 <div id="headerWrapper" class="<?php echo $fluidisFixed; ?>">
-
-<div id="top-wrapper">
+<!--bof-top-notice-->
+<?php if (defined('WIN_TOPNOTICE_STATUS') && (WIN_TOPNOTICE_STATUS === 'true')) { ?>
+<div id="top-wrapper-mobile">
 <div class="onerow-fluid <?php echo $fluidisFixed; ?>" id="top-inner">
 <div id="top-inner-wrapper">
-     <?php echo HEADER_TITLE_TOP_TEXT; ?>
+<div class="top-specials"><?php echo HEADER_TITLE_TOP_TEXT; ?></div>     
 </div>
 </div>
 </div>
-
-
-
-
+<?php } ?>
+<!--eof-top-notice-->
 <div id="top-middle">
 <div class="onerow-fluid <?php echo $fluidisFixed; ?>">
-
-
-<!--bof-branding display-->
-<div id="logoWrapper">
-    <div id="logo"><?php echo '<a href="' . HTTP_SERVER . DIR_WS_CATALOG . '">' . zen_image($template->get_template_dir(HEADER_LOGO_IMAGE, DIR_WS_TEMPLATE, $current_page_base,'images'). '/' . HEADER_LOGO_IMAGE, HEADER_ALT_TEXT) . '</a>'; ?></div>
-<?php if (HEADER_SALES_TEXT != '' || (SHOW_BANNERS_GROUP_SET2 != '' && $banner = zen_banner_exists('dynamic', SHOW_BANNERS_GROUP_SET2))) { ?>
-    <div id="taglineWrapper">
-<?php
-              if (HEADER_SALES_TEXT != '') {
-?>
-      <div id="tagline">
-
-<?php echo HEADER_SALES_TEXT;?>
-
-      </div>
-<?php
-              }
-?>
-<?php
-              if (SHOW_BANNERS_GROUP_SET2 != '' && $banner = zen_banner_exists('dynamic', SHOW_BANNERS_GROUP_SET2)) {
-                if ($banner->RecordCount() > 0) {
-?>
-      <div id="bannerTwo" class="banners"><?php echo zen_display_banner('static', $banner);?></div>
-<?php
-                }
-              }
-?>
-    </div>
-<?php } // no HEADER_SALES_TEXT or SHOW_BANNERS_GROUP_SET2 ?>
-
+<!--eof-logo-mobile-->
+<div id="logoWrapper-mobile">
+<div id="logo-mobile">
+<?php echo '<a href="' . HTTP_SERVER . DIR_WS_CATALOG . '">' . zen_image($template->get_template_dir(HEADER_LOGO_IMAGE, DIR_WS_TEMPLATE, $current_page_base,'images'). '/' . HEADER_LOGO_IMAGE, HEADER_ALT_TEXT) . '</a>'; ?>
+</div>
+<!--eof-logo-mobile-->
+<!-- bof languages header display -->
+<?php if (defined('WIN_HEADER_LANGUAGE_STATUS') && WIN_HEADER_LANGUAGE_STATUS === 'true') { ?>
+<div id="navLanguagesWrapper-mobile" class="forward">
+<?php require(DIR_WS_MODULES . zen_get_module_directory ('header_languages.php'));?>
+</div>
+<?php }?>
+<!-- eof  languages header display -->
+<!-- bof currencies header display -->
+<?php if (defined('WIN_HEADER_CURRENCY_STATUS') && WIN_HEADER_CURRENCY_STATUS === 'true') { ?>
+<div id="navCurrenciesWrapper-mobile">
+<?php require(DIR_WS_MODULES . zen_get_module_directory ('header_currencies.php'));?>
+</div>
+<?php }?>
+<!-- eof currencies header display -->
 
 <!--bof handheld menu display-->
 <?php require($template->get_template_dir('tpl_modules_mobile_categories_tabs.php',DIR_WS_TEMPLATE, $current_page_base,'templates'). '/tpl_modules_mobile_categories_tabs.php'); ?>
@@ -115,9 +89,8 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 <?php
     if ($this_is_home_page) {
 ?>
- <?php
-if (WIN_SLIDER_STATUS == 'true') {
-?>
+<?php if (defined('WIN_SLIDER_STATUS') && WIN_SLIDER_STATUS === 'true') { ?>
+
           <?php require($template->get_template_dir('tpl_home_slider.php',DIR_WS_TEMPLATE, $current_page_base,'common')
                         . '/tpl_home_slider.php');?>
 <?php

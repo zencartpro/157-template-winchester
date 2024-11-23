@@ -4,19 +4,17 @@
  *
  * Template stub used to display categories-tabs output
  * 
- * @copyright Copyright 2003-2022 Zen Cart Development Team
+ * @copyright Copyright 2003-2024 Zen Cart Development Team
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_modules_categories_tabs.php 2022-04-10 14:41:00Z webchills $
+ * @version $Id: tpl_modules_categories_tabs.php 2024-11-23 14:41:00Z webchills $
  */
 ?>
 
 <div id="menu">
 <ul class="slimmenu">
-
-
-    <li class="test"><a href="javascript:void(0)" class="mshop"><?php echo HEADER_TITLE_CATEGORIES; ?></a>
+<li class="test"><a href="javascript:void(0)" class="mshop"><?php echo HEADER_TITLE_CATEGORIES; ?></a>
 <?php
     // load the UL-generator class and produce the menu list dynamically from there
     require_once (DIR_WS_CLASSES . 'categories_ul_generator.php');
@@ -31,9 +29,6 @@ $menulist = str_replace("</li>\n</ul>\n</li>\n</ul>\n","</li>\n</ul>\n",$menulis
 echo $menulist;
 ?>                        
 </li>
-
-
-
 <li class="minfo-links"><a href="javascript:void(0)" class="minfo"><?php echo HEADER_TITLE_INFORMATION; ?></a>
     <ul class="level2">
     <li><a href="<?php echo zen_href_link(FILENAME_SHIPPING); ?>"><?php echo HEADER_TITLE_CUSTOMER_SERVICE; ?></a>
@@ -104,11 +99,8 @@ echo $menulist;
     </ul>
     </li>
     <li class="menu-contact"><a href="<?php echo zen_href_link(FILENAME_CONTACT_US, '', 'NONSSL'); ?>" class="mcontact"><?php echo TITLE_CONTACT; ?></a></li>
-
 </ul>
-
 </div>
-
 <script src="<?php echo $template->get_template_dir('jquery.slimmenu.min.js',DIR_WS_TEMPLATE, $current_page_base,'jscript') . '/jquery.slimmenu.min.js' ?>" type="text/javascript"></script>
 <script src="<?php echo $template->get_template_dir('jquery.easing.min.js',DIR_WS_TEMPLATE, $current_page_base,'jscript') . '/jquery.easing.min.js' ?>" type="text/javascript"></script>
 

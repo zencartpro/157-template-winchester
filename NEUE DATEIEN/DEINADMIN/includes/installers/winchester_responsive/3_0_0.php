@@ -9,12 +9,14 @@ $db->Execute("INSERT IGNORE INTO " . TABLE_CONFIGURATION . " (configuration_titl
 	    ('Slideout Box Status', 'WIN_SLIDEOUTBOX_STATUS', 'true', 'Do you want to show permanently the slideout box on the left corner?', @gid, 6, now(), now(), '', 'zen_cfg_select_option(array(\'true\', \'false\'),'),
 	    ('Top Notice Status', 'WIN_TOPNOTICE_STATUS', 'true', 'Do you want to show permanently a promotional notice section on the top of the page?', @gid, 7, now(), now(), '', 'zen_cfg_select_option(array(\'true\', \'false\'),'),
 	    ('Currency Dropdown in Header', 'WIN_HEADER_CURRENCY_STATUS', 'false', 'Do you want to show permanently a currency dropdown on the right side od header?', @gid, 8, now(), now(), '', 'zen_cfg_select_option(array(\'true\', \'false\'),'),
+	    ('Language Selection in Header', 'WIN_HEADER_LANGUAGE_STATUS', 'false', 'Do you want to show permanently a language switch on the right side od header?', @gid, 8, now(), now(), '', 'zen_cfg_select_option(array(\'true\', \'false\'),'),
 	    ('Footer Navigation Status', 'WIN_FOOTERNAVI_STATUS', 'true', 'Do you want to show additional links in the last footer line?', @gid, 9, now(), now(), '', 'zen_cfg_select_option(array(\'true\', \'false\'),');");
 $db->Execute("REPLACE INTO " . TABLE_CONFIGURATION_LANGUAGE . " (configuration_title, configuration_key, configuration_description, configuration_language_id) VALUES
 ('Winchester - To Top aktivieren', 'WIN_TOTOP_STATUS', 'Wollen Sie beim Scrollen rechts unten einen To Top Button anzeigen?', 43),
 ('Winchester - Slideout Box aktivieren', 'WIN_SLIDEOUTBOX_STATUS', 'Wollen Sie oben links immer die Slideout Box anzeigen?', 43),
 ('Winchester - Hinweisbereich in der Kopfzeile aktivieren', 'WIN_TOPNOTICE_STATUS', 'Wollen Sie in der Kopfzeile permanent einen Hinweisbereich für aktuelle Aktionen anzeigen?', 43),
 ('Winchester - Währungsdropdown im Header aktivieren', 'WIN_HEADER_CURRENCY_STATUS', 'Wollen Sie im Header oben rechts permanent einen Währungsumschalter anzeigen?', 43),
+('Winchester - Sprachauswahl im Header aktivieren', 'WIN_HEADER_LANGUAGE_STATUS', 'Wollen Sie im Header oben rechts permanent einen Umschalter für die im Shop aktiven Sprachen anzeigen?', 43),
 ('Winchester - Links in letzter Fußzeile aktivieren', 'WIN_FOOTERNAVI_STATUS', 'Wollen Sie die zusätzlichen Links (z.B. Site Map Datenschutz AGB Impressum) in der letzten Fußzeile anzeigen?', 43);");
 // set version to 3.0.0
 $db->Execute("UPDATE " . TABLE_CONFIGURATION . " SET configuration_value = '3.0.0' WHERE configuration_key = 'WINCHESTER_RESPONSIVE_VERSION' LIMIT 1;");

@@ -1,3 +1,5 @@
+/*bof new definitions since 3.0.0*/
+
 body {
 margin: 0;
 background: #fff;
@@ -15,6 +17,12 @@ line-height:22px;
 	height:70px;
 }
 
+#logoWrapper-mobile{
+	position:relative;
+	width:100%;
+	height:50px;
+}
+
 #top-second{
 	position:relative;
 	width:100%;
@@ -28,6 +36,14 @@ top:0px;
 left:0px;
 width:240px;
 height:70px;
+}
+
+#logo-mobile{
+position:absolute;
+top:-10px;
+left:0px;
+width:200px;
+height:50px;
 }
 
 
@@ -60,14 +76,26 @@ top:10px;
 	top:30px;
 }
 
+#navLanguagesWrapper-mobile{
+	position:absolute;
+	right:1px;
+	top:0px;
+}
+
 #navCurrenciesWrapper{
 	position:absolute;
 	right:100px;
 	top:30px;
 }
 
-#currencyinheader{
-	
+#navCurrenciesWrapper-mobile{
+	position:absolute;
+	left:210px;
+	top:0px;
+}
+
+#select-currency{
+	background:#F4F4F4;
 }
 
 #navMain{
@@ -82,13 +110,8 @@ text-align:right;
 	position:absolute;
 	left:270px;
 	top:0px;
-	width:480px;
-   
+	width:480px;   
 }
-
-
-
-
 
 .mshop, .minfo, .mcontact{
 	text-transform:uppercase;
@@ -99,7 +122,9 @@ text-align:right;
 	font-size:95%;
 }
 
-
+.grecaptcha-badge {
+visibility: hidden;
+}
 
 
 
@@ -216,6 +241,50 @@ font-size:1em;
 #myAccountGen a{
 	line-height:36px;
 }
+
+#top-wrapper-mobile{
+width:100%;
+height:20px !important;
+background:#fa6938;
+color:#fff;
+font-size:80% !important;
+text-align:center;
+padding-top:2px;
+padding-bottom:2px;}
+
+/*bof smartphone*/
+
+@media (max-width: 767px){
+  /* iPhone / Pixel Portrait */
+  .contentimage-right{
+	float:none;
+	width:200px;
+	height:200px;
+	margin:0 auto;
+	border:10px solid #F4F4F4;
+	text-align:center;
+	clear:both;
+}
+
+.contentimage-left{
+	float:none;
+	width:200px;
+	height:200px;
+	margin:0 auto;
+	border:10px solid #F4F4F4;
+	text-align:center;
+	clear:both;
+}
+
+#tagline {
+display:none;
+}
+
+
+  }
+/*eof smartphone*/
+
+/*eof new definitions since 3.0.0*/
 
 /*bof basic elements*/
 a img {border: none;}

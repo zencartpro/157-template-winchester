@@ -15,7 +15,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_header.php for Winchester 2024-11-22 21:05:16Z webchills $
+ * @version $Id: tpl_header.php for Winchester 2024-11-23 11:05:16Z webchills $
  */
 ?>
 
@@ -49,14 +49,16 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 </div>
 <!--eof-search display-->
 <!-- bof languages header display -->
+<?php if (defined('WIN_HEADER_LANGUAGE_STATUS') && WIN_HEADER_LANGUAGE_STATUS === 'true') { ?>
 <div id="navLanguagesWrapper" class="forward">
 <?php require(DIR_WS_MODULES . zen_get_module_directory ('header_languages.php'));?>
 </div>
+<?php }?>
 <!-- eof  languages header display -->
 <!-- bof currencies header display -->
 <?php if (defined('WIN_HEADER_CURRENCY_STATUS') && WIN_HEADER_CURRENCY_STATUS === 'true') { ?>
 <div id="navCurrenciesWrapper">
-<?php  require(DIR_WS_MODULES . 'header_currencies.php');?>
+<?php require(DIR_WS_MODULES . zen_get_module_directory ('header_currencies.php'));?>
 </div>
 <?php }?>
 <!-- eof currencies header display -->
