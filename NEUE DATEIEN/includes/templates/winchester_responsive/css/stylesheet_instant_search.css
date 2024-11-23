@@ -14,14 +14,14 @@
     left: 0;
     right: 0;
     vertical-align: bottom;
-    font-size: .8rem;
+    font-size: 1rem;
     background: #fff;
-    min-width: 375px;
-    border: 1px solid #ccc;
+    min-width: 30px;
+    border: 1px solid #F4F4F4;
     border-top: none;
     margin: 0;
     padding: .31rem;
-    box-shadow: 4px 4px 4px #171717;
+    box-shadow: 4px 4px 4px #DBDBDB;
 }
 
 .instantSearchResultsDropdownContainer ul {

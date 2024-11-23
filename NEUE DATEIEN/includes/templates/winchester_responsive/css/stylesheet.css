@@ -20,8 +20,9 @@ line-height:22px;
 #logoWrapper-mobile{
 	position:relative;
 	width:100%;
-	height:50px;
+	height:100px;
 }
+
 
 #top-second{
 	position:relative;
@@ -56,10 +57,17 @@ left:0px;
 #megamenu{
 	position:absolute;
 	left:270px;
-	top:0px;
-	
-	
+	top:0px;	
 }
+
+#searchboxfield input[type=text]{
+	width:99%;
+}
+
+#searchboxfield .checkboxLabel{
+	font-size:80%;
+}
+
 
 #header-cart{
 font-size:140% !important;
@@ -67,8 +75,35 @@ text-align:right;
 position:absolute;
 right:10px;
 top:10px;
+}
+
+
+.header-cart-mobile{
+padding:0 10px;
+font-weight:500;
+}
+
+#mobile-navi{
+	position:absolute;
+	left:2px;
+	top:110px;
+	font-size:100%;
+	
+	
+}
+
+#mobilemenuContainer{
+	position:absolute;
+	right:0px;
+	top:0px;	
+	width:72%;
 
 }
+
+#menu{
+	float:left;
+}
+
 
 #navLanguagesWrapper{
 	position:absolute;
@@ -84,18 +119,21 @@ top:10px;
 
 #navCurrenciesWrapper{
 	position:absolute;
-	right:100px;
+	right:170px;
 	top:30px;
+	width:50px;
 }
 
 #navCurrenciesWrapper-mobile{
 	position:absolute;
 	left:210px;
 	top:0px;
+	width:50px;
 }
 
 #select-currency{
 	background:#F4F4F4;
+	width:50px;
 }
 
 #navMain{
@@ -278,6 +316,16 @@ padding-bottom:2px;}
 
 #tagline {
 display:none;
+}
+
+#navBreadCrumb{
+margin:0;
+padding:0.1em;
+font-size:80%;
+font-weight:300;
+color:#171717;
+background:#F4F4F4;
+width:100%;
 }
 
 
@@ -591,7 +639,9 @@ LABEL#textAreaReviews {font-weight:normal;margin: 1em 0;}
 .collapse-button {position: absolute;right: 8px;top: 50%;width: 40px;background: #171717;box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.075);padding: 7px 10px;text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);cursor: pointer;font-size: 14px;text-align: center;transform: translate(0, -50%);-o-transform: translate(0, -50%);-ms-transform: translate(0, -50%);-moz-transform: translate(0, -50%);-webkit-transform: translate(0, -50%);box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box}
 .collapse-button:hover, .collapse-button:focus {background-image: none;background: #666;color: #fff;}
 .collapse-button .icon-bar {background-color: #fff;border-radius: 1px 1px 1px 1px;box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);display: block;height: 2px;width: 18px;margin: 3px 0;}
-#DEACTmenu{float:left;margin-top:65px;width:72%;}
+.slimmenu{
+	float:left;
+}
 ul.slimmenu, ul.slimmenu1 {list-style-type: none;margin: 0;padding: 0;width: 100%;}
 ul.slimmenu li, ul.slimmenu1 li {position: relative;display: inline-block;background:transparent;}
 ul.slimmenu > li, ul.slimmenu1 > li { margin-right: -5px; border-left: 0px solid #999 }

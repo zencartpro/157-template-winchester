@@ -36,8 +36,9 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 <!--eof-top-notice-->
 <div id="top-middle">
 <div class="onerow-fluid <?php echo $fluidisFixed; ?>">
-<!--eof-logo-mobile-->
+<!--bof-logo/currency/language/nav/hamburger section-mobile-->
 <div id="logoWrapper-mobile">
+<!--bof-logo-mobile-->
 <div id="logo-mobile">
 <?php echo '<a href="' . HTTP_SERVER . DIR_WS_CATALOG . '">' . zen_image($template->get_template_dir(HEADER_LOGO_IMAGE, DIR_WS_TEMPLATE, $current_page_base,'images'). '/' . HEADER_LOGO_IMAGE, HEADER_ALT_TEXT) . '</a>'; ?>
 </div>
@@ -56,36 +57,23 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 </div>
 <?php }?>
 <!-- eof currencies header display -->
-
+<!--bof-navi-mobile-->
 <!--bof handheld menu display-->
+<div id="mobilemenuContainer">
 <?php require($template->get_template_dir('tpl_modules_mobile_categories_tabs.php',DIR_WS_TEMPLATE, $current_page_base,'templates'). '/tpl_modules_mobile_categories_tabs.php'); ?>
+</div>
 <!--eof handheld menu display-->
-
 </div>
-
-<div class="clearBoth"></div>
-
-<div id="mobile-nav">
-
-<a href="<?php echo zen_href_link(FILENAME_ACCOUNT, '', 'SSL'); ?>"><i class="fa fa-user"></i></a>
-
-<a href="<?php echo zen_href_link(FILENAME_ADVANCED_SEARCH); ?>"><i class="fa fa-search"></i></a>
-
-<div class="header-cart">
-    <a href="<?php echo zen_href_link(FILENAME_SHOPPING_CART, '', 'NONSSL'); ?>"><?php echo $_SESSION['cart']->count_contents();?>  - <?php echo $currencies->format($_SESSION['cart']->show_total());?></a>
-   <?php if ($_SESSION['cart']->count_contents() != 0) { ?>
-<?php }?>
+<!--bof-navi-mobile-->
+<div id="mobile-navi">
+<a class="header-cart-mobile" href="<?php echo zen_href_link(FILENAME_ACCOUNT, '', 'SSL'); ?>"><i class="fa-solid fa-user fa-lg"></i></i></a>
+<a class="header-cart-mobile" href="<?php echo zen_href_link(FILENAME_ADVANCED_SEARCH); ?>"><i class="fa-solid fa-search fa-lg"></i></i></a>
+<a class="header-cart-mobile" href="<?php echo zen_href_link(FILENAME_SHOPPING_CART, '', 'NONSSL'); ?>"><i class="fa-solid fa-cart-shopping fa-lg"></i> <?php echo $_SESSION['cart']->count_contents();?>  - <?php echo $currencies->format($_SESSION['cart']->show_total());?></a>
 </div>
-
-<div id="navMainSearch"><?php require(DIR_WS_MODULES . 'sideboxes/search_header.php'); ?></div>
-
-
-<br class="clearBoth" />
-
+<!--eof-navi-mobile-->
+<!--eof-logo/currency/language/nav/hamburger section-mobile-->
 </div>
 </div>
-</div>
-
 <?php
     if ($this_is_home_page) {
 ?>
@@ -97,10 +85,5 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
     } ?>
 <?php
     } ?>
-
-
-
-
 <?php } ?>
-
 </div>

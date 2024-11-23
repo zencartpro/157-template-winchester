@@ -99,8 +99,8 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 <!--eof-mega-menu-->
 <!--bof-header-cart-->
 <div id="header-cart">
-    <a href="<?php echo zen_href_link(FILENAME_SHOPPING_CART, '', 'NONSSL'); ?>"><i class="fa-solid fa-cart-shopping"></i> <?php echo $_SESSION['cart']->count_contents();?>  - <?php echo $currencies->format($_SESSION['cart']->show_total());?></a>
-   <?php if ($_SESSION['cart']->count_contents() != 0) { ?>
+<a title="<?php echo HEADER_TITLE_CART_CONTENTS;?>" href="<?php echo zen_href_link(FILENAME_SHOPPING_CART, '', 'NONSSL'); ?>"><i class="fa-solid fa-cart-shopping"></i> <?php echo $_SESSION['cart']->count_contents();?>  - <?php echo $currencies->format($_SESSION['cart']->show_total());?></a>
+<?php if ($_SESSION['cart']->count_contents() != 0) { ?>
 <?php }?>
 </div>
 <!--eof-header-cart-->

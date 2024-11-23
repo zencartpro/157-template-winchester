@@ -6,27 +6,17 @@
  * Loaded automatically by index.php?main_page=shopping_cart.
  * Displays shopping-cart contents
  *
-
- * @copyright Copyright 2003-2022 Zen Cart Development Team
+ * @copyright Copyright 2003-2024 Zen Cart Development Team
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_shopping_cart_default.php for Winchester 2022-04-10 14:28:16Z webchills $
+ * @version $Id: tpl_shopping_cart_default.php for Winchester 2024-11-23 14:28:16Z webchills $
  */
 ?>
 <div class="centerColumn" id="shoppingCartDefault">
 <?php
   if ($flagHasCartContents) {
 ?>
-
-<?php
-  if ($_SESSION['cart']->count_contents() > 0) {
-?>
-<div class="forward"><?php echo TEXT_CART_HELP; ?></div>
-<?php
-  }
-?>
-
 <h1 id="cartDefaultHeading"><?php echo HEADING_TITLE; ?></h1>
 <!-- ** BEGIN PAYPAL EXPRESS CHECKOUT for not logged in visitors only! ** -->
 <?php if (!zen_is_logged_in()) { ?>	
