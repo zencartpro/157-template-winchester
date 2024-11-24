@@ -104,6 +104,10 @@ font-weight:500;
 	float:left;
 }
 
+#indexDefaultHeading{
+	text-align:center;
+}
+
 
 #navLanguagesWrapper{
 	position:absolute;
@@ -290,6 +294,10 @@ text-align:center;
 padding-top:2px;
 padding-bottom:2px;}
 
+#top-wrapper-mobile a{
+color:#fff;
+}
+
 /*bof smartphone*/
 
 @media (max-width: 767px){
@@ -326,6 +334,13 @@ font-weight:300;
 color:#171717;
 background:#F4F4F4;
 width:100%;
+}
+
+#footer-bottom{
+	float:left !important;
+	text-align:left !important;
+	padding-top:2px;
+	margin-right:4px;
 }
 
 
@@ -396,7 +411,7 @@ table{width:100%;}
 }
 /*bof navigation*/
 .navNextPrevCounter {margin:0;font-size:0.9em;}
-.navNextPrevList {margin:0;padding:0.5em 0em;display:inline;white-space:nowrap;list-style-type:none;}
+.navNextPrevList {margin:0;padding:0.5em 2em;display:inline;white-space:nowrap;list-style-type:none;}
 #navCategoryIcon, .buttonRow, #indexProductListCatDescription {margin:0.5em;}
 #navBreadCrumb{margin:16px 0 0 12px;padding:0.1em;font-size:80%;font-weight:300;color:#171717;background:#F4F4F4;}
 #navBreadCrumb i{font-size:100%;margin-left:3px;vertical-align: middle;}
