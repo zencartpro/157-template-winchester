@@ -28,3 +28,5 @@ define('HEADER_TITLE_REVIEWS','Bewertungen');
 define('TEXT_FIRST_REVIEW','<div class="review-first">Seien Sie der/die Erste.&nbsp;&nbsp;');
 define('TEXT_FIRST_REVIEW_WRITE','<span class="review-first-write">Schreiben Sie eine Bewertung.</span>');
 define('HEADER_TITLE_GPSR','Herstellerinfo (GPSR)');
+/*bof social media footer*/
+define('SOCIAL_MEDIA_FOOTER','<a href="https://www.facebook.com/#" target="_blank"><i class="fa-brands fa-square-facebook fa-2xl"></i></a><a href="https://bsky.app/profile/#" target="_blank"><i class="fa-brands fa-bluesky fa-2xl"></i></a><a href="https://www.youtube.com/#" target="_blank"><i class="fa-brands fa-youtube fa-2xl"></i></a><a href="#" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>');

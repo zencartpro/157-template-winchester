@@ -14,7 +14,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_footer.php for Winchester 2024-11-19 17:28:16Z webchills $
+ * @version $Id: tpl_footer.php for Winchester 2024-11-24 18:12:16Z webchills $
  */
 require(DIR_WS_MODULES . zen_get_module_directory('footer.php'));
 ?>
@@ -32,13 +32,31 @@ if (!isset($flag_disable_footer) || !$flag_disable_footer) {
 </ul>
 <?php } ?>
 </div>
-
 <!--bof-flexible footer menu display -->
 <div id="flex-navSupp">
 <div class="onerow-fluid <?php echo $fluidisFixed; ?>">
-
 <?php require($template->get_template_dir('tpl_flexible_footer_menu.php',DIR_WS_TEMPLATE, $current_page_base,'templates'). '/tpl_flexible_footer_menu.php'); ?>
-<br>
+<br class="clearBoth">
+<!--eof-flexible footer menu -->
+<!--bof-footerBottom2 -->
+<div id="footerBottom2">
+<!--bof-payment options display -->
+<?php if (defined('WIN_FOOTER_PAYMENT_STATUS') && (WIN_FOOTER_PAYMENT_STATUS === 'true')) { ?>
+<div id="paymentoptions">
+<a href="index.php?main_page=zahlungsarten"><img src="images/content/payment-options.png" alt="payment options"/> </a>
+</div>
+<?php } ?>
+<!--eof-payment options display -->
+<!--bof-social media display -->
+<?php if (defined('WIN_FOOTER_SOCIALMEDIA_STATUS') && (WIN_FOOTER_SOCIALMEDIA_STATUS === 'true')) { ?>
+<div id="followus">
+<?php echo SOCIAL_MEDIA_FOOTER; ?>
+</div>
+<?php } ?>
+<!--eof-social media display -->
+</div>
+<br class="clearBoth">
+<!--eof-footerBottom2 -->
 <div id="siteinfoLegalSection">
 <!--bof- site copyright display -->
 <div id="siteinfoLegal"><?php echo FOOTER_TEXT_BODY; ?></div>
@@ -63,7 +81,7 @@ if (!isset($flag_disable_footer) || !$flag_disable_footer) {
 <?php } ?>
 </div>
 </div>
-<!--eof-flexible footer menu -->
+
 <!--eof-navigation display -->
 
 <!--bof-ip address display -->
