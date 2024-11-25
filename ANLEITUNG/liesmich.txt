@@ -6,6 +6,7 @@ www.webchills.at
 
 Demo des Templates:
 https://winchester.zencartdemo.at
+https://winchesterblack.zencartdemo.at
 
 
 Diese Version ist ausschließlich für die deutsche Zen Cart Version 1.5.7i geeignet!
@@ -19,6 +20,7 @@ Changelog Version 3.0.0 - November 2024
 - Flexibles Footer Menü neu strukturiert
 - Neue optionale Bereiche für Social Media Icons und Zahlungsartenicons
 - Layout modernisiert
+- angepasste Dateien für dunkles Design Winchester Black hinzugefügt
 
 Changelog Version 2.1.0 - März/April 2022
 - Anpassungen für 1.5.7 und PHP 8
@@ -196,6 +198,22 @@ Falls Sie beim Ändern Fehler gemacht und den Ursprungszustand wieder herstellen
 ____________________________________________________________________________________________________
 
 
+Zusatzlinks unten im Footer
+
+Hier sind Links zu Sitemap, Datenschutz, AGB und Impressum vorgesehen.
+
+Die Links können Sie in folgender Datei anpassen:
+
+includes/templates/winchester_responsive/common/tpl_footer.php
+
+ca. Zeile 65 in folgendem Abschnitt:
+
+<!--bof sitemap, privacy, conditions, impressum -->
+
+Falls Sie diese Links gar nicht anzeigen wollen, einfach in der Templatekonfiguration deaktivieren
+____________________________________________________________________________________________________
+
+
 Menü in der mobilen Version
 
 kann in folgender Datei feinabgestimmt werden:
@@ -262,6 +280,56 @@ includes/templates/winchester_responsive/images/home1.png
 includes/templates/winchester_responsive/images/home.png
 includes/templates/winchester_responsive/images/home3.png
 Diese drei Bilder müssen exakt die Größe 310x200 Pixel haben 
+
+____________________________________________________________________________________________________
+
+Schriftart ändern
+
+Dieses Template sieht die Schriftart Ubuntu vor und bindet diesen Google Font lokal ein.
+
+Vorintegriert sind auch die Fonts Arimo und Open Sans.
+
+Wenn Sie auf Arimo umstellen wollen, ändern Sie in folgender Datei den Link entsprechend ab:
+
+includes/templates/winchester_responsive/common/html_header.php
+
+von
+
+<link href="assets/css/ubuntu.css" rel="stylesheet" type="text/css"/>
+
+auf
+
+<link href="assets/css/arimo.css" rel="stylesheet" type="text/css"/>
+
+oder für Open Sans auf:
+
+<link href="assets/css/opensans.css" rel="stylesheet" type="text/css"/>
+
+In Ihren Stylesheets müssen Sie dann noch alle Aufrufe entsprechend ändern von
+
+font-family: Ubuntu,Arial,Helvetica,sans-serif;
+
+auf z.B.
+
+font-family: Arimo,Arial,Helvetica,sans-serif;
+
+oder
+
+font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+
+Bitte beachten Sie, dass die voreingestellten Schriftgrößen in den Stylesheets für Ubuntu ausgelegt sind und Sie die möglicherweise anpassen müssen, wenn Sie eine andere Schriftart verwenden.
+
+
+____________________________________________________________________________________________________
+
+
+Optional: Dunkles Design WINCHESTER BLACK
+
+Um das Layout auf ein dunkles Design im Stil des alten Winchester Black Templates umzustellen, können Sie die im Ordner OPTIONAL BLACK Dateien und Ordner in der vorgegebenen Struktur in Ihr Shopverzeichnis hochladen und die bestehenden damit überschreiben.
+Damit wird das Template dann so aussehen wie auf:
+https://winchesterblack.zencartdemo.at
+
+____________________________________________________________________________________________________
 
 
 ____________________________________________________________________________________________________
