@@ -186,7 +186,7 @@ visibility: hidden;
 }
 
 #siteinfoLegal a:hover{
-color:#fa6938;
+color:#f38f00;
 text-decoration:underline;
 }
 
@@ -198,7 +198,7 @@ text-decoration:underline;
 }
 
 #footer-bottom a:hover{
-color:#fa6938;
+color:#f38f00;
 text-decoration:underline;
 }
 
@@ -284,7 +284,7 @@ text-align:left;
 
 #productInfoLink a:hover{
 	text-decoration:underline;
-	color:#fa6938;
+	color:#f38f00;
 }
 
 .instructions{
@@ -307,7 +307,7 @@ font-size:1em;
 #top-wrapper-mobile{
 width:100%;
 height:20px !important;
-background:#fa6938;
+background:#f38f00;
 color:#fff;
 font-size:80% !important;
 text-align:center;
@@ -375,7 +375,7 @@ a:link, #navEZPagesTOC ul li a {color:#000;text-decoration:none;}
 a:visited {color: #444443;text-decoration:none;}
 a:hover, #navEZPagesTOC ul li a:hover, #navMain ul li a:hover, #navSupp ul li a:hover, #navCatTabs ul li a:hover {color: #444;}
 a:active {color:#444443;}
-h1 {text-transform:uppercase;font-weight:normal;color:#fa6938;font-size:150%;}
+h1 {text-transform:uppercase;font-weight:normal;color:#f38f00;font-size:150%;}
 h2 {text-transform:uppercase;font-weight:normal;color:#444;font-size:130%;font-weight:normal;}
 h3 {font-size: 110%;font-weight:normal;text-transform:uppercase;}
 h4, h5, h6, LABEL, h4.optionName, LEGEND, ADDRESS, .sideBoxContent, .larger{font-weight:normal;}
@@ -408,9 +408,9 @@ table{width:100%;}
 
 /*bof warnings, errors, messages*/
 .messageStackWarning, .messageStackError, .messageStackSuccess, .messageStackCaution {line-height:1.4em;border:0px solid #dbdbce;padding:5px;}
-.messageStackWarning, .messageStackError {background-color:#ff6938;color:#fff;}
-.messageStackSuccess {background-color:#ff6938;color:#fff;}
-.messageStackCaution {background-color:#ff6938;color:#fff;}
+.messageStackWarning, .messageStackError {background-color:#f38f00;color:#fff;}
+.messageStackSuccess {background-color:#f38f00;color:#fff;}
+.messageStackCaution {background-color:#f38f00;color:#fff;}
 .messageStackCaution img{vertical-align:middle;margin-right:10px;}
 
 /*bof wrappers - page or section containers*/
@@ -436,13 +436,13 @@ table{width:100%;}
 #navBreadCrumb{margin:16px 0 0 12px;padding:0.1em;font-size:80%;font-weight:300;color:#171717;background:#F4F4F4;}
 #navBreadCrumb i{font-size:100%;margin-left:3px;vertical-align: middle;}
 #navBreadCrumb a:hover{
-	color:#ff6938;
+	color:#f38f00;
 	text-decoration:underline;
 }
 
 /*bof header*/
 #headerWrapper{margin:0 auto;}
-#top-wrapper{width:100%;height:30px;background:#fa6938;color:#fff;font-size:110%;text-align:center;padding-top:6px;padding-bottom:2px;}
+#top-wrapper{width:100%;height:30px;background:#f38f00;color:#fff;font-size:110%;text-align:center;padding-top:6px;padding-bottom:2px;}
 #top-wrapper a{color:#fff;}
 #top-wrapper:hover{background:#171717;}
 #top-inner{background:none;}
@@ -451,7 +451,7 @@ table{width:100%;}
 #navMain ul  {margin:0 auto;padding: 0px 0 0.5em 0;list-style-type:none;text-align:right;line-height: 1.5em;float:right;}
 #navMain ul li {display:inline;}
 #navMain ul li a {margin:0;padding:0em 1.0em;color: #444;text-decoration:none;white-space:nowrap;font-size:100%;text-transform:uppercase;}
-#navMain ul li a:hover {color: #ff6938;}
+#navMain ul li a:hover {color: #f38f00;}
 #navEZPagesTop {background-color:#444;}
 #navEZPagesTop {margin:0;padding:0.5em;font-size:0.95em;font-weight:bold;color:#fffffd;}
 #navEZPagesTop a{color:#fffffd;}
@@ -520,7 +520,7 @@ table{width:100%;}
 .mobile-only{display:none;}
 .cartQuantity-mobile{display:none;}
 #stateZone{width:300px;margin-top:10px;margin-bottom:10px;}
-#shippingEstimatorContent h2{font-size:160%;color:#ff6938;margin-bottom:30px;}
+#shippingEstimatorContent h2{font-size:160%;color:#f38f00;margin-bottom:30px;}
 #shippingEstimatorContent .buttonRow{width:63%;margin-top:-20px;}
 #shippingEstimatorContent .button_update{float:right;}
 #shippingEstimatorContent table{margin-top:30px;border-collapse:collapse;}
@@ -553,8 +553,8 @@ h3.leftBoxHeading a, h3.rightBoxHeading a{color:#444;font-weight:normal !importa
 .box-price{font-size:130%;color:#171717;margin:0 auto 30px auto;border-bottom:1px solid #dbdbce;padding-bottom:20px;width:90%;}
 .sideBoxContent img, #reviewsContent img{margin-bottom:10px;}
 .sideBoxContent {padding:20px 5px 20px 5px;border-bottom:1px solid #dbdbce;background:#f4f4f4;color:#686868;}
-h3.leftBoxHeading a:hover {color:#ff6938;text-decoration:none;} 
-h3.rightBoxHeading a:hover {color:#ff6938;text-decoration:none;}
+h3.leftBoxHeading a:hover {color:#f38f00;text-decoration:none;} 
+h3.rightBoxHeading a:hover {color:#f38f00;text-decoration:none;}
 #catBoxDivider {display:none;}
 #specialsHeading a:hover, #whatsnewHeading a:hover, #featuredHeading a:hover {color:#444443;}
 .centeredContent, TH, #cartEmptyText, #cartBoxGVButton, #cartBoxEmpty, #cartBoxVoucherBalance, #navCatTabsWrapper, #navEZPageNextPrev, #bannerOne, #bannerTwo,  #bannerThree,  #bannerFour,  #bannerFive,  #bannerSix, #siteinfoCredits, #siteinfoStatus, #siteinfoIP, .center, .cartRemoveItemDisplay, .cartQuantityUpdate, .cartQuantity, .cartTotalsDisplay, #cartBoxGVBalance, .leftBoxHeading, .centerBoxHeading,.rightBoxHeading, .productListing-data, .accountQuantityDisplay, .ratingRow, LABEL#textAreaReviews, #productMainImage, #reviewsInfoDefaultProductImage, #productReviewsDefaultProductImage, #reviewWriteMainImage, .centerBoxContents, .specialsListBoxContents, .categoryListBoxContents, .additionalImages, .centerBoxContentsSpecials, .centerBoxContentsAlsoPurch, .centerBoxContentsFeatured, .gvBal, .attribImg {text-align:center;}
@@ -665,7 +665,7 @@ LABEL#textAreaReviews {font-weight:normal;margin: 1em 0;}
 .custom-tab-image{float:left;}
 
 .review-first{margin-bottom:30px;}
-.review-first-write{color:#ff6938;}
+.review-first-write{color:#f38f00;}
 .review-first-write:hover{text-decoration:underline;}
 #horizontalTab{margin-top:20px !important;clear:both;}
 
@@ -683,14 +683,14 @@ ul.slimmenu > li, ul.slimmenu1 > li { margin-right: -5px; border-left: 0px solid
 ul.slimmenu > li:first-child, ul.slimmenu1 > li:first-child { border-left: 0 }
 ul.slimmenu > li:last-child, ul.slimmenu1 > li:last-child { margin-right: 0 }
 ul.slimmenu li a {display: block;color: #444;padding: 12px 34px 12px 6px;font-size: 100%;font-weight: normal;text-shadow: 0 1px 0 rgba(255,255,255,0.2);transition: background-color 0.5s ease-out;-o-transition: background-color 0.5s ease-out;-moz-transition: background-color 0.5s ease-out;-webkit-transition: background-color 0.5s ease-out;}
-ul.slimmenu1 li a{display: block;color: #444;padding: 12px 34px 12px 6px;font-size: 15px;font-weight: normal;text-shadow: 0 1px 0 rgba(255,255,255,0.2);transition: background-color 0.5s ease-out;-o-transition: background-color 0.5s ease-out;-moz-transition: background-color 0.5s ease-out;-webkit-transition: background-color 0.5s ease-out;}
-ul.slimmenu li a:hover, ul.slimmenu1 li a:hover {background-color: #fff;text-decoration: none;color:#ff6938;}
+ul.slimmenu1 li a{display: block;color: #444;padding: 12px 34px 12px 6px;font-size: 100%;font-weight: normal;text-shadow: 0 1px 0 rgba(255,255,255,0.2);transition: background-color 0.5s ease-out;-o-transition: background-color 0.5s ease-out;-moz-transition: background-color 0.5s ease-out;-webkit-transition: background-color 0.5s ease-out;}
+ul.slimmenu li a:hover, ul.slimmenu1 li a:hover {background-color: #fff;text-decoration: none;color:#f38f00;}
 ul.slimmenu li .sub-collapser, ul.slimmenu1 li .sub-collapser {background: none;position: absolute;right: 0;top: 0;width: 28px;height: 100%;text-align: center;z-index: 999;cursor: pointer;}
 ul.slimmenu li .sub-collapser:before, ul.slimmenu1 li .sub-collapser:before {content: '';display: inline-block;height: 100%;vertical-align: middle;margin-right: -0.25em;}
-ul.slimmenu li .sub-collapser > i, ul.slimmenu1 li .sub-collapser > i {color:#ff6938;font-size:11px;display:inline-block;vertical-align:middle;}
+ul.slimmenu li .sub-collapser > i, ul.slimmenu1 li .sub-collapser > i {color:#f38f00;font-size:11px;display:inline-block;vertical-align:middle;}
 ul.slimmenu li ul, ul.slimmenu1 li ul {margin: 0;list-style-type: none;}
 ul.slimmenu li ul li, ul.slimmenu1 li ul li {background:#f4f4f4;width:190px;padding-left:20px;font-size:95%;}
-ul.slimmenu li ul li a:hover, ul.slimmenu1 li ul li a:hover{color:#ff6938;}
+ul.slimmenu li ul li a:hover, ul.slimmenu1 li ul li a:hover{color:#f38f00;}
 ul.slimmenu li > ul, ul.slimmenu1 li > ul {display: none;position: absolute;left: -40px;top: 100%;z-index: 9999;}
 ul.slimmenu li > ul > li ul, ul.slimmenu1 li > ul > li ul {display: none;position: absolute;left: 75%;top: 0;z-index: 999;}
 ul.slimmenu.collapsed li, ul.slimmenu1.collapsed li {display: block;width: 99%;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box}
@@ -729,7 +729,7 @@ ul.slimmenu.collapsed li ul.level2 li ul, ul.slimmenu1.collapsed li ul.level2 li
 #navSuppWrapper a{color:#444;font-weight:normal;}
 #siteinfoLegal, #footer-bottom {font-size:13px;}
 #siteinfoLegal a, #footer-bottom a {color: #000000;}
-#siteinfoLegal a:hover, #footer-bottom a:hover {color: #fa6938;}
+#siteinfoLegal a:hover, #footer-bottom a:hover {color: #f38f00;}
 #footer-bottom a{
 	padding-left:20px;
 	text-align:right;
@@ -750,7 +750,7 @@ ul.slimmenu.collapsed li ul.level2 li ul, ul.slimmenu1.collapsed li ul.level2 li
 #flex-navSupp .flexFooterCol.ffCcol1 li span.flexFooterColImage {text-align:left;}
 #flex-navSupp .flexFooterCol.ffCcol1 {border:0;}
 #flex-navSupp a.activePage {}
-#flex-navSupp a:hover {color: #fa6938;}
+#flex-navSupp a:hover {color: #f38f00;}
 
 /*bof css buttons*/
 .cssButton, .cssButtonHover, .more-info {background-color:#171717;transition:background 2s ease;-webkit-transition:background 2s ease;-moz-transition:background 2s ease;-o-transition:background 2s ease;color:#fffffd;text-transform:uppercase;text-align:center;white-space:nowrap;text-decoration:none;font-weight:normal;padding:0.8em 1.2em;}
@@ -770,12 +770,12 @@ ul.slimmenu.collapsed li ul.level2 li ul, ul.slimmenu1.collapsed li ul.level2 li
 .button_add_selected{width:250px !important;height:auto;}
 .button_search{height:auto !important;width:20px !important;background:#171717;border:none;position:relative;top:1px;left:-3px;}
 .button_buy_now .icon-circle-arrow-right:before{color:#fff !important;margin-left:5px;vertical-align:middle;}
-.button_checkout{background:#ff6938;}
+.button_checkout{background:#f38f00;}
 
 /*bof better categories*/
 .betterCategories, .betterDocuments, .betterEzpages, .betterInformation, .betterMoreinformation, .betterBestsellers {border-top: 0px solid #fffffe;}
 .betterCategories a, .betterCategories a:visited, .betterDocuments a, .betterDocuments a:visited, .betterEzpages a, .betterEzpages a:visited, .betterInformation a, .betterInformation a:visited, .betterMoreinformation a, .betterMoreinformation a:visited, .betterBestsellers a, .betterBestsellers a:visited {display: block;background-color: #f4f4f4;border-top: 0px solid #ffffff;border-bottom:1px solid #dbdbce;padding: 15px 4px 15px 20px;transition:background 2s ease;-webkit-transition:background 2s ease;-moz-transition:background 2s ease;-o-transition:background 2s ease;}
-.betterCategories a:hover, .betterCategories a:active, .betterDocuments a:hover, .betterDocuments a:active, .betterEzpages a:hover, .betterEzpages a:active, .betterInformation a:hover, .betterInformation a:active, .betterMoreinformation a:hover, .betterMoreinformation a:active, .betterBestsellers a:hover, .betterBestsellers a:active {background-color: #ff6938;color:#fff;}
+.betterCategories a:hover, .betterCategories a:active, .betterDocuments a:hover, .betterDocuments a:active, .betterEzpages a:hover, .betterEzpages a:active, .betterInformation a:hover, .betterInformation a:active, .betterMoreinformation a:hover, .betterMoreinformation a:active, .betterBestsellers a:hover, .betterBestsellers a:active {background-color: #0010ac;color:#fff;}
 .betterEzpages a:before, .betterMoreinformation a:before, .betterDocuments a:before, .betterInformation a:before, .betterCategories a:before{position:absolute;font-family: FontAwesome;content: "\f0da";}
 .betterEzpages img, .betterMoreinformation img, .betterDocuments img, .betterInformation img, .betterCategories img{padding-left:20px;}
 .cat-count{float:right;margin-right:20px;padding-left:20px;color:#f4f4f4;}
@@ -862,7 +862,7 @@ ul.slimmenu.collapsed li ul.level2 li ul, ul.slimmenu1.collapsed li ul.level2 li
 
 .taxAddon a:hover{
 	text-decoration:underline;
-	color: #fa6938;
+	color: #f38f00;
 }
 
 /* markup for tables used to present tabular data */

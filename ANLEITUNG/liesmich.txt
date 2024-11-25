@@ -263,6 +263,18 @@ Wenn Sie diesen Bereich gar nicht anzeigen wollen, einfach in der Template Konfi
 
 ____________________________________________________________________________________________________
 
+
+Zahlungsartenicons link unten
+
+Verwendet wird ein 266x40 Pixel großes png in :
+images/content/payment-options.png
+
+Gestalten Sie Ihr eigenes und laden es hoch nach images/content/payment-options.png und überschreiben das bestehende damit.
+
+Wenn Sie diesen Bereich gar nicht anzeigen wollen, einfach in der Template Konfiguration deaktivieren
+
+____________________________________________________________________________________________________
+
 Wie ändere ich Bilder und Links in den Slideshows auf der Startseite?
 
 Es gibt zwei "Slider" in den Winchester Templates.
