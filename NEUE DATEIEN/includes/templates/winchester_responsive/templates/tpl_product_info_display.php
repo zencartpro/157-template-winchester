@@ -9,7 +9,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_product_info_display.php for Winchester 2024-11-21 08:50:24Z webchills $
+ * @version $Id: tpl_product_info_display.php for Winchester 2024-11-25 15:50:24Z webchills $
  */
  //require(DIR_WS_MODULES . '/debug_blocks/product_info_prices.php');
 ?>
@@ -200,9 +200,10 @@ if (SHOW_BANNERS_GROUP_SETCUSTOMTAB != '' && $banner = zen_banner_exists('dynami
 <?php } ?>
    </li>
    <li>
+<?php if (defined('WIN_GPSR_DATA_PRODUCT_INFO_TAB') && (WIN_GPSR_DATA_PRODUCT_INFO_TAB === 'true')) { ?>
 <?php if (($flag_show_gpsr) && (!empty($manufacturers_gpsr_company)))  { ?>
-
 <?php echo HEADER_TITLE_GPSR; ?>
+<?php } ?>
 <?php } ?>
 </li>
             </ul>
@@ -249,7 +250,7 @@ if (SHOW_BANNERS_GROUP_SETCUSTOMTAB != '' && $banner = zen_banner_exists('dynami
 <?php } ?>
 <?php } ?>            
 </div>
-
+<?php if (defined('WIN_GPSR_DATA_PRODUCT_INFO_TAB') && (WIN_GPSR_DATA_PRODUCT_INFO_TAB === 'true')) { ?>
 <?php if ($flag_show_gpsr) { ?>
 <?php if (!empty($manufacturers_gpsr_company)) { ?>
  <!--bof GPSR -->
@@ -286,9 +287,9 @@ if (SHOW_BANNERS_GROUP_SETCUSTOMTAB != '' && $banner = zen_banner_exists('dynami
   <?php echo ((!empty($manufacturers_gpsr_additional_2)) ? '<li>' . TEXT_MANUFACTURER_GPSR_ADDITIONAL_2 . $manufacturers_gpsr_additional_2 . '</li>' : '') . "\n"; ?>
   <?php echo ((!empty($manufacturers_gpsr_additional_3)) ? '<li>' . TEXT_MANUFACTURER_GPSR_ADDITIONAL_3 . $manufacturers_gpsr_additional_3 . '</li>' : '') . "\n"; ?>
 </ul>
-</div>
- 
-	<!--eof GPSR -->
+</div> 
+<!--eof GPSR -->
+<?php } ?>
 <?php } ?>
 <?php } ?>
 </div>

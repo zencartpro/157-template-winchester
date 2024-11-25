@@ -7,7 +7,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: main_template_vars.php for GPSR 2024-11-18 19:21:36Z webchills $
+ * @version $Id: main_template_vars.php for Winchester 2024-11-25 15:41:36Z webchills $
  */
 /*
  * Extracts and constructs the data to be used in the product-type template tpl_TYPEHANDLER_info_display.php
@@ -39,7 +39,7 @@
         $products_price_sorter = $product_info->fields['products_price_sorter'];
 
         $products_price = $currencies->display_price($product_info->fields['products_price'], zen_get_tax_rate($product_info->fields['products_tax_class_id']));
-
+        if (defined('WIN_GPSR_DATA_PRODUCT_INFO_TAB') && (WIN_GPSR_DATA_PRODUCT_INFO_TAB === 'true')) { 
         $manufacturers_name = zen_get_products_manufacturers_name((int)$_GET['products_id']);
         $manufacturers_gpsr_company = zen_get_products_manufacturers_gpsr_company((int)$_GET['products_id']);
         $manufacturers_gpsr_contact_person = zen_get_products_manufacturers_gpsr_contact_person((int)$_GET['products_id']);
@@ -58,6 +58,7 @@
         $manufacturers_gpsr_additional_1 = zen_get_products_manufacturers_gpsr_additional_1((int)$_GET['products_id']);
         $manufacturers_gpsr_additional_2 = zen_get_products_manufacturers_gpsr_additional_2((int)$_GET['products_id']);
         $manufacturers_gpsr_additional_3 = zen_get_products_manufacturers_gpsr_additional_3((int)$_GET['products_id']);
+        }
 
         if ($new_price = zen_get_products_special_price($product_info->fields['products_id'])) {
             $specials_price = $currencies->display_price($new_price, zen_get_tax_rate($product_info->fields['products_tax_class_id']));
@@ -167,7 +168,9 @@
         $flag_show_product_info_additional_images = zen_get_show_product_switch($_GET['products_id'], 'additional_images');
         $flag_show_product_info_free_shipping = zen_get_show_product_switch($_GET['products_id'], 'always_free_shipping_image_switch');
         $flag_show_ask_a_question = !empty(zen_get_show_product_switch($_GET['products_id'], 'ask_a_question'));
+        if (defined('WIN_GPSR_DATA_PRODUCT_INFO_TAB') && (WIN_GPSR_DATA_PRODUCT_INFO_TAB === 'true')) { 
         $flag_show_gpsr = !empty(zen_get_show_product_switch($_GET['products_id'], 'gpsr'));
+        }
         require(DIR_WS_MODULES . zen_get_module_directory(FILENAME_PRODUCTS_QUANTITY_DISCOUNTS));
 
         $zco_notifier->notify('NOTIFY_MAIN_TEMPLATE_VARS_EXTRA_PRODUCT_INFO');

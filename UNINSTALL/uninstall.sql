@@ -55,11 +55,29 @@ DELETE FROM configuration WHERE configuration_key = 'WINCHESTER_RESPONSIVE_VERSI
 DELETE FROM configuration WHERE configuration_key = 'WIN_SLIDER_STATUS';
 DELETE FROM configuration WHERE configuration_key = 'SHOW_BANNERS_GROUP_SETCUSTOMTAB';
 DELETE FROM configuration WHERE configuration_key = 'SHOW_EZ_PAGES_MENU';
+DELETE FROM configuration WHERE configuration_key = 'WIN_TOTOP_STATUS';
+DELETE FROM configuration WHERE configuration_key = 'WIN_SLIDEOUTBOX_STATUS';
+DELETE FROM configuration WHERE configuration_key = 'WIN_TOPNOTICE_STATUS';
+DELETE FROM configuration WHERE configuration_key = 'WIN_HEADER_CURRENCY_STATUS';
+DELETE FROM configuration WHERE configuration_key = 'WIN_HEADER_LANGUAGE_STATUS';
+DELETE FROM configuration WHERE configuration_key = 'WIN_FOOTER_PAYMENT_STATUS';
+DELETE FROM configuration WHERE configuration_key = 'WIN_FOOTER_NAVI_STATUS';
+DELETE FROM configuration WHERE configuration_key = 'WIN_FOOTER_SOCIALMEDIA_STATUS';
+DELETE FROM configuration WHERE configuration_key = 'WIN_GPSR_DATA_PRODUCT_INFO_TAB';
 
 DELETE FROM configuration_language WHERE configuration_key = 'WINCHESTER_RESPONSIVE_VERSION';
 DELETE FROM configuration_language WHERE configuration_key = 'WIN_SLIDER_STATUS';
 DELETE FROM configuration_language WHERE configuration_key = 'SHOW_BANNERS_GROUP_SETCUSTOMTAB';
 DELETE FROM configuration_language WHERE configuration_key = 'SHOW_EZ_PAGES_MENU';
+DELETE FROM configuration WHERE configuration_key = 'WIN_TOTOP_STATUS';
+DELETE FROM configuration WHERE configuration_key = 'WIN_SLIDEOUTBOX_STATUS';
+DELETE FROM configuration WHERE configuration_key = 'WIN_TOPNOTICE_STATUS';
+DELETE FROM configuration WHERE configuration_key = 'WIN_HEADER_CURRENCY_STATUS';
+DELETE FROM configuration WHERE configuration_key = 'WIN_HEADER_LANGUAGE_STATUS';
+DELETE FROM configuration WHERE configuration_key = 'WIN_FOOTER_PAYMENT_STATUS';
+DELETE FROM configuration WHERE configuration_key = 'WIN_FOOTER_NAVI_STATUS';
+DELETE FROM configuration WHERE configuration_key = 'WIN_FOOTER_SOCIALMEDIA_STATUS';
+DELETE FROM configuration WHERE configuration_key = 'WIN_GPSR_DATA_PRODUCT_INFO_TAB';
 
 UPDATE configuration SET configuration_value = 60 WHERE configuration_key = 'IMAGE_SHOPPING_CART_WIDTH';
 UPDATE configuration SET configuration_value = 60 WHERE configuration_key = 'IMAGE_SHOPPING_CART_HEIGHT';
@@ -86,7 +104,7 @@ UPDATE configuration SET configuration_value = true WHERE configuration_key = 'P
 UPDATE configuration SET configuration_value = 1 WHERE configuration_key = 'PRODUCT_LIST_DESCRIPTION';
 UPDATE configuration SET configuration_value = 1 WHERE configuration_key = 'PRODUCT_LIST_FILTER';
 UPDATE configuration SET configuration_value = 2 WHERE configuration_key = 'PRODUCT_INFO_CATEGORIES_IMAGE_STATUS';
-UPDATE configuration SET configuration_value = True WHERE configuration_key = 'USE_SPLIT_LOGIN_MODE';
+UPDATE configuration SET configuration_value = 1 WHERE configuration_key = 'USE_SPLIT_LOGIN_MODE';
 UPDATE configuration SET configuration_value = 1 WHERE configuration_key = 'EZPAGES_STATUS_HEADER';
 UPDATE configuration SET configuration_value = 1 WHERE configuration_key = 'EZPAGES_STATUS_FOOTER';
 UPDATE configuration SET configuration_value = 1 WHERE configuration_key = 'SHOW_SHOPPING_CART_UPDATE';
