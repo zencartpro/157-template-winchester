@@ -8,6 +8,7 @@ Freigegebene getestete Versionen für den Einsatz in Livesystemen ausschließlic
 
 Demo des Templates:
 * https://winchester.zencartdemo.at
+* https://winchesterblack.zencartdemo.at
 
 Änderungen gegenüber dem Original Template:
 * Anpassungen für Zen Cart 1.5.7i deutsch und PHP 8.3
@@ -20,11 +21,14 @@ Demo des Templates:
 * AddThis entfernt
 * Anpassung der modifizierten Corefiles an die deutsche Zen Cart Version
 * Flexibles Footermenü auf multilanguage geändert
-* Footermenü mit nützlichen Links voreingestellt
 * Zen Colorbox entfernt, da seit 1.5.5 bereits enthalten
 * Anleitung aktualisiert
 * Uninstaller hinzugefügt
 * Twitter durch Bluesky ersetzt
 * Font auf Ubuntu geändert, alternativ Arimo oder Open Sans vorintegriert
 * Layout modernisiert
-* Sprach. und Währungsauswahl im Header integriert
+* Sprach- und Währungsauswahl im Header integriert
+* Flexibles Footer Menü neu strukturiert
+* Neue optionale Bereiche für Social Media Icons und Zahlungsartenicons
+* Layout modernisiert
+* angepasste Dateien für dunkles Design Winchester Black hinzugefügt
