@@ -102,6 +102,7 @@ font-weight:500;
 
 #menu{
 	float:left;
+	background:#222;
 }
 
 #indexDefaultHeading{
@@ -136,8 +137,9 @@ font-weight:500;
 }
 
 #select-currency{
-	background:#F4F4F4;
+	background:#222;
 	width:50px;
+	color:#FFFFFF;
 }
 
 #navMain{
@@ -183,6 +185,12 @@ visibility: hidden;
 	text-align:left;
 	margin-left:8px;
 	padding-top:2px;
+	color:#a0a0a0;
+}
+
+#siteinfoLegal a{
+color:#FFFFFF;
+
 }
 
 #siteinfoLegal a:hover{
@@ -228,7 +236,7 @@ text-decoration:underline;
 	width:200px;
 	height:200px;
 	margin:0 0 20px 30px;
-	border:10px solid #F4F4F4;
+	border:10px solid #222;
 }
 
 .contentimage-left{
@@ -236,7 +244,7 @@ text-decoration:underline;
 	width:200px;
 	height:200px;
 	margin:20px 30px 20px 0;
-	border:10px solid #F4F4F4;
+	border:10px solid #222;
 }
 
 #gpsrinfo{
@@ -351,8 +359,8 @@ margin:0;
 padding:0.1em;
 font-size:80%;
 font-weight:300;
-color:#171717;
-background:#F4F4F4;
+color:#ffffff;
+background:#222;
 width:100%;
 }
 
@@ -373,7 +381,7 @@ width:100%;
 a img {border: none;}
 a:link, #navEZPagesTOC ul li a {color:#fff;text-decoration:none;}
 a:visited {color: #fff;text-decoration:none;}
-a:hover, #navEZPagesTOC ul li a:hover, #navMain ul li a:hover, #navSupp ul li a:hover, #navCatTabs ul li a:hover {color: #444;}
+a:hover, #navEZPagesTOC ul li a:hover, #navMain ul li a:hover, #navSupp ul li a:hover, #navCatTabs ul li a:hover {color: #ff6938;}
 a:active {color:#fff;}
 h1 {text-transform:uppercase;font-weight:normal;color:#fa6938;font-size:150%;}
 h2 {text-transform:uppercase;font-weight:normal;color:#a0a0a0;font-size:130%;font-weight:normal;}
@@ -462,7 +470,7 @@ table{width:100%;}
 #navCatTabs ul li a {text-decoration: none;padding: 0em 0.5em;margin: 0;color: #fffffd;white-space: nowrap;}
 
 #navMainSearch {}
-.search-header-box {background:#a0a0a0;height:36px;color:#444;border:0px solid #dbdbce;font-size:75%;width:360px;float:left}
+.search-header-box {background:#a0a0a0;height:36px;color:#444;border:1px solid #a0a0a1;font-size:75%;width:360px;float:left}
 .search-box {padding-left:5px;background:#fff;width:160px;height:40px;color:#a0a0a0;border:1px solid #dbdbce;text-transform:lowercase;font-size:80%;}
 .search-header-box:focus{background:#fff;}
 #navMainSearch-mobile{display:none;}
@@ -526,6 +534,7 @@ table{width:100%;}
 #shippingEstimatorContent table{margin-top:30px;border-collapse:collapse;}
 #shippingEstimatorContent table td{border-bottom:1px solid #222;padding:10px;}
 #seProductsHeading, #seTotalHeading{display:none;}
+#cartProdTitle{color:#000;}
 
 /*bof image display*/
 #productMainImage, #reviewsInfoDefaultProductImage, #productReviewsDefaultProductImage, #reviewWriteMainImage {margin:0 1em 1em 0;}
@@ -685,7 +694,7 @@ ul.slimmenu > li:last-child, ul.slimmenu1 > li:last-child { margin-right: 0 }
 ul.slimmenu li a {display: block;color: #a0a0a0;padding: 12px 34px 12px 6px;font-size: 100%;font-weight: normal;text-shadow: 0 1px 0 rgba(255,255,255,0.2);transition: background-color 0.5s ease-out;-o-transition: background-color 0.5s ease-out;-moz-transition: background-color 0.5s ease-out;-webkit-transition: background-color 0.5s ease-out;}
 ul.slimmenu1 li a{display: block;color: #a0a0a0;padding: 12px 34px 12px 6px;font-size: 15px;font-weight: normal;text-shadow: 0 1px 0 rgba(255,255,255,0.2);transition: background-color 0.5s ease-out;-o-transition: background-color 0.5s ease-out;-moz-transition: background-color 0.5s ease-out;-webkit-transition: background-color 0.5s ease-out;}
 ul.slimmenu li a:hover, ul.slimmenu1 li a:hover {background:none;text-decoration: none;color:#ff6938;}
-ul.slimmenu li .sub-collapser, ul.slimmenu1 li .sub-collapser {background: none;position: absolute;right: 0;top: 0;width: 28px;height: 100%;text-align: center;z-index: 999;cursor: pointer;}
+ul.slimmenu li .sub-collapser, ul.slimmenu1 li .sub-collapser {background: none repeat scroll 0 0 rgba(0, 0, 0, 0.075);position: absolute;right: 0;top: 0;width: 28px;height: 100%;text-align: center;z-index: 999;cursor: pointer;}
 ul.slimmenu li .sub-collapser:before, ul.slimmenu1 li .sub-collapser:before {content: '';display: inline-block;height: 100%;vertical-align: middle;margin-right: -0.25em;}
 ul.slimmenu li .sub-collapser > i, ul.slimmenu1 li .sub-collapser > i {color:#ff6938;font-size:11px;display:inline-block;vertical-align:middle;}
 ul.slimmenu li ul, ul.slimmenu1 li ul {margin: 0;list-style-type: none;}
@@ -743,7 +752,7 @@ ul.slimmenu.collapsed li ul.level2 li ul, ul.slimmenu1.collapsed li ul.level2 li
 *+html .ezpagesFooterCol {float: left;}/*ie7 hack*/
 #flex-navSupp .flexFooterCol a { color: #666564; font-weight: normal;font-size:100%;line-height:24px;}
 .flexFooterCol h4 {color: #a0a0a0; text-align: left;text-transform:uppercase;font-weight:normal;margin-left:5px;font-size:140%;}
-.ffCcol4 i{font-size:200%;border:1px solid #a0a0a0;padding:10px;background:#a0a0a0;transition:background 2s ease;-webkit-transition:background 2s ease;-moz-transition:background 2s ease;-o-transition:background 2s ease;min-width:30px;}
+.ffCcol4 i{font-size:200%;border:1px solid #a0a0a1;padding:10px;background:#a0a0a0;transition:background 2s ease;-webkit-transition:background 2s ease;-moz-transition:background 2s ease;-o-transition:background 2s ease;min-width:30px;}
 .ffCcol4 i:hover{background:#171717;color:#fff;border:1px solid #171716;}
 #flex-navSupp .flexFooterCol li {display: block; text-align: left;}
 #flex-navSupp .flexFooterCol li span {display: block; text-align:center;}
@@ -773,8 +782,8 @@ ul.slimmenu.collapsed li ul.level2 li ul, ul.slimmenu1.collapsed li ul.level2 li
 .button_checkout{background:#ff6938;}
 
 /*bof better categories*/
-.betterCategories, .betterDocuments, .betterEzpages, .betterInformation, .betterMoreinformation, .betterBestsellers {border-top: 0px solid #fffffe;}
-.betterCategories a, .betterCategories a:visited, .betterDocuments a, .betterDocuments a:visited, .betterEzpages a, .betterEzpages a:visited, .betterInformation a, .betterInformation a:visited, .betterMoreinformation a, .betterMoreinformation a:visited, .betterBestsellers a, .betterBestsellers a:visited {display: block;background-color: #f4f4f4;border-top: 0px solid #ffffff;border-bottom:1px solid #dbdbce;padding: 15px 4px 15px 20px;transition:background 2s ease;-webkit-transition:background 2s ease;-moz-transition:background 2s ease;-o-transition:background 2s ease;}
+.betterCategories, .betterDocuments, .betterEzpages, .betterInformation, .betterMoreinformation, .betterBestsellers {border-top: 0px solid #fffffe;background:#222;}
+.betterCategories a, .betterCategories a:visited, .betterDocuments a, .betterDocuments a:visited, .betterEzpages a, .betterEzpages a:visited, .betterInformation a, .betterInformation a:visited, .betterMoreinformation a, .betterMoreinformation a:visited, .betterBestsellers a, .betterBestsellers a:visited {display: block;background-color: #000;border-top: 0px solid #ffffff;border-bottom:1px solid #222;padding: 15px 4px 15px 20px;transition:background 2s ease;-webkit-transition:background 2s ease;-moz-transition:background 2s ease;-o-transition:background 2s ease;color:#a0a0a0;}
 .betterCategories a:hover, .betterCategories a:active, .betterDocuments a:hover, .betterDocuments a:active, .betterEzpages a:hover, .betterEzpages a:active, .betterInformation a:hover, .betterInformation a:active, .betterMoreinformation a:hover, .betterMoreinformation a:active, .betterBestsellers a:hover, .betterBestsellers a:active {background-color: #ff6938;color:#fff;}
 .betterEzpages a:before, .betterMoreinformation a:before, .betterDocuments a:before, .betterInformation a:before, .betterCategories a:before{position:absolute;font-family: FontAwesome;content: "\f0da";}
 .betterEzpages img, .betterMoreinformation img, .betterDocuments img, .betterInformation img, .betterCategories img{padding-left:20px;}

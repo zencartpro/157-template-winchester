@@ -140,7 +140,7 @@ ________________________________________________________________________________
 
 Logo austauschen
 
-Das Template verwendet 2 Logos, eines für den Desktop/Tablets und eines für Smartphones
+Das Template verwendet 2 Logos, eines für Desktop/Tablets und eines für Smartphones
 
 includes/templates/winchester_responsive/images/logo.png überschreiben
 Größe des Logos sollte so wie in der Demo sein: 240 Pixel x 70 Pixel

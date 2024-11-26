@@ -375,7 +375,7 @@ a:link, #navEZPagesTOC ul li a {color:#000;text-decoration:none;}
 a:visited {color: #444443;text-decoration:none;}
 a:hover, #navEZPagesTOC ul li a:hover, #navMain ul li a:hover, #navSupp ul li a:hover, #navCatTabs ul li a:hover {color: #444;}
 a:active {color:#444443;}
-h1 {text-transform:uppercase;font-weight:normal;color:#f38f00;font-size:150%;}
+h1 {text-transform:uppercase;font-weight:normal;color:#0010ac;font-size:150%;}
 h2 {text-transform:uppercase;font-weight:normal;color:#444;font-size:130%;font-weight:normal;}
 h3 {font-size: 110%;font-weight:normal;text-transform:uppercase;}
 h4, h5, h6, LABEL, h4.optionName, LEGEND, ADDRESS, .sideBoxContent, .larger{font-weight:normal;}
