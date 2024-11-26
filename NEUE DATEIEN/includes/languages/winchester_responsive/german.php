@@ -6,7 +6,7 @@
 * Zen Cart German Version - www.zen-cart-pro.at
 * @copyright Portions Copyright 2003 osCommerce
 * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
-* @version $Id: german.php for Winchester 2024-11-19 15:19:32Z webchills $
+* @version $Id: german.php for Winchester 2024-11-26 18:06:32Z webchills $
 */
 // -----
 // Since the languages are now loaded via classes, the $locales definition
@@ -323,7 +323,7 @@ define('PREVNEXT_TITLE_PREVIOUS_PAGE','Vorherige Seite');
 define('PREVNEXT_TITLE_PREV_SET_OF_NO_PAGE', 'Vorherige %d Seiten');
 define('PREV_NEXT_PRODUCT','Artikel ');
 define('PRIMARY_ADDRESS_TITLE','Primäre Adresse');
-define('PRODUCTS_ORDER_QTY_TEXT','Menge: ');
+define('PRODUCTS_ORDER_QTY_TEXT','');
 define('PRODUCTS_ORDER_QTY_TEXT_IN_CART','Menge im Warenkorb: ');
 define('PRODUCTS_PRICE_IS_CALL_FOR_PRICE_TEXT','für Preis anfragen');
 define('PRODUCTS_PRICE_IS_FREE_TEXT','Es ist kostenlos!');

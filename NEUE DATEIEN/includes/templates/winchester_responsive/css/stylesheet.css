@@ -9,6 +9,11 @@ color: #171717;
 line-height:22px;
 }
 
+.form-control{
+box-sizing: border-box;
+  width: 150px;
+  height: 100%;
+}
 
 
 #logoWrapper{
@@ -75,12 +80,19 @@ text-align:right;
 position:absolute;
 right:10px;
 top:10px;
+color:#171717;
+}
+
+#header-cart a{
+
+color:#171717;
 }
 
 
 .header-cart-mobile{
 padding:0 10px;
 font-weight:500;
+color:#171717;
 }
 
 #mobile-navi{
@@ -317,6 +329,7 @@ padding-bottom:2px;}
 #top-wrapper-mobile a{
 color:#fff;
 }
+
 
 /*bof smartphone*/
 
@@ -632,7 +645,7 @@ LABEL#textAreaReviews {font-weight:normal;margin: 1em 0;}
 
 /*bof product info*/
 #cartAdd {margin:0;padding:0;text-align:center;margin-top:30px;margin-bottom:30px;border-bottom:1px solid #dbdbce;padding-bottom:30px;}
-#cartAdd input{width:50px;}
+
 #product-divider {margin:10px 0 20px 0;border-bottom:1px solid #dbdbce;}
 .navNextPrevWrapper {text-align:center;margin-bottom:20px;}
 .navNextPrevCounter {text-align:center;margin-bottom:20px;margin-top:30px;}
@@ -753,22 +766,23 @@ ul.slimmenu.collapsed li ul.level2 li ul, ul.slimmenu1.collapsed li ul.level2 li
 #flex-navSupp a:hover {color: #f38f00;}
 
 /*bof css buttons*/
-.cssButton, .cssButtonHover, .more-info {background-color:#171717;transition:background 2s ease;-webkit-transition:background 2s ease;-moz-transition:background 2s ease;-o-transition:background 2s ease;color:#fffffd;text-transform:uppercase;text-align:center;white-space:nowrap;text-decoration:none;font-weight:normal;padding:0.8em 1.2em;}
+.cssButton, .cssButtonHover, .more-info {vertical-align:middle;background-color:#171717;transition:background 2s ease;-webkit-transition:background 2s ease;-moz-transition:background 2s ease;-o-transition:background 2s ease;color:#ffffff;text-transform:uppercase;text-align:center;white-space:nowrap;text-decoration:none;font-weight:normal;padding:0.6em 0.6em;}
 .more-info{width:80px;margin:0 auto;}
 .more-info:hover{background:#111111;}
 .more-info .icon-circle-arrow-right:before{color:#fff !important;margin-left:5px;vertical-align:middle;}
-.cssButtonHover {color:#171717;background:#ccc;text-decoration: none;}
+.cssButtonHover {color:#FFFFFF;background:green;text-decoration: none;}
 .small_delete, .button_prev, .button_next, .button_search  {width: 7em;}
 .button_sold_out_sm, .button_sold_out, .button_update_cart, .button_checkout, .button_login {width: 10em;}
 .button_return_to_product_list, .button_add_selected {width: 22em;}
 .button_in_cart{width: 19em;}  
 .button_submit {width: 18em;}
-.button_update_cart {color: red;}
+.button_update_cart {color: #FFFFFF;}
 .button_update_cartHover {color: #000;}
-.button_in_cart{width:150px !important;font-size:120% !important;background:#444;height:40px;}
-.button_in_cartHover{background:#a0a0a0;}
+.button_in_cart{height:40px;width:150px !important;font-size:110% !important;background:#444;display: inline-block;vertical-align: middle;display: inline-block;box-sizing: border-box;}
+.button_in_cartHover{background:green;}
 .button_add_selected{width:250px !important;height:auto;}
 .button_search{height:auto !important;width:20px !important;background:#171717;border:none;position:relative;top:1px;left:-3px;}
+.button_searchHover{height:auto !important;width:20px !important;background:green;border:none;position:relative;top:1px;left:-3px;}
 .button_buy_now .icon-circle-arrow-right:before{color:#fff !important;margin-left:5px;vertical-align:middle;}
 .button_checkout{background:#f38f00;}
 

@@ -1,0 +1,25 @@
+#cartAdd input[type="text"]{
+    width:70px;   
+    text-align:center;
+    color:#000000;
+    vertical-align: middle;
+}
+
+#cartAdd-wrapper{
+	 height:40px
+	 vertical-align: middle;
+}
+
+.button_in_cart{
+	 vertical-align: middle;
+	 height:40px;
+	
+}
+
+#addToCartButton{
+	 margin-top:10px;
+}
+
+#cartAdd{
+	margin-left:10px;
+}

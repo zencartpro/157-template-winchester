@@ -1,7 +1,7 @@
 <?php
 /**
  * Page Template
- * Zen Cart German Specific (zencartpro adaptations)
+ * Zen Cart German Specific (zencartpro adaptations / 200 code in 157)
  * Loaded automatically by index.php?main_page=product_info.
  * Displays details of a typical product
  *
@@ -9,12 +9,18 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_product_info_display.php for Winchester 2024-11-25 15:50:24Z webchills $
+ * @version $Id: tpl_product_info_display.php for Winchester 2024-11-26 19:17:24Z webchills $
  */
  //require(DIR_WS_MODULES . '/debug_blocks/product_info_prices.php');
 ?>
 <div class="centerColumn" id="productGeneral">
-
+<link rel="stylesheet" href="<?php echo $template->get_template_dir('jquery-ui.css',DIR_WS_TEMPLATE, $current_page_base,'css') . '/jquery-ui.css' ?>">
+<link rel="stylesheet" href="<?php echo $template->get_template_dir('jquery-ui-1.12.icon-font.css',DIR_WS_TEMPLATE, $current_page_base,'css') . '/jquery-ui-1.12.icon-font.css' ?>">
+<script>
+    jQuery(document).ready(function(){
+    $( ".spinner" ).spinner();
+      });
+</script>
 <!--bof Form start-->
 <?php echo zen_draw_form('cart_quantity', zen_href_link(zen_get_info_page($_GET['products_id']), zen_get_all_get_params(array('action')) . 'action=add_product', $request_type), 'post', 'enctype="multipart/form-data" id="addToCartForm"') . "\n"; ?>
 <!--eof Form start-->
@@ -137,7 +143,7 @@ if (CUSTOMERS_APPROVAL == 3 and TEXT_LOGIN_FOR_PRICE_BUTTON_REPLACE_SHOWROOM == 
       $the_button = '<input type="hidden" name="cart_quantity" value="1">';
     } else {
       // show the quantity box
-      $the_button = '<div class="max-qty">' . zen_get_products_quantity_min_units_display((int)$_GET['products_id']) . '</div><span class="qty-text">' . PRODUCTS_ORDER_QTY_TEXT . '</span><input type="text" name="cart_quantity" value="' . $products_get_buy_now_qty . '" maxlength="6" size="4" aria-label="' . ARIA_QTY_ADD_TO_CART . '">';
+      $the_button = '<div id="cartAdd-wrapper"><div class="max-qty">' . zen_get_products_quantity_min_units_display((int)$_GET['products_id']) . '</div><span class="qty-text">' . PRODUCTS_ORDER_QTY_TEXT . '</span></div><input type="text" name="cart_quantity" class="spinner" min="0" max="1000000" value="' . $products_get_buy_now_qty . '" maxlength="4" size="3" aria-label="' . ARIA_QTY_ADD_TO_CART . '">';
     }
     $the_button .= zen_draw_hidden_field('products_id', (int)$_GET['products_id']);
     $the_button .= zen_image_submit(BUTTON_IMAGE_IN_CART, BUTTON_IN_CART_ALT, ' id="addToCartButton"');
