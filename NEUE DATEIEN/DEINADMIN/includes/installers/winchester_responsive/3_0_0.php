@@ -4,7 +4,7 @@
 * @copyright Copyright 2003-2024 Zen Cart Development Team
 * @copyright Portions Copyright 2003 osCommerce
 * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
-* @version $Id: 3_0_0.php 2024-11-25 16:30:14 webchills $
+* @version $Id: 3_0_0.php 2024-11-26 20:40:14 webchills $
 */
 
 $configuration = $db->Execute("SELECT configuration_group_id FROM " . TABLE_CONFIGURATION_GROUP . " WHERE configuration_group_title = '" . BOX_CONFIGURATION_WINCHESTER_RESPONSIVE . "' ORDER BY configuration_group_id ASC;");
@@ -329,7 +329,8 @@ $db->Execute("INSERT IGNORE INTO " . TABLE_CONFIGURATION . " (configuration_titl
 ('Winchester - Payment Options Icons in Footer', 'WIN_FOOTER_PAYMENT_STATUS', 'true', 'Do you want to show permanently a graphic with your payment options in the footer?', @gid, 10, now(), now(), '', 'zen_cfg_select_option(array(\'true\', \'false\'),'),
 ('Winchester - Social Media Icons in Footer', 'WIN_FOOTER_SOCIALMEDIA_STATUS', 'true', 'Do you want to show permanently your social media icons in the footer?', @gid, 11, now(), now(), '', 'zen_cfg_select_option(array(\'true\', \'false\'),'),
 ('Winchester - GPSR Manufacturer Info in Tab', 'WIN_GPSR_DATA_PRODUCT_INFO_TAB', 'false', 'Do you want to show the GPRS manufacturer info in a tab on the product details page?<br><br><b>NOTE: Only set to true if you have the GPRS addon installed!</b><br>', @gid, 12, now(), now(), '', 'zen_cfg_select_option(array(\'true\', \'false\'),'),
-('Winchester - Footer Navigation Status', 'WIN_FOOTERNAVI_STATUS', 'true', 'Do you want to show additional links in the last footer line?', @gid, 13, now(), now(), '', 'zen_cfg_select_option(array(\'true\', \'false\'),');");
+('Winchester - Megamenu in Header', 'WIN_HEADER_MEGAMENU_STATUS', 'true', 'Do you want to show a mega menu with categories and info in the header', @gid, 13, now(), now(), '', 'zen_cfg_select_option(array(\'true\', \'false\'),'),
+('Winchester - Footer Navigation Status', 'WIN_FOOTERNAVI_STATUS', 'true', 'Do you want to show additional links in the last footer line?', @gid, 14, now(), now(), '', 'zen_cfg_select_option(array(\'true\', \'false\'),');");
 $db->Execute("REPLACE INTO " . TABLE_CONFIGURATION_LANGUAGE . " (configuration_title, configuration_key, configuration_description, configuration_language_id) VALUES
 ('Winchester - To Top aktivieren', 'WIN_TOTOP_STATUS', 'Wollen Sie beim Scrollen rechts unten einen To Top Button anzeigen?', 43),
 ('Winchester - Slideout Box aktivieren', 'WIN_SLIDEOUTBOX_STATUS', 'Wollen Sie oben links immer die Slideout Box anzeigen?', 43),
@@ -339,6 +340,7 @@ $db->Execute("REPLACE INTO " . TABLE_CONFIGURATION_LANGUAGE . " (configuration_t
 ('Winchester - Zahlungsarten Icons im Footer aktivieren', 'WIN_FOOTER_PAYMENT_STATUS', 'Wollen Sie im Footer unten links permanent Icons Ihrer Zahlungsarten anzeigen?', 43),
 ('Winchester - Social Media Icons im Footer aktivieren', 'WIN_FOOTER_SOCIALMEDIA_STATUS', 'Wollen Sie im Footer unten rechts permanent Ihre Social Media Icons anzeigen?', 43),
 ('Winchester - GPSR Herstellerinfo als Tab aktivieren', 'WIN_GPSR_DATA_PRODUCT_INFO_TAB', 'Wollen Sie auf der Artikeldetailseite die GPSR Herstellerinformationen in einem Tab anzeigen?<br><br><b>HINWEIS: Nur aktivieren, wenn Sie das Modul GPSR Herstellerinformationen installiert haben!<br>', 43),
+('Winchester - Megamenu im Header aktivieren', 'WIN_HEADER_MEGAMENU_STATUS', 'Wollen Sie im Header ein megamenu mit Kategorien und Shopinfo anzeigen?', 43),
 ('Winchester - Links in letzter Fußzeile aktivieren', 'WIN_FOOTERNAVI_STATUS', 'Wollen Sie die zusätzlichen Links (z.B. Site Map Datenschutz AGB Impressum) in der letzten Fußzeile anzeigen?', 43);");
 
 // Column Layout Grid - remove old unused settings

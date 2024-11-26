@@ -21,6 +21,7 @@ Changelog Version 3.0.0 - November 2024
 - Neue optionale Bereiche für Social Media Icons und Zahlungsartenicons
 - Layout modernisiert
 - angepasste Dateien für dunkles Design Winchester Black hinzugefügt
+- Mengeneingabefeld auf Artikeldetailseite mit Spinner Pfeilen
 
 Changelog Version 2.1.0 - März/April 2022
 - Anpassungen für 1.5.7 und PHP 8
@@ -42,12 +43,13 @@ Changelog Version 1.7 - September 2019
 - Installer multilanguagefähig gemacht, so dass alle Konfigurationsoptionen in der deutschen Administration auf deutsch erscheinen
 - deutsche Sprachdateien hinzugefügt
 - AddThis entfernt
+- Mengeneingabefeld auf Artikeldetailseite mit Spinner Pfeilen
 - Anpassung der modifizierten Corefiles an die deutsche Zen Cart Version 1.5.7
 - Flexibles Footermenü auf multilanguage geändert
 - Fehler auf der Startseite behoben
 - enthaltene Javascripts aktualisiert und lokal eingebunden
 - Footermenü mit nützlichen Links voreingestellt
-- Anpassungen für PHP 8
+- Anpassungen für PHP 8.3
 - Zen Colorbox entfernt, da seit 1.5.5 bereits enthalten
 - Anleitung aktualisiert
 - Uninstaller hinzugefügt
@@ -118,12 +120,13 @@ In der Zen Cart Administration unter Tools > Template Auswahl auf Template ände
 Nun im Admin auf irgendeinen Menüpunkt clicken, Sie sollten dann oben links zwei grüne Erfolgsmeldungen sehen, dass die nötigen Datenbankeinträge erfolgreich vorgenommen wurden
 
 5)
-Unter Tools Boxlayout clicken Sie nun auf den Button Zurücksetzen, dadurch werden die von diesem Template verwendeten Sideboxen automatisch voreingestellt.
+Unter Tools Boxlayout clicken Sie nun auf den Button Zurücksetzen. Stellen Sie danach Ihre gewünschten Sideboxen ein.
 
 6)
 Beachten Sie, dass das Aktivieren von Sideboxen für die rechte Spalte sinnlos ist, da dieses Template die rechte Spalte grundsätzlich nicht verwendet.
 Stellen Sie nun die Sideboxen ein, die Sie anzeigen wollen und stellen Sie dabei die Einstellung Show Box @ Min-Width immer auf Aus.
 Diese Einstellung regelt die Anzeige von Sideboxen für mobile Geräte und für die sollten die Sideboxen immer aus sein.
+Wenn Sie im Header ein Suchfeld anzeigen wollen (dringend empfohlen), dann aktivieren Sie die Sidebox search_header
 
 ____________________________________________________________________________________________________
 
@@ -135,6 +138,12 @@ ________________________________________________________________________________
 Sprachauswahl im Header entfernen
 
 Wenn Sie im Shop nur eine Sprache aktiv haben und die Sprachauswahl im Header nicht benötigen, können Sie die Anzeige in der Winchester Template Konfiguration deaktivieren.
+____________________________________________________________________________________________________
+
+
+Megamenu im Header entfernen
+
+Wenn Sie das Megamenu im Header nicht benötigen, können Sie die Anzeige in der Winchester Template Konfiguration deaktivieren.
 ____________________________________________________________________________________________________
 
 

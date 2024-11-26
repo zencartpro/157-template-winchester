@@ -91,11 +91,13 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 </div>
 <!--eof-sales-text-->
 <!--bof-mega-menu-->
+<?php if (defined('WIN_HEADER_MEGAMENU_STATUS') && (WIN_HEADER_MEGAMENU_STATUS === 'true')) { ?>
 <div id="megamenu">
 <!--bof handheld menu display-->
 <?php require($template->get_template_dir('tpl_modules_mobile_categories_tabs.php',DIR_WS_TEMPLATE, $current_page_base,'templates'). '/tpl_modules_mobile_categories_tabs.php'); ?>
 <!--eof handheld menu display-->
 </div>
+<?php }?>
 <!--eof-mega-menu-->
 <!--bof-header-cart-->
 <div id="header-cart">
