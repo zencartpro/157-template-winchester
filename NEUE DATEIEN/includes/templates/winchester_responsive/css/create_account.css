@@ -26,4 +26,11 @@
 	text-decoration:underline;
 }
 
+@media (max-width: 767px){
+  /* iPhone / Pixel Portrait */
+ #createAcctDefault label {
+	width:300px !important;
+}
+} 
+
 

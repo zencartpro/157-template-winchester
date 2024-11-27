@@ -15,7 +15,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_header_mobile.php 2024-11-23 08:27:16Z webchills $
+ * @version $Id: tpl_header_mobile.php 2024-11-27 15:27:16Z webchills $
  */
 ?>
 
@@ -68,7 +68,7 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 <div id="mobile-navi">
 <a class="header-cart-mobile" href="<?php echo zen_href_link(FILENAME_ACCOUNT, '', 'SSL'); ?>"><i class="fa-solid fa-user fa-lg"></i></i></a>
 <a class="header-cart-mobile" href="<?php echo zen_href_link(FILENAME_ADVANCED_SEARCH); ?>"><i class="fa-solid fa-search fa-lg"></i></i></a>
-<a class="header-cart-mobile" href="<?php echo zen_href_link(FILENAME_SHOPPING_CART, '', 'NONSSL'); ?>"><i class="fa-solid fa-cart-shopping fa-lg"></i> <?php echo $_SESSION['cart']->count_contents();?>  - <?php echo $currencies->format($_SESSION['cart']->show_total());?></a>
+<a class="header-cart-mobile" href="<?php echo zen_href_link(FILENAME_SHOPPING_CART, '', 'NONSSL'); ?>"><i class="fa-solid fa-cart-shopping fa-lg"></i><?php if ($_SESSION['cart']->count_contents() != 0) { ?> <?php echo $_SESSION['cart']->count_contents();?>  - <?php echo $currencies->format($_SESSION['cart']->show_total());?><?php }?> </a>
 </div>
 <!--eof-navi-mobile-->
 <!--eof-logo/currency/language/nav/hamburger section-mobile-->

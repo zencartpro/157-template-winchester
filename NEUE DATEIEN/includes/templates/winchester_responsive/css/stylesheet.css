@@ -371,7 +371,20 @@ width:100%;
 	margin-right:4px;
 }
 
+#cartContentsDisplay input[type=text]{
+	width:50px !important;
+}
 
+#loginDefault .floatingBox{
+	width:100% !important;
+}
+
+.hideonmobile{
+	display:none;
+}
+.hideontablet{
+	display:none;
+}
   }
 /*eof smartphone*/
 
@@ -395,7 +408,7 @@ HR {margin-top: 0.5em;border:none;border-bottom:1px solid #dbdbce;margin-bottom:
 CODE {font-family: Ubuntu,Arial,Helvetica,sans-serif;font-size: 1em;}
 FORM, SELECT, INPUT {display: inline;margin: 0.1em;;}
 TEXTAREA {margin: auto;display: block;width: 95%;border:1px solid #ddd;background:#ddddde;margin-top:10px;margin-bottom:10px;}
-input:focus, select:focus, textarea:focus {background: #ccc;}
+input:focus, select:focus, textarea:focus {background: #ccc;outline: none;border:1px solid #ddd;}
 input {border:1px solid #ddd;background:#ddddde;height:28px;margin-bottom:10px;padding-left:10px;}
 FIELDSET {padding: 30px;margin: 0.5em 0em;border: 1px solid #dbdbce;margin-bottom:30px;margin-top:30px;}
 #country{width:42%;}
@@ -486,7 +499,7 @@ table{width:100%;}
 #contentColumnMain, #navColumnOne, #navColumnTwo, .centerBoxContents, .specialsListBoxContents, .categoryListBoxContents, .additionalImages, .centerBoxContentsSpecials, .centerBoxContentsAlsoPurch, .centerBoxContentsFeatured, .centerBoxContentsNew, .alert {vertical-align:top;}
 #productDescription, .shippingEstimatorWrapper {padding:0.5em;}
 .alert {margin-left:0.5em;color:#ff0001;}
-.important {font-weight:bold;}
+.important {font-weight:300;}
 .gvBal {float:right;}
 .centerColumn, #bannerOne, #bannerTwo,  #bannerThree,  #bannerFour,  #bannerFive,  #bannerSix {padding:0.8em;}
 .smallText, #siteinfoCredits, #siteinfoStatus, #siteinfoIP {font-size: 0.9em;}

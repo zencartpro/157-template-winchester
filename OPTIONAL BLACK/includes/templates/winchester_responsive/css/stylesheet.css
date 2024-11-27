@@ -75,12 +75,17 @@ text-align:right;
 position:absolute;
 right:10px;
 top:10px;
+color:#ffffff;
 }
 
+#header-cart a{
 
+color:#ffffff;
+}
 .header-cart-mobile{
 padding:0 10px;
 font-weight:500;
+color:#ffffff;
 }
 
 #mobile-navi{
@@ -371,7 +376,21 @@ width:100%;
 	margin-right:4px;
 }
 
+#cartContentsDisplay input[type=text]{
+	width:50px !important;
+}
 
+#loginDefault .floatingBox{
+	width:100% !important;
+}
+
+.hideonmobile{
+	display:none;
+}
+
+.hideontablet{
+	display:none;
+}
   }
 /*eof smartphone*/
 
