@@ -8,12 +8,12 @@
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
  * @version $Id: ezpages_drop_menu.php 2024-11-16 15:27:03Z webchills $
  */
- $show_ezpages_header = false;
- $ezpages_header_status = $db->Execute('select layout_box_name from ' . TABLE_LAYOUT_BOXES . " where layout_box_status_single = 1 and layout_template ='" . $template_dir . "' and layout_box_name='ezpages_drop_menu.php'");
-
-  if ($ezpages_header_status->RecordCount() != 0) {
-    $show_ezpages_header= true;
-  }
+ $show_ezpages_header = true;
+// $ezpages_header_status = $db->Execute('select layout_box_name from ' . TABLE_LAYOUT_BOXES . " where layout_box_status_single = 1 and layout_template ='" . $template_dir . "' and layout_box_name='ezpages_drop_menu.php'");
+//
+//  if ($ezpages_header_status->RecordCount() != 0) {
+//    $show_ezpages_header= true;
+//  }
   
   if ($show_ezpages_header == true) {
 

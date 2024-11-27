@@ -15,6 +15,7 @@ Demo des Templates:
 * alle verwendeten Javascripts aktualisiert
 * Font Awesome 6.7.0 lokal eingebunden
 * fehlende Anpassungen in Artikeltypentemplates ergänzt
+* Mengeneingabefeld auf Artikeldetailseite mit Spinner Pfeilen
 * Installer multilanguagefähig gemacht, so dass alle Konfigurationsoptionen in der deutschen Administration auf deutsch erscheinen
 * Neue Konfigurationsoptionen im Winchester Menü, um Bereiche zu deaktivieren
 * deutsche Sprachdateien hinzugefügt
@@ -32,3 +33,11 @@ Demo des Templates:
 * Neue optionale Bereiche für Social Media Icons und Zahlungsartenicons
 * Layout modernisiert
 * angepasste Dateien für dunkles Design Winchester Black hinzugefügt
+
+Sie verwenden dieses Template als Grundlage für Ihr Shopdesign?
+* Spenden Sie für die Weiterentwicklung der deutschen Zen Cart Version hier:
+* https://spenden.zen-cart-pro.at
+
+Du willst helfen, dieses Template noch besser zu machen?
+* Beteilige Dich auf Github:
+* https://github.com/zencartpro/157-template-winchester

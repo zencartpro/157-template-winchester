@@ -2,7 +2,7 @@
 
 Anpassung des Templates Winchester (https://www.zen-cart.com/downloads.php?do=file&id=1865) von picaflor-azul für die deutsche Zen Cart Version 1.5.7
 November 2024
-www.webchills.at
+webchills (www.webchills.at)
 
 Demo des Templates:
 https://winchester.zencartdemo.at
@@ -127,27 +127,41 @@ Beachten Sie, dass das Aktivieren von Sideboxen für die rechte Spalte sinnlos i
 Stellen Sie nun die Sideboxen ein, die Sie anzeigen wollen und stellen Sie dabei die Einstellung Show Box @ Min-Width immer auf Aus.
 Diese Einstellung regelt die Anzeige von Sideboxen für mobile Geräte und für die sollten die Sideboxen immer aus sein.
 Wenn Sie im Header ein Suchfeld anzeigen wollen (dringend empfohlen), dann aktivieren Sie die Sidebox search_header
+Um in diesem Suchfeld die Sofortsuche zu nutzen, installieren Sie unter Module > Plugin Manager das Plugin Instant Search.
 
 ____________________________________________________________________________________________________
 
-
 Konfigurationsmöglichkeiten / Anpassung an eigene Wünsche
-
 ____________________________________________________________________________________________________
 
 Sprachauswahl im Header entfernen
+____________________________________________________________________________________________________
 
 Wenn Sie im Shop nur eine Sprache aktiv haben und die Sprachauswahl im Header nicht benötigen, können Sie die Anzeige in der Winchester Template Konfiguration deaktivieren.
 ____________________________________________________________________________________________________
 
-
 Megamenu im Header entfernen
-
-Wenn Sie das Megamenu im Header nicht benötigen, können Sie die Anzeige in der Winchester Template Konfiguration deaktivieren.
 ____________________________________________________________________________________________________
 
+Wenn Sie das Megamenu im Header nicht benötigen, können Sie die Anzeige in der Winchester Template Konfiguration deaktivieren.
+
+____________________________________________________________________________________________________
+
+EZ Pages im Megamenu
+____________________________________________________________________________________________________
+
+Wenn Sie im Megamenu im Header einen eigenen Menüpunkt mit Ihren EZ Pages anzeigen wollen, aktivieren Sie das in der Winchester Template Konfiguration:
+
+Winchester - EZ Pages im Topmenü
+
+Es erscheinen dann dort die EZ Pages, die mit Kopfzeile aktiv angelegt sind.
+Es ist dazu nicht nötig die Sidebox ezpages_drop_menu.php zu aktivieren.
+Eine weitere EZ Pages Navigation ist in diesem Template nicht vorgesehen, lassen Sie daher Konfiguration > EZ Pages Einstellungen > Kopfzeile anzeigen auf 0
+
+____________________________________________________________________________________________________
 
 Logo austauschen
+___________________________________________________________________________________________________
 
 Das Template verwendet 2 Logos, eines für Desktop/Tablets und eines für Smartphones
 
@@ -159,8 +173,8 @@ Größe des Logos sollte so wie in der Demo sein: 200 Pixel x 50 Pixel
 
 ____________________________________________________________________________________________________
 
-
 Slogan unter Logo ändern oder deaktivieren
+____________________________________________________________________________________________________
 
 includes/languages/german/winchester_responsive/header.php
 includes/languages/english/winchester_responsive/header.php
@@ -174,18 +188,8 @@ define('HEADER_SALES_TEXT', '');
 
 ____________________________________________________________________________________________________
 
-
-Konfiguration > Responsives Template Konfiguration
-
-Slideshow auf der Startseite
-Standardmäßig aktiv
-Winchester Slideshow > true
-
-Weitere Einstellungsmöglichkeiten sind dort erklärt
-____________________________________________________________________________________________________
-
-
 Karussell der empfohlenen Artikel auf der Startseite
+____________________________________________________________________________________________________
 
 Standardmäßig aktiv.
 Es müssen dafür natürlich Empfohlene Artikel angelegt sein.
@@ -193,8 +197,8 @@ Einstellungen dazu unter Konfiguration Karussell der Empfohlenen Artikel
 
 ____________________________________________________________________________________________________
 
-
 Links im Footer
+____________________________________________________________________________________________________
 
 Der Footerbereich ist komplett admingesteuert
 Tools > Flexibles Footer Menü
@@ -202,12 +206,14 @@ Tools > Flexibles Footer Menü
 Hier sind die Einstellungsmöglichkeiten erklärt und die Menüpunkte bereits vorbefüllt.
 Ändern Sie einfach Texte/Links/Reihenfolge auf Ihre Wünsche ab.
 
-Falls Sie beim Ändern Fehler gemacht und den Ursprungszustand wieder herstellen wollen, finden Sie im Ordner TOOLS in der backup-flexible-footer-menu-default.sql einen Befehl zum Löschen und neuanlegen der Tabellen für das Flexible Footer Menü vorbefüllt mit den Voreinstellungen der Templatedemo.
+Am einfachsten und für die meisten Szenarien am sinnvollsten ist wie in der Demo ausschließlich 3 Überschriften mit den entsprechenden Unterpunkten zu verwenden.
+
+Falls Sie beim Ändern Fehler gemacht und den Ursprungszustand wieder herstellen wollen, finden Sie im Ordner TOOLS in der backup-flexible-footer-menu-default.sql einen Befehl zum Löschen und Neuanlegen der Tabellen für das Flexible Footer Menü vorbefüllt mit den Voreinstellungen der Templatedemo.
 
 ____________________________________________________________________________________________________
 
-
 Zusatzlinks unten im Footer
+____________________________________________________________________________________________________
 
 Hier sind Links zu Sitemap, Datenschutz, AGB und Impressum vorgesehen.
 
@@ -222,16 +228,16 @@ ca. Zeile 65 in folgendem Abschnitt:
 Falls Sie diese Links gar nicht anzeigen wollen, einfach in der Templatekonfiguration deaktivieren
 ____________________________________________________________________________________________________
 
-
 Menü in der mobilen Version
+____________________________________________________________________________________________________
 
 kann in folgender Datei feinabgestimmt werden:
 includes/templates/winchester_responsive/templates/tpl_modules_mobile_categories_tabs.php 
 
 ____________________________________________________________________________________________________
 
-
-Flyout Sidebox Links
+Flyout Sidebox links oben
+____________________________________________________________________________________________________
 
 Inhalt kann geändert werden in:
 includes/languages/german/extra_definitions/winchester_responsive/winchester_responsive_defines.php
@@ -241,8 +247,8 @@ includes/languages/english/extra_definitions/winchester_responsive/winchester_re
 Wenn diese Flyout Box nicht benötigt wird, einfach in der Templatekonfiguration deaktivieren
 ____________________________________________________________________________________________________
 
-
 Hinweistext ganz oben im Header
+____________________________________________________________________________________________________
 
 Inhalt kann geändert werden in:
 includes/languages/german/extra_definitions/winchester_responsive/winchester_responsive_defines.php
@@ -256,6 +262,12 @@ Wenn Sie diesen Bereich überhaupt nicht anzeigen wollen, einfach in der Templat
 ____________________________________________________________________________________________________
 
 Social Media Links rechts unten
+____________________________________________________________________________________________________
+
+Inhalt kann geändert werden in:
+includes/languages/german/extra_definitions/winchester_responsive/winchester_responsive_defines.php
+Für englische Version entsprechend in
+includes/languages/english/extra_definitions/winchester_responsive/winchester_responsive_defines.php
 
 Voreingestellt ist dort folgender Code :
 define('SOCIAL_MEDIA_FOOTER','<a href="https://www.facebook.com/#" target="_blank"><i class="fa-brands fa-square-facebook fa-2xl"></i></a><a href="https://bsky.app/profile/#" target="_blank"><i class="fa-brands fa-bluesky fa-2xl"></i></a><a href="https://www.youtube.com/#" target="_blank"><i class="fa-brands fa-youtube fa-2xl"></i></a><a href="#" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>');
@@ -272,8 +284,8 @@ Wenn Sie diesen Bereich gar nicht anzeigen wollen, einfach in der Template Konfi
 
 ____________________________________________________________________________________________________
 
-
 Zahlungsartenicons link unten
+____________________________________________________________________________________________________
 
 Verwendet wird ein 266x40 Pixel großes png in :
 images/content/payment-options.png
@@ -285,6 +297,7 @@ Wenn Sie diesen Bereich gar nicht anzeigen wollen, einfach in der Template Konfi
 ____________________________________________________________________________________________________
 
 Wie ändere ich Bilder und Links in den Slideshows auf der Startseite?
+____________________________________________________________________________________________________
 
 Es gibt zwei "Slider" in den Winchester Templates.
 
@@ -305,6 +318,7 @@ Diese drei Bilder müssen exakt die Größe 310x200 Pixel haben
 ____________________________________________________________________________________________________
 
 Schriftart ändern
+____________________________________________________________________________________________________
 
 Dieses Template sieht die Schriftart Ubuntu vor und bindet diesen Google Font lokal ein.
 
@@ -340,17 +354,46 @@ font-family: 'Open Sans',Arial,Helvetica,sans-serif;
 
 Bitte beachten Sie, dass die voreingestellten Schriftgrößen in den Stylesheets für Ubuntu ausgelegt sind und Sie die möglicherweise anpassen müssen, wenn Sie eine andere Schriftart verwenden.
 
+Sie können natürlich auch jeden anderen Google Font verwenden, wenn sie ihn so einbinden wie hier beschrieben:
+https://www.zen-cart-pro.at/knowledgebase/google-fonts-lokal-einbinden/
 
 ____________________________________________________________________________________________________
 
+Verwendung von Font Awesome Icons
+____________________________________________________________________________________________________
+
+Dieses Template verwendet an verschiedenen Stellen lokal eingebundene Font Awesome Icons.
+Generell können Sie in Ihren Sprachdateien oder Templatedateien jedes beliebige Font Awesome 6.7.0 kompatible Icon verwenden.
+Also alles, was Sie hier finden:
+https://fontawesome.com/v6/search?o=r&m=free
+
+Beispiel: 
+
+Telefonhörer Icon normal:
+<i class="fa-solid fa-phone"></i>
+
+Telefonhörer Icon sehr groß in Farbe gelb:
+<i class="fa-solid fa-phone fa-2xl" style="color: #FFD43B;"></i>
+
+____________________________________________________________________________________________________
 
 Optional: Dunkles Design WINCHESTER BLACK
+____________________________________________________________________________________________________
 
 Um das Layout auf ein dunkles Design im Stil des alten Winchester Black Templates umzustellen, können Sie die im Ordner OPTIONAL BLACK Dateien und Ordner in der vorgegebenen Struktur in Ihr Shopverzeichnis hochladen und die bestehenden damit überschreiben.
 Damit wird das Template dann so aussehen wie auf:
 https://winchesterblack.zencartdemo.at
 
+
 ____________________________________________________________________________________________________
+
+Hinweis für Updates von älteren Winchester Template Versionen
+____________________________________________________________________________________________________
+
+Wenn Sie Ihre alte Farbkonfiguration und sonstiges aus Ihrem alten Winchester Template übernehmen wollen, vergleichen Sie Ihre alten Stylesheets mit den neuen.
+Insbesondere das Hauptstylesheet stylesheet.css enthält seit 3.0.0 etliche neue Definitionen, die unbedingt vorhanden sein müssen. Sie sind im neuen Stylesheet im oberen Bereich mit
+/*bof new definitions since 3.0.0*/
+gekennzeichnet
 
 
 ____________________________________________________________________________________________________
@@ -376,3 +419,16 @@ Alle von diesem Template geänderten Dateien wieder mit den entsprechenden 1.5.7
 Die uninstall.sql im Ordner UNINSTALL mit einem Texteditor öffnen, Inhalt kopieren und ins Eingabefeld unter Tools > SQL Patches installieren einfügen und absenden
 Dadurch werden alle neuen Datenbankeinträge, die dieses Template vorgenommen hat entfernt.
 Das im Shop aktive Template wird auf das 1.5.7 Standardtemplate responsive_classic zurückgestellt mit dessen Standardeinstellungen.
+
+____________________________________________________________________________________________________
+
+UNTERSTÜTZEN
+____________________________________________________________________________________________________
+
+Sie verwenden dieses Template als Grundlage für Ihr Shopdesign?
+Spenden Sie für die Weiterentwicklung der deutschen Zen Cart Version hier:
+https://spenden.zen-cart-pro.at
+
+Du willst helfen, dieses Template noch besser zu machen?
+Beteilige Dich auf Github:
+https://github.com/zencartpro/157-template-winchester

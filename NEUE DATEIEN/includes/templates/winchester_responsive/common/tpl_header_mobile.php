@@ -15,7 +15,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_header_mobile.php 2024-11-27 15:27:16Z webchills $
+ * @version $Id: tpl_header_mobile.php 2024-11-27 16:27:16Z webchills $
  */
 ?>
 
@@ -40,7 +40,7 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 <div id="logoWrapper-mobile">
 <!--bof-logo-mobile-->
 <div id="logo-mobile">
-<?php echo '<a href="' . HTTP_SERVER . DIR_WS_CATALOG . '">' . zen_image($template->get_template_dir(HEADER_LOGO_IMAGE, DIR_WS_TEMPLATE, $current_page_base,'images'). '/' . HEADER_LOGO_IMAGE, HEADER_ALT_TEXT) . '</a>'; ?>
+<?php echo '<a href="' . HTTP_SERVER . DIR_WS_CATALOG . '">' . zen_image($template->get_template_dir(HEADER_LOGO_MOBILE_IMAGE, DIR_WS_TEMPLATE, $current_page_base,'images'). '/' . HEADER_LOGO_MOBILE_IMAGE, HEADER_ALT_TEXT) . '</a>'; ?>
 </div>
 <!--eof-logo-mobile-->
 <!-- bof languages header display -->
