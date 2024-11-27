@@ -40,4 +40,4 @@ Sie verwenden dieses Template als Grundlage für Ihr Shopdesign?
 
 Du willst helfen, dieses Template noch besser zu machen?
 * Beteilige Dich auf Github:
-* https://github.com/zencartpro/157-template-winchester
+* https://github.com/zencartpro/157-template-winchester/issues
