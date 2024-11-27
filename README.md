@@ -33,6 +33,7 @@ Demo des Templates:
 * Neue optionale Bereiche für Social Media Icons und Zahlungsartenicons
 * Layout modernisiert
 * angepasste Dateien für dunkles Design Winchester Black hinzugefügt
+* GPSR Herstellerinformationen als Tab auf Artikeldetailseite (optional)
 
 Sie verwenden dieses Template als Grundlage für Ihr Shopdesign?
 * Spenden Sie für die Weiterentwicklung der deutschen Zen Cart Version hier:

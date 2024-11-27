@@ -4,7 +4,7 @@
 * @copyright Copyright 2003-2024 Zen Cart Development Team
 * @copyright Portions Copyright 2003 osCommerce
 * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
-* @version $Id: 3_0_0.php 2024-11-26 20:40:14 webchills $
+* @version $Id: 3_0_0.php 2024-11-27 19:00:14 webchills $
 */
 
 $configuration = $db->Execute("SELECT configuration_group_id FROM " . TABLE_CONFIGURATION_GROUP . " WHERE configuration_group_title = '" . BOX_CONFIGURATION_WINCHESTER_RESPONSIVE . "' ORDER BY configuration_group_id ASC;");
@@ -98,7 +98,7 @@ $value = $result->fields['show_box_min_width'];
 $type = gettype($value);
 if ($type == 'NULL'){
 
-$db->Execute("ALTER TABLE " . TABLE_LAYOUT_BOXES  . " ADD show_box_min_width TINYINT( 1 ) NOT NULL DEFAULT '1' AFTER layout_box_status_single;");
+$db->Execute("ALTER TABLE " . TABLE_LAYOUT_BOXES  . " ADD show_box_min_width TINYINT( 1 ) NOT NULL DEFAULT '0' AFTER layout_box_status_single;");
 
 }
 

@@ -22,21 +22,7 @@ Changelog Version 3.0.0 - November 2024
 - Layout modernisiert
 - angepasste Dateien für dunkles Design Winchester Black hinzugefügt
 - Mengeneingabefeld auf Artikeldetailseite mit Spinner Pfeilen
-
-Changelog Version 2.1.0 - März/April 2022
-- Anpassungen für 1.5.7 und PHP 8
-- Font Awesome Update auf 6.1.1 und Einbindung lokal
-- veraltete Funktionen entfernt
-- Javascripts aktualisiert und lokal eingebunden
-
-Changelog Version 1.7.1 - November 2019
-- Fixes für Google Analytics und Microdata aus 1.5.6d integriert
-
-Changelog Version 1.7 - September 2019
-- Anpassungen für PHP 7.3 
-- Anpassungen für Zen Cart 1.5.6 deutsch
-- Flexibles Footer Menü auf aktuelle Version aktualisiert
-
+- GPSR Herstellerinformationen als Tab auf Artikeldetailseite (optional)
 
 Änderungen gegenüber dem Original Template:
 - Fehler im Installer behoben
@@ -105,6 +91,9 @@ Danach den Inhalt in der vorgegebenen Struktur ins Shopverzeichnis hochladen
 
 2)
 Die Ordner/Dateien im Ordner NEUE DATEIEN in der vorgegebenen Struktur ins Shopverzeichnis hochladen, dadurch werden keine bestehenden Dateien überschrieben.
+Falls Sie in Ihrem Shop in Ihrem extras/fontawesome Verzeichnis bereits den Ornder 6.7.0 haben, dann müssen Sie folgenden Ordner nicht hochladen:
+extras/fontawesome/6.7.0
+
 Wichtiger Hinweis: 
 Die Dateien in folgenden Ordnern müssen Sie möglicherweise später nochmal mit den entsprechenden Dateien von Modulen vergleichen, die Sie bereits im Shop integriert haben und deren Änderungen nachziehen:
 includes/templates/winchester_responsive
@@ -123,11 +112,13 @@ Nun im Admin auf irgendeinen Menüpunkt clicken, Sie sollten dann oben links zwe
 Unter Tools Boxlayout clicken Sie nun auf den Button Zurücksetzen. Stellen Sie danach Ihre gewünschten Sideboxen ein.
 
 6)
-Beachten Sie, dass das Aktivieren von Sideboxen für die rechte Spalte sinnlos ist, da dieses Template die rechte Spalte grundsätzlich nicht verwendet.
+Beachten Sie, dass das Aktivieren von Sideboxen für die rechte Spalte normalerweise sinnlos ist, da dieses Template die rechte Spalte grundsätzlich nicht verwendet.
+Wenn Sie im Header ein Suchfeld anzeigen wollen (dringend empfohlen), dann aktivieren Sie die Sidebox search_header und stellen diese auf EIN und RECHTS, damit sie in der linken Sidebar nicht nochmals angezeigt wird
+Um in diesem Suchfeld die Sofortsuche zu nutzen, installieren Sie unter Module > Plugin Manager das Plugin Instant Search.
+Bei allen anderen möglichen Sideboxen, die Sie aktivieren wollen wählen Sie immer EIN und LINKS.
 Stellen Sie nun die Sideboxen ein, die Sie anzeigen wollen und stellen Sie dabei die Einstellung Show Box @ Min-Width immer auf Aus.
 Diese Einstellung regelt die Anzeige von Sideboxen für mobile Geräte und für die sollten die Sideboxen immer aus sein.
-Wenn Sie im Header ein Suchfeld anzeigen wollen (dringend empfohlen), dann aktivieren Sie die Sidebox search_header
-Um in diesem Suchfeld die Sofortsuche zu nutzen, installieren Sie unter Module > Plugin Manager das Plugin Instant Search.
+In der Templatedemo auf https://winchester.zencartdemo.at sind nur die Sideboxen Kategorien und Hersteller auf EIN.
 
 ____________________________________________________________________________________________________
 
@@ -293,6 +284,30 @@ images/content/payment-options.png
 Gestalten Sie Ihr eigenes und laden es hoch nach images/content/payment-options.png und überschreiben das bestehende damit.
 
 Wenn Sie diesen Bereich gar nicht anzeigen wollen, einfach in der Template Konfiguration deaktivieren
+
+____________________________________________________________________________________________________
+
+Bilder auf Inhaltsseiten
+____________________________________________________________________________________________________
+
+Dieses Template hat Beispielinhaltsseiten, in denen Bilder entweder links loatend oder rechts floatend eingebunden sind als Beispiele mitgebracht.
+z.B.
+https://winchester.zencartdemo.at/index.php?main_page=about_us
+
+Die entsprechenden Bilder sind im Ordner images/content abgelegt und werden z.B. so aufgerufen:
+<div class="contentimage-right"><img src="images/content/1.jpg" alt="Beispielbild 1"></div>
+oder
+<div class="contentimage-left"><img src="images/content/1.jpg" alt="Beispielbild 1"></div>
+
+Im Hauptstylesheet stylesheet.css stehen die Definitionen .contentimage-right und .contentimage-left zum Styling zur Verfügung
+
+____________________________________________________________________________________________________
+
+Optional: GPSR Herstellerinformationen
+____________________________________________________________________________________________________
+
+Wenn Sie das Modul GPSR Herstellerinformation 1.0.3 oder höher installiert haben, werden die Infos von diesem Template als Tab auf der Artikeldetailseite angezeigt.
+Um das zu nutzen aktivieren Sie diese Einstellung in der Winchester Template Konfiguration.
 
 ____________________________________________________________________________________________________
 
