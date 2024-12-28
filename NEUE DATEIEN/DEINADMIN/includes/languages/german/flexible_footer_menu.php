@@ -38,6 +38,8 @@ define('FFM_TEXT_DELETE_IMAGE', 'Bild löschen');
 define('FFM_TABLE_TITLE_HEADER', 'Titel');
 define('FFM_TABLE_TITLE_PAGE_NAME', 'Seiten Name');
 define('FFM_TABLE_TITLE_IMAGE', 'Bild');
+define('TEXT_INFO_PAGES_ID_SELECT', 'Seite auswählen...');
+define('TEXT_INFO_PAGES_ID', 'ID der Seite: ');
 define('SUCCESS_PAGE_UPDATED', 'Die Seite wurde erfolgreich aktualisiert.'); 
 define('SUCCESS_PAGE_INSERTED', 'Die Seite wurde erfolgreich hinzugefügt.'); 
 define('SUCCESS_PAGE_REMOVED', 'Die Seite wurde erfolgreich gelöscht.');
